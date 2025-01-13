@@ -1,0 +1,283 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>files</title>
+    <link rel="stylesheet" href="./cruds.css">
+    <link rel="stylesheet" href="./my-portfolio.css">
+</head>
+<body>
+        <header>
+                <div class="logo"><img class="the_logo" src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"></div>
+                <ul class="navlist">
+                    
+                </ul>
+                <div id="menu-icon" class="bx bx-menu"></div>
+                <li><a href="logout.html"style="--i:6; color:#c0adc9">Log out</a></li>
+            </header>
+        
+    <div class="crud">
+        <div class="head">
+            <h2>your files</h2>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            <input class="upload" type="file" id="fileInput" onchange="handleFileSelect(event)"/>
+            <button id="submit">create</button>
+        </div>
+        <div class="ouputs">
+            <div class="searchBlock">
+                <input onkeyup = "searchData(this.value)" type="text" placeholder="search" id="search">
+                <div class="btnSearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">search by Title</button>
+
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+            <table>
+                <tr>
+                    <th>title</th>
+                    <th>files</th>
+                    <th>delete</th>                   
+                    <th>update</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+            let menuIcon =  document.querySelector("#menu-icon");
+        let navList = document.querySelector(".navlist");
+        
+        menuIcon.onclick = () =>{
+            menuIcon.classList.toggle("bx-x")
+            navList.classList.toggle("open")
+        }
+        
+        window.onscroll = () =>{
+            menuIcon.classList.remove("bx-x")
+            navList.classList.remove("open")
+        }
+        
+            </script>
+    <script src="./cruds.js"></script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Files</title>
+    <link rel="stylesheet" href="./cruds.css">
+    <link rel="stylesheet" href="./my-portfolio.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="the_logo"
+                src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png">
+        </div>
+        <ul class="navlist"></ul>
+        <div id="menu-icon" class="bx bx-menu"></div>
+        <li><a href="logout.html" style="--i:6; color:#c0adc9">Log out</a></li>
+    </header>
+
+    <div class="crud">
+        <div class="head">
+            <h2>Your Files</h2>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <input class="upload" type="file" id="fileInput" onchange="handleFileSelect(event)">
+            <button id="submit" onclick="uploadFile()">Create</button>
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input onkeyup="searchData(this.value)" type="text" placeholder="Search" id="search">
+                <div class="btnSearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">Search by Title</button>
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Files</th>
+                    <th>Delete</th>
+                    <!-- <th>Update</th> -->
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let menuIcon = document.querySelector("#menu-icon");
+        let navList = document.querySelector(".navlist");
+
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle("bx-x");
+            navList.classList.toggle("open");
+        }
+
+        window.onscroll = () => {
+            menuIcon.classList.remove("bx-x");
+            navList.classList.remove("open");
+        }
+
+        // Store data in localStorage
+        let dataPro = JSON.parse(localStorage.getItem('product')) || [];
+
+        // Function to handle file selection and preview
+        function handleFileSelect(event) {
+            const file = event.target.files[0]; // Get the selected file
+            const titleInput = document.getElementById('title');
+            const fileTitle = titleInput.value || file.name; // Use title input or file name as title
+
+            if (file) {
+                const fileReader = new FileReader();
+
+                fileReader.onload = function (e) {
+                    const fileURL = e.target.result; // File URL
+                    const newFile = {
+                        title: fileTitle,
+                        url: fileURL,
+                        name: file.name
+                    };
+                    // Add the new file to dataPro and store it in localStorage
+                    dataPro.push(newFile);
+                    localStorage.setItem('product', JSON.stringify(dataPro));
+
+                    // Display updated data
+                    showData();
+                }
+
+                // Read the file based on its type
+                if (file.type.startsWith('image')) {
+                    fileReader.readAsDataURL(file); // For image files
+                } else if (file.type === 'application/pdf') {
+                    fileReader.readAsDataURL(file); // For PDF files
+                } else if (file.type === 'text/plain') {
+                    fileReader.readAsText(file); // For text files
+                } else {
+                    alert('Unsupported file type!');
+                }
+            }
+        }
+
+        // Function to display files from localStorage
+        function showData() {
+            let table = '';
+            dataPro.forEach((file, index) => {
+                table += `
+                <tr>
+                    <td>${file.title}</td>
+                    <td><a href="${file.url}" target="_blank">Click to Open</a></td>
+                    <td><button onclick="deleteData(${index})" id="delete">Delete</button></td>
+                  
+                </tr>`;
+            });
+
+            document.getElementById('tbody').innerHTML = table;
+
+            let btnDelete = document.getElementById("deleteAll");
+            if (dataPro.length > 0) {
+                btnDelete.innerHTML = `
+                    <button onclick="deleteAll()">Delete all(${dataPro.length})</button>
+                `;
+            } else {
+                btnDelete.innerHTML = '';
+            }
+        }
+
+        // Function to delete a single file
+        function deleteData(index) {
+            dataPro.splice(index, 1);
+            localStorage.setItem('product', JSON.stringify(dataPro));
+            showData();
+        }
+
+        // Function to delete all files
+        function deleteAll() {
+            localStorage.clear();
+            dataPro = [];
+            showData();
+        }
+
+        // Function to update file data
+        function updateData(index) {
+            const file = dataPro[index];
+            document.getElementById('title').value = file.title;
+            document.getElementById('submit').innerText = 'Update';
+            currentFileIndex = index;
+        }
+
+        let currentFileIndex;
+
+        // Function to create or update a file entry
+        function uploadFile() {
+            const fileTitle = document.getElementById('title').value;
+            if (fileTitle) {
+                if (currentFileIndex === undefined) {
+                    // Add new file
+                    dataPro.push({
+                        title: fileTitle,
+                        url: 'newFileURL', // Placeholder until the file is uploaded
+                        name: 'newFileName' // Placeholder until the file is uploaded
+                    });
+                } else {
+                    // Update file data
+                    dataPro[currentFileIndex].title = fileTitle;
+                }
+
+                localStorage.setItem('product', JSON.stringify(dataPro));
+                showData();
+                document.getElementById('title').value = '';
+                currentFileIndex = undefined;
+                document.getElementById('submit').innerText = 'Create';
+            } else {
+                alert('Please enter a title.');
+            }
+        }
+
+        // Function for searching files by title
+        function searchData(value) {
+            const rows = document.getElementById('tbody').rows;
+            for (let i = 0; i < rows.length; i++) {
+                let row = rows[i];
+                const titleCell = row.cells[0].innerText.toLowerCase();
+                if (titleCell.includes(value.toLowerCase())) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+        }
+
+        // Load and display existing files
+        showData();
+
+        // Function for switching search criteria (currently only by title)
+        function getSearchMood(id) {
+            const search = document.getElementById('search');
+            if (id == 'searchTitle') {
+                search.placeholder = 'Search by Title';
+            }
+            search.focus();
+        }
+
+    </script>
+
+</body>
+
+</html>
