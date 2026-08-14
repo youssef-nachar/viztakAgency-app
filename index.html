@@ -1770,6 +1770,158 @@
             }
         }
 
+
+        /* =========================================================
+           AUTHENTICATION / PROTECTED FILES
+           ========================================================= */
+
+        #files.auth-hidden {
+            display: none !important;
+        }
+
+        /* =========================================================
+           LOGGED IN FULL PAGE OVERRIDE MODE
+           Hide everything else when logged in so ONLY the files page shows.
+           ========================================================= */
+
+        body.logged-in-mode header,
+        body.logged-in-mode .hero,
+        body.logged-in-mode .stats,
+        body.logged-in-mode #about,
+        body.logged-in-mode #services,
+        body.logged-in-mode #branches,
+        body.logged-in-mode #book,
+        body.logged-in-mode #contact,
+        body.logged-in-mode #loginInfo,
+        body.logged-in-mode footer {
+            display: none !important;
+        }
+
+        body.logged-in-mode #files {
+            display: block !important;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            min-height: 100vh;
+        }
+
+        .nav-auth {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .nav-auth .auth-user {
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 800;
+            max-width: 110px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .auth-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 4500;
+            display: none;
+            place-items: center;
+            padding: 20px;
+            background: rgba(0,0,0,.72);
+            backdrop-filter: blur(12px);
+        }
+
+        .auth-modal.open {
+            display: grid;
+        }
+
+        .auth-modal-card {
+            width: min(440px, 100%);
+            padding: 34px;
+            border: 1px solid var(--border-light);
+            border-radius: 28px;
+            background: var(--card-solid);
+            box-shadow: var(--shadow);
+            animation: modalIn .3s ease;
+        }
+
+        .auth-modal-head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 22px;
+        }
+
+        .auth-modal-icon {
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border-radius: 17px;
+            color: var(--primary);
+            background: rgba(22,224,255,.1);
+            font-size: 27px;
+            margin-bottom: 16px;
+        }
+
+        .auth-modal-card h3 {
+            font-size: 26px;
+        }
+
+        .auth-modal-card > p {
+            color: var(--text-muted);
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .auth-status {
+            margin-top: 14px;
+            padding: 10px 12px;
+            border-radius: 11px;
+            font-size: 11px;
+            display: none;
+        }
+
+        .auth-status.error {
+            display: block;
+            color: #fff;
+            background: rgba(255,85,116,.12);
+            border: 1px solid rgba(255,85,116,.25);
+        }
+
+        .auth-status.success {
+            display: block;
+            color: #fff;
+            background: rgba(37,214,149,.12);
+            border: 1px solid rgba(37,214,149,.25);
+        }
+
+        .protected-note {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 9px;
+            margin-top: 14px;
+            padding: 12px 14px;
+            border: 1px solid rgba(22,224,255,.14);
+            border-radius: 12px;
+            background: rgba(22,224,255,.045);
+            color: var(--text-secondary);
+            font-size: 11px;
+        }
+
+        .protected-note i {
+            color: var(--primary);
+            font-size: 17px;
+        }
+
+        @media (max-width: 620px) {
+            .auth-modal-card {
+                padding: 24px;
+            }
+        }
+
         /* =========================================================
            RESPONSIVE
            ========================================================= */
@@ -2050,18 +2202,19 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="#files" class="nav-link">
+                <li id="filesNavItem" style="display:none;">
+                    <a href="#files" class="nav-link" id="filesNavLink">
                         <i class="bx bx-folder-open"></i>
                         Files
                     </a>
                 </li>
 
-                <li>
-                    <a href="#login" class="nav-link">
-                        <i class="bx bx-user"></i>
-                        Login
+                <li class="nav-auth">
+                    <a href="#" class="nav-link" id="authNavLink">
+                        <i class="bx bx-log-in-circle"></i>
+                        <span id="authNavText">Login</span>
                     </a>
+                    <span class="auth-user" id="authUserLabel" hidden></span>
                 </li>
 
             </ul>
@@ -3013,7 +3166,7 @@
      FILE MANAGER
      ========================================================= -->
 
-<section class="section" id="files">
+<section class="section auth-hidden" id="files" aria-hidden="true">
 
     <div class="container">
 
@@ -3032,6 +3185,15 @@
             <p class="section-description">
                 Manage your documents locally in your browser.
             </p>
+            <div class="protected-note">
+                <div>
+                    <i class="bx bx-lock-alt"></i>
+                    <span>Private area — Logged in successfully.</span>
+                </div>
+                <button class="btn danger small" id="logoutInPageBtn" type="button">
+                    <i class="bx bx-log-out"></i> Logout
+                </button>
+            </div>
 
         </div>
 
@@ -3164,87 +3326,25 @@
 </section>
 
 <!-- =========================================================
-     LOGIN
+     LOGIN ACCESS
+     Login is intentionally available from the navigation bar only.
      ========================================================= -->
 
-<section class="section" id="login">
-
+<section class="section" id="loginInfo" style="display:none;">
     <div class="container">
-
         <div class="login-wrapper">
-
-            <div class="login-card reveal">
-
+            <div class="login-card">
                 <div class="login-icon">
-                    <i class="bx bx-lock-alt"></i>
+                    <i class="bx bx-shield-quarter"></i>
                 </div>
-
-                <h2>Welcome back.</h2>
-
+                <h2>Private Portal</h2>
                 <p>
-                    Access your Vistak portal.
+                    Login is available from the navigation bar.
+                    Once authenticated, the Files area will become available.
                 </p>
-
-                <form id="loginForm">
-
-                    <div class="login-field">
-
-                        <i class="bx bx-user"></i>
-
-                        <input
-                            type="text"
-                            id="username"
-                            placeholder="Username"
-                            autocomplete="username"
-                            required
-                        >
-
-                    </div>
-
-                    <div class="login-field">
-
-                        <i class="bx bx-lock"></i>
-
-                        <input
-                            type="password"
-                            id="password"
-                            placeholder="Password"
-                            autocomplete="current-password"
-                            required
-                        >
-
-                        <button
-                            type="button"
-                            class="password-toggle"
-                            id="passwordToggle"
-                            aria-label="Show password"
-                        >
-                            <i class="bx bx-show"></i>
-                        </button>
-
-                    </div>
-
-                    <button
-                        type="submit"
-                        class="btn full"
-                    >
-                        <i class="bx bx-log-in"></i>
-                        Login
-                    </button>
-
-                </form>
-
-                <p style="margin-top:18px;text-align:center;">
-                    Demo interface — connect this form to your
-                    real authentication backend.
-                </p>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
 <!-- =========================================================
@@ -3295,6 +3395,79 @@
 ></div>
 
 <!-- =========================================================
+     LOGIN MODAL
+     ========================================================= -->
+
+<div
+    class="auth-modal"
+    id="authModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="authModalTitle"
+>
+    <div class="auth-modal-card">
+        <div class="auth-modal-head">
+            <div>
+                <div class="auth-modal-icon">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <h3 id="authModalTitle">Private Login</h3>
+                <p>Sign in to access the protected Files area.</p>
+            </div>
+
+            <button
+                class="icon-btn"
+                id="authModalClose"
+                type="button"
+                aria-label="Close login"
+            >
+                <i class="bx bx-x"></i>
+            </button>
+        </div>
+
+        <form id="loginForm">
+            <div class="login-field">
+                <i class="bx bx-user"></i>
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="login-field">
+                <i class="bx bx-lock"></i>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="password-toggle"
+                    id="passwordToggle"
+                    aria-label="Show password"
+                >
+                    <i class="bx bx-show"></i>
+                </button>
+            </div>
+
+            <button type="submit" class="btn full">
+                <i class="bx bx-log-in"></i>
+                Sign In
+            </button>
+
+            <div class="auth-status" id="authStatus"></div>
+        </form>
+    </div>
+</div>
+
+<!-- =========================================================
      PREVIEW MODAL
      ========================================================= -->
 
@@ -3332,6 +3505,9 @@
 
 <script>
     "use strict";
+
+    // Safe global auth state available before every File Manager function.
+    window.__vistakAuthenticated = false;
 
     /* =========================================================
        GLOBAL HELPERS
@@ -4277,6 +4453,14 @@
 
     function renderFiles() {
 
+        if (!window.__vistakAuthenticated) {
+            if (tbody) tbody.innerHTML = "";
+            if (fileCount) fileCount.textContent = "0";
+            if (imageCount) imageCount.textContent = "0";
+            if (emptyState) emptyState.style.display = "block";
+            return;
+        }
+
         const query =
             searchInput.value
                 .trim()
@@ -4415,6 +4599,15 @@
                 );
 
             if (!button) return;
+
+            if (!window.__vistakAuthenticated) {
+                showToast(
+                    "Access denied",
+                    "Please login before managing files.",
+                    "error"
+                );
+                return;
+            }
 
             const id =
                 button.dataset.id;
@@ -4639,62 +4832,372 @@
     renderFiles();
 
     /* =========================================================
-       LOGIN
+       AUTHENTICATION / PROTECTED FILES
        ========================================================= */
 
-    const password =
-        $("#password");
+    /*
+       Front-end demo credentials.
+       IMPORTANT:
+       This protects the UI and the browser-side Files area only.
+       For real security, replace this with Firebase Authentication
+       or another server-side authentication provider.
+    */
+    const AUTH_CONFIG = {
+        username: "admin",
+        password: "Vistak@2026"
+    };
 
-    const passwordToggle =
-        $("#passwordToggle");
+    const AUTH_STORAGE_KEY = "vistak_authenticated_v1";
+    const AUTH_USER_KEY = "vistak_authenticated_user_v1";
+
+    const authModal = $("#authModal");
+    const authModalClose = $("#authModalClose");
+    const authNavLink = $("#authNavLink");
+    const authNavText = $("#authNavText");
+    const authUserLabel = $("#authUserLabel");
+    const filesNavItem = $("#filesNavItem");
+    const filesSection = $("#files");
+    const loginForm = $("#loginForm");
+    const password = $("#password");
+    const passwordToggle = $("#passwordToggle");
+    const authStatus = $("#authStatus");
+
+    let isAuthenticated =
+        sessionStorage.getItem(AUTH_STORAGE_KEY) === "true";
+
+    let authenticatedUser =
+        sessionStorage.getItem(AUTH_USER_KEY) || "";
+
+    function setAuthStatus(message, type = "error") {
+        if (!authStatus) return;
+
+        authStatus.textContent = message;
+        authStatus.className = `auth-status ${type}`;
+    }
+
+    function clearAuthStatus() {
+        if (!authStatus) return;
+
+        authStatus.textContent = "";
+        authStatus.className = "auth-status";
+    }
+
+    function openLoginModal() {
+        if (!authModal) return;
+
+        clearAuthStatus();
+        authModal.classList.add("open");
+
+        setTimeout(() => {
+            $("#username")?.focus();
+        }, 100);
+    }
+
+    function closeLoginModal() {
+        authModal?.classList.remove("open");
+        clearAuthStatus();
+    }
+
+    function updateAuthUI() {
+        window.__vistakAuthenticated = isAuthenticated;
+
+        if (!filesSection || !filesNavItem || !authNavLink) return;
+
+        if (isAuthenticated) {
+            // إضافة الكلاس الذي يخفي كامل أقسام الموقع باستثناء الملفات
+            document.body.classList.add("logged-in-mode");
+
+            filesNavItem.style.display = "";
+            filesSection.classList.remove("auth-hidden");
+            filesSection.setAttribute("aria-hidden", "false");
+
+            authNavText.textContent = "Logout";
+
+            if (authUserLabel) {
+                authUserLabel.hidden = false;
+                authUserLabel.textContent =
+                    authenticatedUser
+                        ? `@${authenticatedUser}`
+                        : "";
+            }
+
+            authNavLink.querySelector("i")?.classList.remove(
+                "bx-log-in-circle"
+            );
+
+            authNavLink.querySelector("i")?.classList.add(
+                "bx-log-out-circle"
+            );
+
+            renderFiles();
+
+        } else {
+            // إزالة الكلاس لإعادة إظهار أقسام الموقع في حالة الخروج
+            document.body.classList.remove("logged-in-mode");
+
+            filesNavItem.style.display = "none";
+            filesSection.classList.add("auth-hidden");
+            filesSection.setAttribute("aria-hidden", "true");
+
+            authNavText.textContent = "Login";
+
+            if (authUserLabel) {
+                authUserLabel.hidden = true;
+                authUserLabel.textContent = "";
+            }
+
+            authNavLink.querySelector("i")?.classList.remove(
+                "bx-log-out-circle"
+            );
+
+            authNavLink.querySelector("i")?.classList.add(
+                "bx-log-in-circle"
+            );
+
+            if (location.hash === "#files") {
+                history.replaceState(
+                    null,
+                    "",
+                    location.pathname + location.search
+                );
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
+        }
+    }
+
+    function requireAuthentication(event) {
+        if (isAuthenticated) return true;
+
+        event?.preventDefault();
+        closeMenu();
+        openLoginModal();
+
+        showToast(
+            "Login required",
+            "Please sign in to access the Files area.",
+            "info"
+        );
+
+        return false;
+    }
+
+    function login(username, enteredPassword) {
+        if (
+            username === AUTH_CONFIG.username &&
+            enteredPassword === AUTH_CONFIG.password
+        ) {
+            isAuthenticated = true;
+            authenticatedUser = username;
+
+            sessionStorage.setItem(
+                AUTH_STORAGE_KEY,
+                "true"
+            );
+
+            sessionStorage.setItem(
+                AUTH_USER_KEY,
+                username
+            );
+
+            updateAuthUI();
+            closeLoginModal();
+
+            showToast(
+                "Login successful",
+                "Welcome to your private Portal.",
+                "success"
+            );
+
+            return true;
+        }
+
+        setAuthStatus(
+            "Invalid username or password.",
+            "error"
+        );
+
+        return false;
+    }
+
+    function logout() {
+        isAuthenticated = false;
+        authenticatedUser = "";
+
+        sessionStorage.removeItem(
+            AUTH_STORAGE_KEY
+        );
+
+        sessionStorage.removeItem(
+            AUTH_USER_KEY
+        );
+
+        updateAuthUI();
+
+        showToast(
+            "Logged out",
+            "Your private Files access has been locked.",
+            "success"
+        );
+    }
+
+    authNavLink?.addEventListener(
+        "click",
+        event => {
+            event.preventDefault();
+
+            if (isAuthenticated) {
+                logout();
+            } else {
+                openLoginModal();
+            }
+        }
+    );
+
+    $("#logoutInPageBtn")?.addEventListener(
+        "click",
+        () => {
+            logout();
+        }
+    );
+
+    $("#filesNavLink")?.addEventListener(
+        "click",
+        event => {
+            if (!requireAuthentication(event)) {
+                return;
+            }
+
+            closeMenu();
+        }
+    );
+
+    authModalClose?.addEventListener(
+        "click",
+        closeLoginModal
+    );
+
+    authModal?.addEventListener(
+        "click",
+        event => {
+            if (event.target === authModal) {
+                closeLoginModal();
+            }
+        }
+    );
+
+    document.addEventListener(
+        "keydown",
+        event => {
+            if (
+                event.key === "Escape" &&
+                authModal?.classList.contains("open")
+            ) {
+                closeLoginModal();
+            }
+        }
+    );
 
     passwordToggle?.addEventListener(
         "click",
         () => {
+            const icon = $("i", passwordToggle);
 
-            const icon =
-                $("i", passwordToggle);
-
-            if (
-                password.type === "password"
-            ) {
-
+            if (password.type === "password") {
                 password.type = "text";
-
-                icon.className =
-                    "bx bx-hide";
-
+                icon.className = "bx bx-hide";
+                passwordToggle.setAttribute(
+                    "aria-label",
+                    "Hide password"
+                );
             } else {
-
                 password.type = "password";
-
-                icon.className =
-                    "bx bx-show";
-
+                icon.className = "bx bx-show";
+                passwordToggle.setAttribute(
+                    "aria-label",
+                    "Show password"
+                );
             }
-
         }
     );
 
-    $("#loginForm")?.addEventListener(
+    loginForm?.addEventListener(
         "submit",
         event => {
-
             event.preventDefault();
 
             const username =
-                $("#username").value.trim();
+                $("#username")?.value.trim() || "";
 
-            if (!username) return;
+            const enteredPassword =
+                password?.value || "";
 
-            showToast(
-                "Demo Login",
-                "Connect this form to your real authentication system.",
-                "info"
-            );
+            if (!username || !enteredPassword) {
+                setAuthStatus(
+                    "Please enter both username and password.",
+                    "error"
+                );
+                return;
+            }
 
+            if (login(username, enteredPassword)) {
+                loginForm.reset();
+            }
         }
     );
+
+    /*
+       Extra guard:
+       If someone manually changes the URL hash to #files,
+       the section is still blocked unless authenticated.
+    */
+    window.addEventListener(
+        "hashchange",
+        () => {
+            if (
+                location.hash === "#files" &&
+                !isAuthenticated
+            ) {
+                history.replaceState(
+                    null,
+                    "",
+                    location.pathname + location.search
+                );
+
+                openLoginModal();
+            }
+        }
+    );
+
+    /*
+       Protect all File Manager operations as well.
+       Even if a hidden UI control is triggered manually,
+       no file operation is allowed while logged out.
+    */
+    const originalSaveFiles = saveFiles;
+
+    saveFiles = function () {
+        if (!isAuthenticated) {
+            showToast(
+                "Access denied",
+                "Please login before managing files.",
+                "error"
+            );
+            return false;
+        }
+
+        return originalSaveFiles();
+    };
+
+    /*
+       Initial authentication state.
+       sessionStorage means closing the browser tab/session
+       logs the user out automatically.
+    */
+    updateAuthUI();
 
     /* =========================================================
        ESCAPE MENU ON OUTSIDE CLICK
