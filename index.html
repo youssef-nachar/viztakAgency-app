@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,11 @@
     <title>Vistak | Travel & Immigration Portal</title>
 
     <!-- Icons -->
-    <link
-        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-        rel="stylesheet"
-    >
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <!-- Favicon -->
-    <link
-        rel="icon"
-        type="image/png"
-        href="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
-    >
+    <link rel="icon" type="image/png"
+        href="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png">
 
     <style>
         /* =========================================================
@@ -46,8 +41,8 @@
             --text-secondary: #a9b8ca;
             --text-muted: #6f8197;
 
-            --border: rgba(255,255,255,0.09);
-            --border-light: rgba(255,255,255,0.15);
+            --border: rgba(255, 255, 255, 0.09);
+            --border-light: rgba(255, 255, 255, 0.15);
 
             --success: #25d695;
             --danger: #ff5574;
@@ -65,13 +60,13 @@
 
             --header-height: 84px;
 
-            --transition: 0.3s cubic-bezier(.2,.8,.2,1);
+            --transition: 0.3s cubic-bezier(.2, .8, .2, 1);
         }
 
         body.light-theme {
             --bg: #f4f8fc;
             --bg-secondary: #ffffff;
-            --card: rgba(255,255,255,.82);
+            --card: rgba(255, 255, 255, .82);
             --card-solid: #ffffff;
 
             --text: #0a1524;
@@ -103,16 +98,12 @@
         body {
             font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             background:
-                radial-gradient(
-                    circle at 10% 10%,
-                    rgba(22,224,255,.08),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 90% 20%,
-                    rgba(118,87,255,.09),
-                    transparent 28%
-                ),
+                radial-gradient(circle at 10% 10%,
+                    rgba(22, 224, 255, .08),
+                    transparent 30%),
+                radial-gradient(circle at 90% 20%,
+                    rgba(118, 87, 255, .09),
+                    transparent 28%),
                 var(--bg);
             color: var(--text);
             overflow-x: hidden;
@@ -129,16 +120,16 @@
             pointer-events: none;
             z-index: -1;
             background-image:
-                linear-gradient(rgba(255,255,255,.015) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,.015) 1px, transparent 1px);
+                linear-gradient(rgba(255, 255, 255, .015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, .015) 1px, transparent 1px);
             background-size: 50px 50px;
             mask-image: linear-gradient(to bottom, black, transparent 90%);
         }
 
         body.light-theme::before {
             background-image:
-                linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,0,0,.025) 1px, transparent 1px);
+                linear-gradient(rgba(0, 0, 0, .025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, .025) 1px, transparent 1px);
         }
 
         img {
@@ -184,10 +175,8 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(
-                var(--primary),
-                var(--secondary)
-            );
+            background: linear-gradient(var(--primary),
+                    var(--secondary));
             border-radius: 20px;
         }
 
@@ -216,8 +205,8 @@
             align-items: center;
             gap: 8px;
             padding: 8px 14px;
-            border: 1px solid rgba(22,224,255,.2);
-            background: rgba(22,224,255,.06);
+            border: 1px solid rgba(22, 224, 255, .2);
+            background: rgba(22, 224, 255, .06);
             border-radius: 999px;
             color: var(--primary);
             font-size: 12px;
@@ -235,23 +224,19 @@
         }
 
         .section-title span {
-            background: linear-gradient(
-                90deg,
-                var(--primary),
-                #ffffff,
-                var(--secondary)
-            );
+            background: linear-gradient(90deg,
+                    var(--primary),
+                    #ffffff,
+                    var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
         body.light-theme .section-title span {
-            background: linear-gradient(
-                90deg,
-                var(--primary-dark),
-                var(--secondary)
-            );
+            background: linear-gradient(90deg,
+                    var(--primary-dark),
+                    var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
         }
@@ -284,11 +269,11 @@
             backdrop-filter: blur(22px);
             -webkit-backdrop-filter: blur(22px);
             border-color: var(--border);
-            box-shadow: 0 15px 50px rgba(0,0,0,.18);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, .18);
         }
 
         body.light-theme header.scrolled {
-            background: rgba(255,255,255,.8);
+            background: rgba(255, 255, 255, .8);
         }
 
         .header-inner {
@@ -334,7 +319,7 @@
         .navlist a:hover,
         .navlist a.active {
             color: var(--text);
-            background: rgba(255,255,255,.06);
+            background: rgba(255, 255, 255, .06);
         }
 
         .navlist a.active {
@@ -368,13 +353,13 @@
             border: 1px solid var(--border);
             border-radius: 12px;
             color: var(--text);
-            background: rgba(255,255,255,.04);
+            background: rgba(255, 255, 255, .04);
             transition: var(--transition);
         }
 
         .icon-btn:hover {
             transform: translateY(-2px);
-            border-color: rgba(22,224,255,.35);
+            border-color: rgba(22, 224, 255, .35);
             color: var(--primary);
             box-shadow: var(--glow);
         }
@@ -399,17 +384,15 @@
             border: 1px solid transparent;
             border-radius: 13px;
             color: #00121a;
-            background: linear-gradient(
-                135deg,
-                var(--primary),
-                #65f4ff
-            );
+            background: linear-gradient(135deg,
+                    var(--primary),
+                    #65f4ff);
             font-weight: 800;
             font-size: 14px;
             transition: var(--transition);
             overflow: hidden;
             box-shadow:
-                0 10px 30px rgba(22,224,255,.12);
+                0 10px 30px rgba(22, 224, 255, .12);
         }
 
         .btn::before {
@@ -419,12 +402,10 @@
             left: -100%;
             width: 60%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255,255,255,.5),
-                transparent
-            );
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, .5),
+                    transparent);
             transform: skewX(-20deg);
             transition: .6s;
         }
@@ -436,28 +417,26 @@
         .btn:hover {
             transform: translateY(-3px);
             box-shadow:
-                0 15px 40px rgba(22,224,255,.22);
+                0 15px 40px rgba(22, 224, 255, .22);
         }
 
         .btn.secondary {
-            background: rgba(255,255,255,.04);
+            background: rgba(255, 255, 255, .04);
             border-color: var(--border-light);
             color: var(--text);
             box-shadow: none;
         }
 
         .btn.secondary:hover {
-            border-color: rgba(22,224,255,.35);
+            border-color: rgba(22, 224, 255, .35);
             color: var(--primary);
         }
 
         .btn.danger {
             color: #fff;
-            background: linear-gradient(
-                135deg,
-                #ff416c,
-                #ff5574
-            );
+            background: linear-gradient(135deg,
+                    #ff416c,
+                    #ff5574);
         }
 
         .btn.small {
@@ -491,7 +470,7 @@
             width: 600px;
             height: 600px;
             border-radius: 50%;
-            background: rgba(22,224,255,.07);
+            background: rgba(22, 224, 255, .07);
             filter: blur(80px);
             left: -250px;
             top: 10%;
@@ -504,7 +483,7 @@
             width: 500px;
             height: 500px;
             border-radius: 50%;
-            background: rgba(118,87,255,.08);
+            background: rgba(118, 87, 255, .08);
             filter: blur(90px);
             right: -200px;
             bottom: 0;
@@ -531,8 +510,8 @@
             gap: 9px;
             padding: 8px 13px;
             border-radius: 999px;
-            border: 1px solid rgba(22,224,255,.22);
-            background: rgba(22,224,255,.06);
+            border: 1px solid rgba(22, 224, 255, .22);
+            background: rgba(22, 224, 255, .06);
             color: var(--primary);
             font-size: 12px;
             font-weight: 800;
@@ -549,10 +528,13 @@
         }
 
         @keyframes pulse {
-            0%,100% {
+
+            0%,
+            100% {
                 transform: scale(1);
                 opacity: 1;
             }
+
             50% {
                 transform: scale(1.5);
                 opacity: .5;
@@ -570,12 +552,10 @@
         .hero h1 .gradient {
             display: inline-block;
             background:
-                linear-gradient(
-                    110deg,
+                linear-gradient(110deg,
                     var(--primary),
                     #fff,
-                    var(--secondary)
-                );
+                    var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -636,7 +616,7 @@
             display: grid;
             place-items: center;
             border: 1px solid var(--border);
-            background: rgba(255,255,255,.035);
+            background: rgba(255, 255, 255, .035);
             border-radius: 12px;
             color: var(--text-secondary);
             transition: var(--transition);
@@ -645,7 +625,7 @@
         .social:hover {
             transform: translateY(-4px);
             color: var(--primary);
-            border-color: rgba(22,224,255,.3);
+            border-color: rgba(22, 224, 255, .3);
             box-shadow: var(--glow);
         }
 
@@ -664,7 +644,7 @@
             position: absolute;
             width: 500px;
             height: 500px;
-            border: 1px solid rgba(22,224,255,.12);
+            border: 1px solid rgba(22, 224, 255, .12);
             border-radius: 50%;
             animation: rotate 20s linear infinite;
         }
@@ -696,6 +676,7 @@
             from {
                 transform: rotate(0);
             }
+
             to {
                 transform: rotate(360deg);
             }
@@ -709,11 +690,9 @@
             place-items: center;
             border: 1px solid var(--border-light);
             background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,.08),
-                    rgba(255,255,255,.02)
-                );
+                linear-gradient(145deg,
+                    rgba(255, 255, 255, .08),
+                    rgba(255, 255, 255, .02));
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-radius: 40px;
@@ -724,9 +703,12 @@
         }
 
         @keyframes float {
-            0%,100% {
+
+            0%,
+            100% {
                 transform: translateY(0) rotate(2deg);
             }
+
             50% {
                 transform: translateY(-13px) rotate(-1deg);
             }
@@ -738,7 +720,7 @@
             width: 250px;
             height: 250px;
             border-radius: 50%;
-            background: rgba(22,224,255,.14);
+            background: rgba(22, 224, 255, .14);
             filter: blur(45px);
             top: -80px;
             right: -50px;
@@ -750,7 +732,7 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            background: rgba(118,87,255,.13);
+            background: rgba(118, 87, 255, .13);
             filter: blur(40px);
             bottom: -80px;
             left: -50px;
@@ -761,7 +743,7 @@
             z-index: 3;
             width: 76%;
             filter:
-                drop-shadow(0 25px 40px rgba(0,0,0,.35));
+                drop-shadow(0 25px 40px rgba(0, 0, 0, .35));
         }
 
         .floating-card {
@@ -773,13 +755,13 @@
             padding: 13px 15px;
             border: 1px solid var(--border-light);
             border-radius: 16px;
-            background: rgba(7,17,30,.75);
+            background: rgba(7, 17, 30, .75);
             backdrop-filter: blur(15px);
             box-shadow: var(--shadow);
         }
 
         body.light-theme .floating-card {
-            background: rgba(255,255,255,.8);
+            background: rgba(255, 255, 255, .8);
         }
 
         .floating-card i {
@@ -787,7 +769,7 @@
             height: 38px;
             display: grid;
             place-items: center;
-            background: rgba(22,224,255,.1);
+            background: rgba(22, 224, 255, .1);
             border-radius: 11px;
             color: var(--primary);
             font-size: 20px;
@@ -824,7 +806,7 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             border: 1px solid var(--border);
-            background: rgba(255,255,255,.025);
+            background: rgba(255, 255, 255, .025);
             backdrop-filter: blur(20px);
             border-radius: 24px;
             overflow: hidden;
@@ -875,12 +857,10 @@
             border-radius: 35px;
             border: 1px solid var(--border);
             background:
-                radial-gradient(
-                    circle at center,
-                    rgba(22,224,255,.12),
-                    transparent 60%
-                ),
-                rgba(255,255,255,.025);
+                radial-gradient(circle at center,
+                    rgba(22, 224, 255, .12),
+                    transparent 60%),
+                rgba(255, 255, 255, .025);
             overflow: hidden;
         }
 
@@ -888,7 +868,7 @@
             content: "";
             position: absolute;
             inset: 30px;
-            border: 1px dashed rgba(22,224,255,.16);
+            border: 1px dashed rgba(22, 224, 255, .16);
             border-radius: 50%;
             animation: rotate 30s linear infinite reverse;
         }
@@ -897,7 +877,7 @@
             position: relative;
             z-index: 2;
             width: 60%;
-            filter: drop-shadow(0 30px 50px rgba(0,0,0,.4));
+            filter: drop-shadow(0 30px 50px rgba(0, 0, 0, .4));
         }
 
         .about-badge {
@@ -908,12 +888,12 @@
             padding: 15px 18px;
             border: 1px solid var(--border-light);
             border-radius: 18px;
-            background: rgba(7,17,30,.78);
+            background: rgba(7, 17, 30, .78);
             backdrop-filter: blur(15px);
         }
 
         body.light-theme .about-badge {
-            background: rgba(255,255,255,.82);
+            background: rgba(255, 255, 255, .82);
         }
 
         .about-badge strong {
@@ -964,7 +944,7 @@
             place-items: center;
             border-radius: 10px;
             color: var(--primary);
-            background: rgba(22,224,255,.08);
+            background: rgba(22, 224, 255, .08);
         }
 
         .feature strong {
@@ -1005,13 +985,13 @@
             border-radius: 50%;
             top: -70px;
             right: -50px;
-            background: rgba(22,224,255,.1);
+            background: rgba(22, 224, 255, .1);
             filter: blur(25px);
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(22,224,255,.25);
+            border-color: rgba(22, 224, 255, .25);
             box-shadow: var(--shadow);
         }
 
@@ -1022,11 +1002,9 @@
             place-items: center;
             border-radius: 16px;
             color: var(--primary);
-            background: linear-gradient(
-                135deg,
-                rgba(22,224,255,.12),
-                rgba(118,87,255,.1)
-            );
+            background: linear-gradient(135deg,
+                    rgba(22, 224, 255, .12),
+                    rgba(118, 87, 255, .1));
             font-size: 25px;
             margin-bottom: 22px;
         }
@@ -1060,7 +1038,7 @@
             border: 1px solid var(--border);
             border-radius: 30px;
             overflow: hidden;
-            background: rgba(255,255,255,.025);
+            background: rgba(255, 255, 255, .025);
             box-shadow: var(--shadow);
         }
 
@@ -1081,7 +1059,7 @@
             bottom: 25px;
             padding: 17px 20px;
             border-radius: 17px;
-            background: rgba(5,15,27,.75);
+            background: rgba(5, 15, 27, .75);
             border: 1px solid var(--border-light);
             backdrop-filter: blur(15px);
         }
@@ -1111,11 +1089,9 @@
             padding: 40px;
             border-radius: 28px;
             background:
-                linear-gradient(
-                    145deg,
-                    rgba(22,224,255,.1),
-                    rgba(118,87,255,.08)
-                );
+                linear-gradient(145deg,
+                    rgba(22, 224, 255, .1),
+                    rgba(118, 87, 255, .08));
             border: 1px solid var(--border);
         }
 
@@ -1165,7 +1141,7 @@
             margin-bottom: 5px;
         }
 
-        .form-card > p {
+        .form-card>p {
             color: var(--text-muted);
             font-size: 12px;
             margin-bottom: 25px;
@@ -1200,7 +1176,7 @@
         .field textarea {
             width: 100%;
             border: 1px solid var(--border);
-            background: rgba(0,0,0,.16);
+            background: rgba(0, 0, 0, .16);
             color: var(--text);
             outline: none;
             border-radius: 12px;
@@ -1211,15 +1187,15 @@
         body.light-theme .field input,
         body.light-theme .field select,
         body.light-theme .field textarea {
-            background: rgba(0,0,0,.025);
+            background: rgba(0, 0, 0, .025);
         }
 
         .field input:focus,
         .field select:focus,
         .field textarea:focus {
-            border-color: rgba(22,224,255,.55);
+            border-color: rgba(22, 224, 255, .55);
             box-shadow:
-                0 0 0 4px rgba(22,224,255,.07);
+                0 0 0 4px rgba(22, 224, 255, .07);
         }
 
         .field textarea {
@@ -1270,7 +1246,7 @@
             padding: 10px 14px;
             border: 1px solid var(--border);
             border-radius: 12px;
-            background: rgba(255,255,255,.025);
+            background: rgba(255, 255, 255, .025);
         }
 
         .mini-stat strong {
@@ -1285,8 +1261,8 @@
         }
 
         .upload-zone {
-            border: 1.5px dashed rgba(22,224,255,.3);
-            background: rgba(22,224,255,.025);
+            border: 1.5px dashed rgba(22, 224, 255, .3);
+            background: rgba(22, 224, 255, .025);
             padding: 35px 20px;
             border-radius: 20px;
             text-align: center;
@@ -1296,7 +1272,7 @@
 
         .upload-zone.dragging,
         .upload-zone:hover {
-            background: rgba(22,224,255,.07);
+            background: rgba(22, 224, 255, .07);
             border-color: var(--primary);
         }
 
@@ -1328,7 +1304,7 @@
 
         .file-create input {
             border: 1px solid var(--border);
-            background: rgba(0,0,0,.14);
+            background: rgba(0, 0, 0, .14);
             color: var(--text);
             outline: none;
             padding: 13px;
@@ -1359,7 +1335,7 @@
         .search-box input {
             width: 100%;
             border: 1px solid var(--border);
-            background: rgba(0,0,0,.13);
+            background: rgba(0, 0, 0, .13);
             color: var(--text);
             outline: none;
             padding: 13px 13px 13px 42px;
@@ -1399,7 +1375,7 @@
         }
 
         tbody tr:hover {
-            background: rgba(255,255,255,.025);
+            background: rgba(255, 255, 255, .025);
         }
 
         .file-name {
@@ -1451,7 +1427,7 @@
             display: grid;
             place-items: center;
             border-radius: 20px;
-            background: rgba(22,224,255,.1);
+            background: rgba(22, 224, 255, .1);
             color: var(--primary);
             font-size: 30px;
             margin-bottom: 20px;
@@ -1461,7 +1437,7 @@
             font-size: 30px;
         }
 
-        .login-card > p {
+        .login-card>p {
             color: var(--text-muted);
             font-size: 12px;
             margin-bottom: 25px;
@@ -1472,7 +1448,7 @@
             margin-bottom: 14px;
         }
 
-        .login-field > i:first-child {
+        .login-field>i:first-child {
             position: absolute;
             left: 14px;
             top: 50%;
@@ -1484,7 +1460,7 @@
             width: 100%;
             padding: 14px 45px;
             border: 1px solid var(--border);
-            background: rgba(0,0,0,.14);
+            background: rgba(0, 0, 0, .14);
             color: var(--text);
             border-radius: 12px;
             outline: none;
@@ -1519,7 +1495,7 @@
             padding: 22px;
             border: 1px solid var(--border);
             border-radius: 20px;
-            background: rgba(255,255,255,.025);
+            background: rgba(255, 255, 255, .025);
         }
 
         .contact-item i {
@@ -1560,14 +1536,14 @@
             padding: 15px;
             border: 1px solid var(--border-light);
             border-radius: 15px;
-            background: rgba(7,17,30,.9);
+            background: rgba(7, 17, 30, .9);
             backdrop-filter: blur(20px);
             box-shadow: var(--shadow);
             animation: toastIn .35s ease forwards;
         }
 
         body.light-theme .toast {
-            background: rgba(255,255,255,.95);
+            background: rgba(255, 255, 255, .95);
         }
 
         .toast i {
@@ -1601,6 +1577,7 @@
                 opacity: 0;
                 transform: translateX(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -1618,7 +1595,7 @@
             display: none;
             place-items: center;
             padding: 20px;
-            background: rgba(0,0,0,.7);
+            background: rgba(0, 0, 0, .7);
             backdrop-filter: blur(10px);
         }
 
@@ -1644,6 +1621,7 @@
                 opacity: 0;
                 transform: scale(.95) translateY(15px);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1) translateY(0);
@@ -1680,7 +1658,7 @@
         footer {
             padding: 45px 0;
             border-top: 1px solid var(--border);
-            background: rgba(0,0,0,.15);
+            background: rgba(0, 0, 0, .15);
         }
 
         .footer-inner {
@@ -1711,9 +1689,9 @@
             display: grid;
             place-items: center;
             border-radius: 12px;
-            background: rgba(22,224,255,.08);
+            background: rgba(22, 224, 255, .08);
             color: var(--primary);
-            border: 1px solid rgba(22,224,255,.18);
+            border: 1px solid rgba(22, 224, 255, .18);
         }
 
         /* =========================================================
@@ -1760,10 +1738,13 @@
         }
 
         @keyframes loaderPulse {
-            0%,100% {
+
+            0%,
+            100% {
                 opacity: .5;
                 transform: scale(.95);
             }
+
             50% {
                 opacity: 1;
                 transform: scale(1);
@@ -1827,7 +1808,7 @@
             display: none;
             place-items: center;
             padding: 20px;
-            background: rgba(0,0,0,.72);
+            background: rgba(0, 0, 0, .72);
             backdrop-filter: blur(12px);
         }
 
@@ -1860,7 +1841,7 @@
             place-items: center;
             border-radius: 17px;
             color: var(--primary);
-            background: rgba(22,224,255,.1);
+            background: rgba(22, 224, 255, .1);
             font-size: 27px;
             margin-bottom: 16px;
         }
@@ -1869,7 +1850,7 @@
             font-size: 26px;
         }
 
-        .auth-modal-card > p {
+        .auth-modal-card>p {
             color: var(--text-muted);
             font-size: 12px;
             margin-top: 5px;
@@ -1886,15 +1867,15 @@
         .auth-status.error {
             display: block;
             color: #fff;
-            background: rgba(255,85,116,.12);
-            border: 1px solid rgba(255,85,116,.25);
+            background: rgba(255, 85, 116, .12);
+            border: 1px solid rgba(255, 85, 116, .25);
         }
 
         .auth-status.success {
             display: block;
             color: #fff;
-            background: rgba(37,214,149,.12);
-            border: 1px solid rgba(37,214,149,.25);
+            background: rgba(37, 214, 149, .12);
+            border: 1px solid rgba(37, 214, 149, .25);
         }
 
         .protected-note {
@@ -1904,9 +1885,9 @@
             gap: 9px;
             margin-top: 14px;
             padding: 12px 14px;
-            border: 1px solid rgba(22,224,255,.14);
+            border: 1px solid rgba(22, 224, 255, .14);
             border-radius: 12px;
-            background: rgba(22,224,255,.045);
+            background: rgba(22, 224, 255, .045);
             color: var(--text-secondary);
             font-size: 11px;
         }
@@ -1960,14 +1941,14 @@
                 padding: 25px;
                 flex-direction: column;
                 align-items: stretch;
-                background: rgba(5,15,27,.96);
+                background: rgba(5, 15, 27, .96);
                 backdrop-filter: blur(25px);
                 border-left: 1px solid var(--border);
                 transition: .4s ease;
             }
 
             body.light-theme .navlist {
-                background: rgba(255,255,255,.97);
+                background: rgba(255, 255, 255, .97);
             }
 
             .navlist.open {
@@ -2123,6 +2104,7 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
+
             *,
             *::before,
             *::after {
@@ -2137,1749 +2119,1529 @@
 
 <body>
 
-<!-- =========================================================
+    <!-- =========================================================
      PAGE LOADER
      ========================================================= -->
 
-<div class="page-loader" id="pageLoader">
-    <img
-        class="loader-logo"
-        src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
-        alt="Vistak"
-    >
-</div>
+    <div class="page-loader" id="pageLoader">
+        <img class="loader-logo"
+            src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
+            alt="Vistak">
+    </div>
 
-<!-- =========================================================
+    <!-- =========================================================
      HEADER
      ========================================================= -->
 
-<header id="header">
+    <header id="header">
 
-    <div class="header-inner">
+        <div class="header-inner">
 
-        <a href="#home" class="logo" aria-label="Vistak Home">
-            <img
-                src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
-                alt="Vistak Logo"
-            >
-        </a>
+            <a href="#home" class="logo" aria-label="Vistak Home">
+                <img src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
+                    alt="Vistak Logo">
+            </a>
 
-        <nav>
-            <ul class="navlist" id="navList">
+            <nav>
+                <ul class="navlist" id="navList">
 
-                <li>
-                    <a href="#home" class="nav-link active">
-                        <i class="bx bx-home-alt"></i>
-                        Home
-                    </a>
-                </li>
+                    <li>
+                        <a href="#home" class="nav-link active">
+                            <i class="bx bx-home-alt"></i>
+                            Home
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="#about" class="nav-link">
-                        <i class="bx bx-buildings"></i>
-                        About
-                    </a>
-                </li>
+                    <li>
+                        <a href="#about" class="nav-link">
+                            <i class="bx bx-buildings"></i>
+                            About
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="#services" class="nav-link">
-                        <i class="bx bx-grid-alt"></i>
-                        Services
-                    </a>
-                </li>
+                    <li>
+                        <a href="#services" class="nav-link">
+                            <i class="bx bx-grid-alt"></i>
+                            Services
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="#book" class="nav-link">
-                        <i class="bx bx-calendar-check"></i>
-                        Book
-                    </a>
-                </li>
+                    <li>
+                        <a href="#book" class="nav-link">
+                            <i class="bx bx-calendar-check"></i>
+                            Book
+                        </a>
+                    </li>
 
-                <li>
-                    <a href="#contact" class="nav-link">
-                        <i class="bx bx-message-rounded-dots"></i>
-                        Contact
-                    </a>
-                </li>
+                    <li>
+                        <a href="#contact" class="nav-link">
+                            <i class="bx bx-message-rounded-dots"></i>
+                            Contact
+                        </a>
+                    </li>
 
-                <li id="filesNavItem" style="display:none;">
-                    <a href="#files" class="nav-link" id="filesNavLink">
-                        <i class="bx bx-folder-open"></i>
-                        Files
-                    </a>
-                </li>
+                    <li id="filesNavItem" style="display:none;">
+                        <a href="#files" class="nav-link" id="filesNavLink">
+                            <i class="bx bx-folder-open"></i>
+                            Files
+                        </a>
+                    </li>
 
-                <li class="nav-auth">
-                    <a href="#" class="nav-link" id="authNavLink">
-                        <i class="bx bx-log-in-circle"></i>
-                        <span id="authNavText">Login</span>
-                    </a>
-                    <span class="auth-user" id="authUserLabel" hidden></span>
-                </li>
+                    <li class="nav-auth">
+                        <a href="#" class="nav-link" id="authNavLink">
+                            <i class="bx bx-log-in-circle"></i>
+                            <span id="authNavText">Login</span>
+                        </a>
+                        <span class="auth-user" id="authUserLabel" hidden></span>
+                    </li>
 
-            </ul>
-        </nav>
+                </ul>
+            </nav>
 
-        <div class="header-actions">
+            <div class="header-actions">
 
-            <button
-                class="icon-btn"
-                id="themeToggle"
-                aria-label="Toggle theme"
-                title="Toggle theme"
-            >
-                <i class="bx bx-moon"></i>
-            </button>
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <i class="bx bx-moon"></i>
+                </button>
 
-            <button
-                class="icon-btn"
-                id="menu-icon"
-                aria-label="Open menu"
-                title="Menu"
-            >
-                <i class="bx bx-menu"></i>
-            </button>
+                <button class="icon-btn" id="menu-icon" aria-label="Open menu" title="Menu">
+                    <i class="bx bx-menu"></i>
+                </button>
+
+            </div>
 
         </div>
 
-    </div>
+    </header>
 
-</header>
-
-<!-- =========================================================
+    <!-- =========================================================
      HERO
      ========================================================= -->
 
-<section class="hero" id="home">
+    <section class="hero" id="home">
 
-    <div class="hero-grid">
+        <div class="hero-grid">
 
-        <div class="hero-content reveal">
+            <div class="hero-content reveal">
 
-            <div class="hero-badge">
-                <span class="status-dot"></span>
-                Your global journey starts here
-            </div>
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
+                    Your global journey starts here
+                </div>
 
-            <h1>
-                Explore the world.
-                <br>
-                <span class="gradient">Expand your future.</span>
-            </h1>
+                <h1>
+                    Explore the world.
+                    <br>
+                    <span class="gradient">Expand your future.</span>
+                </h1>
 
-            <p class="hero-subtitle">
-                Premium travel, study abroad, immigration,
-                investment and consultancy solutions designed
-                around your goals.
-                <br><br>
-                <span class="typing" id="typingText">
-                    Study Abroad
-                </span>
-            </p>
+                <p class="hero-subtitle">
+                    Premium travel, study abroad, immigration,
+                    investment and consultancy solutions designed
+                    around your goals.
+                    <br><br>
+                    <span class="typing" id="typingText">
+                        Study Abroad
+                    </span>
+                </p>
 
-            <div class="hero-actions">
+                <div class="hero-actions">
 
-                <a href="#book" class="btn">
-                    <i class="bx bx-calendar"></i>
-                    Book Your Journey
-                </a>
+                    <a href="#book" class="btn">
+                        <i class="bx bx-calendar"></i>
+                        Book Your Journey
+                    </a>
 
-                <a href="#about" class="btn secondary">
-                    Discover Vistak
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
+                    <a href="#about" class="btn secondary">
+                        Discover Vistak
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
 
-            </div>
+                </div>
 
-            <div class="hero-email">
-                <i class="bx bx-envelope"></i>
-                <span>vistak_agency@hotmail.com</span>
-            </div>
+                <div class="hero-email">
+                    <i class="bx bx-envelope"></i>
+                    <span>vistak_agency@hotmail.com</span>
+                </div>
 
-            <div class="hero-socials">
+                <div class="hero-socials">
 
-                <a
-                    class="social"
-                    href="https://www.facebook.com/vistakagency/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                >
-                    <i class="bx bxl-facebook"></i>
-                </a>
+                    <a class="social" href="https://www.facebook.com/vistakagency/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
 
-                <a
-                    class="social"
-                    href="https://www.instagram.com/vistak_travel/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                >
-                    <i class="bx bxl-instagram"></i>
-                </a>
+                    <a class="social" href="https://www.instagram.com/vistak_travel/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
 
-                <a
-                    class="social"
-                    href="https://www.linkedin.com/company/vistak-legal-&-travel-agency"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                >
-                    <i class="bx bxl-linkedin"></i>
-                </a>
+                    <a class="social" href="https://www.linkedin.com/company/vistak-legal-&-travel-agency"
+                        target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
 
-            </div>
-
-        </div>
-
-        <div class="hero-visual reveal">
-
-            <div class="visual-orbit"></div>
-
-            <div class="hero-card">
-
-                <img
-                    src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
-                    alt="Vistak Global Travel"
-                >
-
-            </div>
-
-            <div class="floating-card floating-one">
-
-                <i class="bx bx-world"></i>
-
-                <div>
-                    <strong>Global Reach</strong>
-                    <span>Travel beyond borders</span>
                 </div>
 
             </div>
 
-            <div class="floating-card floating-two">
+            <div class="hero-visual reveal">
 
-                <i class="bx bx-check-shield"></i>
+                <div class="visual-orbit"></div>
 
-                <div>
-                    <strong>Trusted Service</strong>
-                    <span>Professional guidance</span>
+                <div class="hero-card">
+
+                    <img src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
+                        alt="Vistak Global Travel">
+
+                </div>
+
+                <div class="floating-card floating-one">
+
+                    <i class="bx bx-world"></i>
+
+                    <div>
+                        <strong>Global Reach</strong>
+                        <span>Travel beyond borders</span>
+                    </div>
+
+                </div>
+
+                <div class="floating-card floating-two">
+
+                    <i class="bx bx-check-shield"></i>
+
+                    <div>
+                        <strong>Trusted Service</strong>
+                        <span>Professional guidance</span>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<!-- =========================================================
+    <!-- =========================================================
      STATS
      ========================================================= -->
 
-<div class="stats reveal">
+    <div class="stats reveal">
 
-    <div class="stat">
-        <div class="stat-number" data-target="10">0+</div>
-        <div class="stat-label">Years Experience</div>
+        <div class="stat">
+            <div class="stat-number" data-target="10">0+</div>
+            <div class="stat-label">Years Experience</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number" data-target="150">0+</div>
+            <div class="stat-label">Projects Completed</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number" data-target="200">0+</div>
+            <div class="stat-label">Happy Clients</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-number" data-target="20">0+</div>
+            <div class="stat-label">Destinations</div>
+        </div>
+
     </div>
 
-    <div class="stat">
-        <div class="stat-number" data-target="150">0+</div>
-        <div class="stat-label">Projects Completed</div>
-    </div>
-
-    <div class="stat">
-        <div class="stat-number" data-target="200">0+</div>
-        <div class="stat-label">Happy Clients</div>
-    </div>
-
-    <div class="stat">
-        <div class="stat-number" data-target="20">0+</div>
-        <div class="stat-label">Destinations</div>
-    </div>
-
-</div>
-
-<!-- =========================================================
+    <!-- =========================================================
      ABOUT
      ========================================================= -->
 
-<section class="section" id="about">
+    <section class="section" id="about">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="about-grid">
+            <div class="about-grid">
 
-            <div class="about-visual reveal">
+                <div class="about-visual reveal">
 
-                <div class="about-image">
+                    <div class="about-image">
 
-                    <img
-                        src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
-                        alt="About Vistak"
-                    >
+                        <img src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
+                            alt="About Vistak">
 
-                    <div class="about-badge">
-                        <strong>2017</strong>
-                        <span>Founded in Lebanon</span>
+                        <div class="about-badge">
+                            <strong>2017</strong>
+                            <span>Founded in Lebanon</span>
+                        </div>
+
                     </div>
 
                 </div>
 
-            </div>
+                <div class="about-content reveal">
 
-            <div class="about-content reveal">
-
-                <div class="eyebrow">
-                    <i class="bx bx-sparkles"></i>
-                    About Vistak
-                </div>
-
-                <h2>
-                    A smarter way to
-                    <span>go global.</span>
-                </h2>
-
-                <p>
-                    Vistak was originated back in 2017 as a travel
-                    agency in Lebanon specializing in outbound tourism.
-                    Today, we provide a wider range of professional
-                    solutions covering tourism, investment, study abroad
-                    and immigration consultancy.
-                </p>
-
-                <p>
-                    Our philosophy is simple:
-                    <strong>Think globally, act locally.</strong>
-                    We focus on exceeding expectations, building
-                    long-term relationships and operating with integrity.
-                </p>
-
-                <div class="feature-list">
-
-                    <div class="feature">
-                        <i class="bx bx-check"></i>
-
-                        <div>
-                            <strong>Personalized Guidance</strong>
-                            <p>Solutions designed around your individual goals.</p>
-                        </div>
+                    <div class="eyebrow">
+                        <i class="bx bx-sparkles"></i>
+                        About Vistak
                     </div>
 
-                    <div class="feature">
-                        <i class="bx bx-check"></i>
+                    <h2>
+                        A smarter way to
+                        <span>go global.</span>
+                    </h2>
 
-                        <div>
-                            <strong>Professional Expertise</strong>
-                            <p>Experience across travel and international services.</p>
+                    <p>
+                        Vistak was originated back in 2017 as a travel
+                        agency in Lebanon specializing in outbound tourism.
+                        Today, we provide a wider range of professional
+                        solutions covering tourism, investment, study abroad
+                        and immigration consultancy.
+                    </p>
+
+                    <p>
+                        Our philosophy is simple:
+                        <strong>Think globally, act locally.</strong>
+                        We focus on exceeding expectations, building
+                        long-term relationships and operating with integrity.
+                    </p>
+
+                    <div class="feature-list">
+
+                        <div class="feature">
+                            <i class="bx bx-check"></i>
+
+                            <div>
+                                <strong>Personalized Guidance</strong>
+                                <p>Solutions designed around your individual goals.</p>
+                            </div>
                         </div>
+
+                        <div class="feature">
+                            <i class="bx bx-check"></i>
+
+                            <div>
+                                <strong>Professional Expertise</strong>
+                                <p>Experience across travel and international services.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <i class="bx bx-check"></i>
+
+                            <div>
+                                <strong>Long-Term Partnership</strong>
+                                <p>We build relationships beyond a single transaction.</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="feature">
-                        <i class="bx bx-check"></i>
-
-                        <div>
-                            <strong>Long-Term Partnership</strong>
-                            <p>We build relationships beyond a single transaction.</p>
-                        </div>
+                    <div style="margin-top:28px;">
+                        <a href="#contact" class="btn">
+                            Talk To Our Team
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
                     </div>
 
-                </div>
-
-                <div style="margin-top:28px;">
-                    <a href="#contact" class="btn">
-                        Talk To Our Team
-                        <i class="bx bx-right-arrow-alt"></i>
-                    </a>
                 </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<!-- =========================================================
+    <!-- =========================================================
      SERVICES
      ========================================================= -->
 
-<section class="section" id="services">
+    <section class="section" id="services">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="section-header reveal">
+            <div class="section-header reveal">
 
-            <div class="eyebrow">
-                <i class="bx bx-layer"></i>
-                What We Do
+                <div class="eyebrow">
+                    <i class="bx bx-layer"></i>
+                    What We Do
+                </div>
+
+                <h2 class="section-title">
+                    Services built for your
+                    <span>next chapter.</span>
+                </h2>
+
+                <p class="section-description">
+                    From planning your next holiday to building your
+                    international future, our team helps you navigate
+                    every step.
+                </p>
+
             </div>
 
-            <h2 class="section-title">
-                Services built for your
-                <span>next chapter.</span>
-            </h2>
+            <div class="services-grid">
 
-            <p class="section-description">
-                From planning your next holiday to building your
-                international future, our team helps you navigate
-                every step.
-            </p>
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="bx bx-plane-alt"></i>
+                    </div>
 
-        </div>
+                    <h3>Travel & Tourism</h3>
 
-        <div class="services-grid">
+                    <p>
+                        Personalized travel planning and outbound tourism
+                        solutions for unforgettable experiences.
+                    </p>
 
-            <article class="service-card reveal">
-                <div class="service-icon">
-                    <i class="bx bx-plane-alt"></i>
-                </div>
+                    <a href="#book" class="service-link">
+                        Plan a trip
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </article>
 
-                <h3>Travel & Tourism</h3>
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="bx bx-book-open"></i>
+                    </div>
 
-                <p>
-                    Personalized travel planning and outbound tourism
-                    solutions for unforgettable experiences.
-                </p>
+                    <h3>Study Abroad</h3>
 
-                <a href="#book" class="service-link">
-                    Plan a trip
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-            </article>
+                    <p>
+                        Discover international education opportunities
+                        and receive guidance throughout your journey.
+                    </p>
 
-            <article class="service-card reveal">
-                <div class="service-icon">
-                    <i class="bx bx-book-open"></i>
-                </div>
+                    <a href="#contact" class="service-link">
+                        Learn more
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </article>
 
-                <h3>Study Abroad</h3>
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="bx bx-globe"></i>
+                    </div>
 
-                <p>
-                    Discover international education opportunities
-                    and receive guidance throughout your journey.
-                </p>
+                    <h3>Immigration</h3>
 
-                <a href="#contact" class="service-link">
-                    Learn more
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-            </article>
+                    <p>
+                        Professional consultancy to help you understand
+                        your international relocation options.
+                    </p>
 
-            <article class="service-card reveal">
-                <div class="service-icon">
-                    <i class="bx bx-globe"></i>
-                </div>
+                    <a href="#contact" class="service-link">
+                        Consult us
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </article>
 
-                <h3>Immigration</h3>
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="bx bx-line-chart"></i>
+                    </div>
 
-                <p>
-                    Professional consultancy to help you understand
-                    your international relocation options.
-                </p>
+                    <h3>Investment</h3>
 
-                <a href="#contact" class="service-link">
-                    Consult us
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-            </article>
+                    <p>
+                        Explore international opportunities and make
+                        informed decisions for your future.
+                    </p>
 
-            <article class="service-card reveal">
-                <div class="service-icon">
-                    <i class="bx bx-line-chart"></i>
-                </div>
+                    <a href="#contact" class="service-link">
+                        Get started
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </article>
 
-                <h3>Investment</h3>
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="bx bx-family"></i>
+                    </div>
 
-                <p>
-                    Explore international opportunities and make
-                    informed decisions for your future.
-                </p>
+                    <h3>Family Visit</h3>
 
-                <a href="#contact" class="service-link">
-                    Get started
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-            </article>
+                    <p>
+                        Support and guidance for family visit travel
+                        planning and related documentation.
+                    </p>
 
-            <article class="service-card reveal">
-                <div class="service-icon">
-                    <i class="bx bx-family"></i>
-                </div>
+                    <a href="#book" class="service-link">
+                        Book now
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </article>
 
-                <h3>Family Visit</h3>
+                <article class="service-card reveal">
+                    <div class="service-icon">
+                        <i class="bx bx-support"></i>
+                    </div>
 
-                <p>
-                    Support and guidance for family visit travel
-                    planning and related documentation.
-                </p>
+                    <h3>Consultancy</h3>
 
-                <a href="#book" class="service-link">
-                    Book now
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-            </article>
+                    <p>
+                        One-on-one consultations to identify the right
+                        path for your travel and international goals.
+                    </p>
 
-            <article class="service-card reveal">
-                <div class="service-icon">
-                    <i class="bx bx-support"></i>
-                </div>
+                    <a href="#contact" class="service-link">
+                        Contact us
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+                </article>
 
-                <h3>Consultancy</h3>
-
-                <p>
-                    One-on-one consultations to identify the right
-                    path for your travel and international goals.
-                </p>
-
-                <a href="#contact" class="service-link">
-                    Contact us
-                    <i class="bx bx-right-arrow-alt"></i>
-                </a>
-            </article>
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<!-- =========================================================
+    <!-- =========================================================
      BRANCHES
      ========================================================= -->
 
-<section class="section" id="branches">
+    <section class="section" id="branches">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="section-header reveal">
+            <div class="section-header reveal">
 
-            <div class="eyebrow">
-                <i class="bx bx-map"></i>
-                Our Presence
+                <div class="eyebrow">
+                    <i class="bx bx-map"></i>
+                    Our Presence
+                </div>
+
+                <h2 class="section-title">
+                    Meet us
+                    <span>wherever you are.</span>
+                </h2>
+
+                <p class="section-description">
+                    Our network is designed to bring professional
+                    international services closer to you.
+                </p>
+
             </div>
 
-            <h2 class="section-title">
-                Meet us
-                <span>wherever you are.</span>
-            </h2>
+            <div class="branches-wrap reveal">
 
-            <p class="section-description">
-                Our network is designed to bring professional
-                international services closer to you.
-            </p>
+                <img src="https://vistak.co/wp-content/uploads/2022/11/Frame-1.jpg" alt="Vistak Branches"
+                    loading="lazy">
+
+                <div class="branches-overlay">
+                    <strong>Vistak Branch Network</strong>
+                    <span>Connecting people with opportunities worldwide.</span>
+                </div>
+
+            </div>
 
         </div>
 
-        <div class="branches-wrap reveal">
+    </section>
 
-            <img
-                src="https://vistak.co/wp-content/uploads/2022/11/Frame-1.jpg"
-                alt="Vistak Branches"
-                loading="lazy"
-            >
-
-            <div class="branches-overlay">
-                <strong>Vistak Branch Network</strong>
-                <span>Connecting people with opportunities worldwide.</span>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================================================
+    <!-- =========================================================
      BOOKING
      ========================================================= -->
 
-<section class="section" id="book">
+    <section class="section" id="book">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="section-header reveal">
-
-            <div class="eyebrow">
-                <i class="bx bx-calendar-heart"></i>
-                Start Your Journey
-            </div>
-
-            <h2 class="section-title">
-                Ready to
-                <span>travel?</span>
-            </h2>
-
-            <p class="section-description">
-                Complete the form and our team will get back to you
-                with the next steps.
-            </p>
-
-        </div>
-
-        <div class="form-layout">
-
-            <div class="form-intro reveal">
+            <div class="section-header reveal">
 
                 <div class="eyebrow">
-                    <i class="bx bx-paper-plane"></i>
-                    Booking Request
+                    <i class="bx bx-calendar-heart"></i>
+                    Start Your Journey
                 </div>
 
-                <h3>
-                    Your next destination
-                    is closer than you think.
-                </h3>
+                <h2 class="section-title">
+                    Ready to
+                    <span>travel?</span>
+                </h2>
 
-                <p>
-                    Tell us what you need and let our team help you
-                    organize your journey.
+                <p class="section-description">
+                    Complete the form and our team will get back to you
+                    with the next steps.
                 </p>
-
-                <div class="form-points">
-
-                    <div class="form-point">
-                        <i class="bx bx-check-circle"></i>
-                        <span>Professional travel assistance</span>
-                    </div>
-
-                    <div class="form-point">
-                        <i class="bx bx-check-circle"></i>
-                        <span>Personalized recommendations</span>
-                    </div>
-
-                    <div class="form-point">
-                        <i class="bx bx-check-circle"></i>
-                        <span>Fast response from our team</span>
-                    </div>
-
-                    <div class="form-point">
-                        <i class="bx bx-check-circle"></i>
-                        <span>Support throughout your journey</span>
-                    </div>
-
-                </div>
 
             </div>
 
-            <div class="form-card reveal">
+            <div class="form-layout">
 
-                <h3>Book Now</h3>
+                <div class="form-intro reveal">
 
-                <p>
-                    Please provide accurate information.
-                </p>
+                    <div class="eyebrow">
+                        <i class="bx bx-paper-plane"></i>
+                        Booking Request
+                    </div>
 
-                <form
-                    action="https://api.web3forms.com/submit"
-                    method="POST"
-                    id="bookingForm"
-                >
+                    <h3>
+                        Your next destination
+                        is closer than you think.
+                    </h3>
 
-                    <!-- Replace this with your own Web3Forms key -->
-                    <input
-                        type="hidden"
-                        name="access_key"
-                        value="YOUR_WEB3FORMS_ACCESS_KEY"
-                    >
+                    <p>
+                        Tell us what you need and let our team help you
+                        organize your journey.
+                    </p>
 
-                    <input
-                        type="hidden"
-                        name="subject"
-                        value="New Vistak Booking Request"
-                    >
+                    <div class="form-points">
 
-                    <input
-                        type="hidden"
-                        name="from_name"
-                        value="Vistak Website"
-                    >
-
-                    <div class="form-grid">
-
-                        <div class="field">
-                            <label for="first-name">
-                                First Name
-                            </label>
-
-                            <input
-                                type="text"
-                                id="first-name"
-                                name="first_name"
-                                placeholder="John"
-                                autocomplete="given-name"
-                                required
-                            >
+                        <div class="form-point">
+                            <i class="bx bx-check-circle"></i>
+                            <span>Professional travel assistance</span>
                         </div>
 
-                        <div class="field">
-                            <label for="last-name">
-                                Last Name
-                            </label>
-
-                            <input
-                                type="text"
-                                id="last-name"
-                                name="last_name"
-                                placeholder="Doe"
-                                autocomplete="family-name"
-                                required
-                            >
+                        <div class="form-point">
+                            <i class="bx bx-check-circle"></i>
+                            <span>Personalized recommendations</span>
                         </div>
 
-                        <div class="field">
-                            <label for="email">
-                                Email
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="john@example.com"
-                                autocomplete="email"
-                                required
-                            >
+                        <div class="form-point">
+                            <i class="bx bx-check-circle"></i>
+                            <span>Fast response from our team</span>
                         </div>
 
-                        <div class="field">
-                            <label for="phone">
-                                Phone
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="phone"
-                                name="phone"
-                                placeholder="+961..."
-                                autocomplete="tel"
-                            >
-                        </div>
-
-                        <div class="field">
-                            <label for="destination">
-                                Destination
-                            </label>
-
-                            <select
-                                name="destination"
-                                id="destination"
-                                required
-                            >
-                                <option value="">
-                                    Select destination
-                                </option>
-                                <option value="Paris">Paris</option>
-                                <option value="London">London</option>
-                                <option value="New York">New York</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Canada">Canada</option>
-                                <option value="USA">USA</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="field">
-                            <label for="trip">
-                                Trip Type
-                            </label>
-
-                            <select
-                                name="trip_type"
-                                id="trip"
-                                required
-                            >
-                                <option value="">
-                                    Select type
-                                </option>
-                                <option value="One Way">
-                                    One Way
-                                </option>
-                                <option value="Round Trip">
-                                    Round Trip
-                                </option>
-                            </select>
-                        </div>
-
-                        <div class="field">
-                            <label for="date">
-                                Travel Date
-                            </label>
-
-                            <input
-                                type="date"
-                                name="travel_date"
-                                id="date"
-                                required
-                            >
-                        </div>
-
-                        <div class="field">
-                            <label for="numPassengers">
-                                Passengers
-                            </label>
-
-                            <input
-                                type="number"
-                                name="passengers"
-                                id="numPassengers"
-                                min="1"
-                                max="10"
-                                value="1"
-                                required
-                            >
-                        </div>
-
-                        <div class="field full">
-
-                            <label for="bookingNotes">
-                                Additional Notes
-                            </label>
-
-                            <textarea
-                                id="bookingNotes"
-                                name="notes"
-                                placeholder="Tell us anything important about your trip..."
-                            ></textarea>
-
+                        <div class="form-point">
+                            <i class="bx bx-check-circle"></i>
+                            <span>Support throughout your journey</span>
                         </div>
 
                     </div>
 
-                    <div class="form-footer">
+                </div>
 
-                        <button
-                            type="submit"
-                            class="btn full"
-                            id="bookingSubmit"
-                        >
-                            <i class="bx bx-paper-plane"></i>
-                            Confirm Booking Request
-                        </button>
+                <div class="form-card reveal">
 
-                    </div>
+                    <h3>Book Now</h3>
 
-                </form>
+                    <p>
+                        Please provide accurate information.
+                    </p>
+
+                    <form action="https://api.web3forms.com/submit" method="POST" id="bookingForm">
+
+                        <!-- Replace this with your own Web3Forms key -->
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+
+                        <input type="hidden" name="subject" value="New Vistak Booking Request">
+
+                        <input type="hidden" name="from_name" value="Vistak Website">
+
+                        <div class="form-grid">
+
+                            <div class="field">
+                                <label for="first-name">
+                                    First Name
+                                </label>
+
+                                <input type="text" id="first-name" name="first_name" placeholder="John"
+                                    autocomplete="given-name" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="last-name">
+                                    Last Name
+                                </label>
+
+                                <input type="text" id="last-name" name="last_name" placeholder="Doe"
+                                    autocomplete="family-name" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input type="email" id="email" name="email" placeholder="john@example.com"
+                                    autocomplete="email" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="phone">
+                                    Phone
+                                </label>
+
+                                <input type="tel" id="phone" name="phone" placeholder="+961..." autocomplete="tel">
+                            </div>
+
+                            <div class="field">
+                                <label for="destination">
+                                    Destination
+                                </label>
+
+                                <select name="destination" id="destination" required>
+                                    <option value="">
+                                        Select destination
+                                    </option>
+                                    <option value="Paris">Paris</option>
+                                    <option value="London">London</option>
+                                    <option value="New York">New York</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="trip">
+                                    Trip Type
+                                </label>
+
+                                <select name="trip_type" id="trip" required>
+                                    <option value="">
+                                        Select type
+                                    </option>
+                                    <option value="One Way">
+                                        One Way
+                                    </option>
+                                    <option value="Round Trip">
+                                        Round Trip
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="date">
+                                    Travel Date
+                                </label>
+
+                                <input type="date" name="travel_date" id="date" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="numPassengers">
+                                    Passengers
+                                </label>
+
+                                <input type="number" name="passengers" id="numPassengers" min="1" max="10" value="1"
+                                    required>
+                            </div>
+
+                            <div class="field full">
+
+                                <label for="bookingNotes">
+                                    Additional Notes
+                                </label>
+
+                                <textarea id="bookingNotes" name="notes"
+                                    placeholder="Tell us anything important about your trip..."></textarea>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-footer">
+
+                            <button type="submit" class="btn full" id="bookingSubmit">
+                                <i class="bx bx-paper-plane"></i>
+                                Confirm Booking Request
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<!-- =========================================================
+    <!-- =========================================================
      CONTACT
      ========================================================= -->
 
-<section class="section" id="contact">
+    <section class="section" id="contact">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="section-header reveal">
+            <div class="section-header reveal">
 
-            <div class="eyebrow">
-                <i class="bx bx-conversation"></i>
-                Contact
-            </div>
-
-            <h2 class="section-title">
-                Let's talk about your
-                <span>next move.</span>
-            </h2>
-
-            <p class="section-description">
-                Have a question? Our team is ready to help.
-            </p>
-
-        </div>
-
-        <div class="contact-grid">
-
-            <div class="contact-info reveal">
-
-                <div class="contact-item">
-                    <i class="bx bx-envelope"></i>
-                    <h4>Email</h4>
-                    <p>vistak_agency@hotmail.com</p>
+                <div class="eyebrow">
+                    <i class="bx bx-conversation"></i>
+                    Contact
                 </div>
 
-                <div class="contact-item">
-                    <i class="bx bx-world"></i>
-                    <h4>Website</h4>
-                    <p>vistak.co</p>
-                </div>
+                <h2 class="section-title">
+                    Let's talk about your
+                    <span>next move.</span>
+                </h2>
 
-                <div class="contact-item">
-                    <i class="bx bx-support"></i>
-                    <h4>Support</h4>
-                    <p>
-                        Contact our team for travel,
-                        study and immigration consultancy.
-                    </p>
-                </div>
-
-                <div class="contact-item">
-                    <i class="bx bx-time-five"></i>
-                    <h4>Response</h4>
-                    <p>
-                        We will review your message
-                        and contact you as soon as possible.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="form-card reveal">
-
-                <h3>Send us a message</h3>
-
-                <p>
-                    Fill out the form below and we'll be in touch.
+                <p class="section-description">
+                    Have a question? Our team is ready to help.
                 </p>
 
-                <form
-                    action="https://api.web3forms.com/submit"
-                    method="POST"
-                    id="contactForm"
-                >
+            </div>
 
-                    <!-- Replace this with your own Web3Forms key -->
-                    <input
-                        type="hidden"
-                        name="access_key"
-                        value="YOUR_WEB3FORMS_ACCESS_KEY"
-                    >
+            <div class="contact-grid">
 
-                    <input
-                        type="hidden"
-                        name="subject"
-                        value="New Vistak Contact Message"
-                    >
+                <div class="contact-info reveal">
 
-                    <input
-                        type="hidden"
-                        name="from_name"
-                        value="Vistak Website"
-                    >
-
-                    <div class="form-grid">
-
-                        <div class="field">
-                            <label for="contact_name">
-                                Full Name
-                            </label>
-
-                            <input
-                                type="text"
-                                name="name"
-                                id="contact_name"
-                                placeholder="Your name"
-                                required
-                            >
-                        </div>
-
-                        <div class="field">
-                            <label for="contact_email">
-                                Email
-                            </label>
-
-                            <input
-                                type="email"
-                                name="email"
-                                id="contact_email"
-                                placeholder="you@example.com"
-                                required
-                            >
-                        </div>
-
-                        <div class="field">
-                            <label for="contact_phone">
-                                Phone
-                            </label>
-
-                            <input
-                                type="tel"
-                                name="phone"
-                                id="contact_phone"
-                                placeholder="+961..."
-                            >
-                        </div>
-
-                        <div class="field">
-                            <label for="contact_address">
-                                Address
-                            </label>
-
-                            <input
-                                type="text"
-                                name="address"
-                                id="contact_address"
-                                placeholder="Your address"
-                            >
-                        </div>
-
-                        <div class="field full">
-
-                            <label for="contact_message">
-                                Message
-                            </label>
-
-                            <textarea
-                                name="message"
-                                id="contact_message"
-                                placeholder="How can we help you?"
-                                required
-                            ></textarea>
-
-                        </div>
-
+                    <div class="contact-item">
+                        <i class="bx bx-envelope"></i>
+                        <h4>Email</h4>
+                        <p>vistak_agency@hotmail.com</p>
                     </div>
 
-                    <div class="form-footer">
-
-                        <button
-                            type="submit"
-                            class="btn full"
-                            id="contactSubmit"
-                        >
-                            <i class="bx bx-send"></i>
-                            Send Message
-                        </button>
-
+                    <div class="contact-item">
+                        <i class="bx bx-world"></i>
+                        <h4>Website</h4>
+                        <p>vistak.co</p>
                     </div>
 
-                </form>
+                    <div class="contact-item">
+                        <i class="bx bx-support"></i>
+                        <h4>Support</h4>
+                        <p>
+                            Contact our team for travel,
+                            study and immigration consultancy.
+                        </p>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="bx bx-time-five"></i>
+                        <h4>Response</h4>
+                        <p>
+                            We will review your message
+                            and contact you as soon as possible.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="form-card reveal">
+
+                    <h3>Send us a message</h3>
+
+                    <p>
+                        Fill out the form below and we'll be in touch.
+                    </p>
+
+                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+
+                        <!-- Replace this with your own Web3Forms key -->
+                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+
+                        <input type="hidden" name="subject" value="New Vistak Contact Message">
+
+                        <input type="hidden" name="from_name" value="Vistak Website">
+
+                        <div class="form-grid">
+
+                            <div class="field">
+                                <label for="contact_name">
+                                    Full Name
+                                </label>
+
+                                <input type="text" name="name" id="contact_name" placeholder="Your name" required>
+                            </div>
+
+                            <div class="field">
+                                <label for="contact_email">
+                                    Email
+                                </label>
+
+                                <input type="email" name="email" id="contact_email" placeholder="you@example.com"
+                                    required>
+                            </div>
+
+                            <div class="field">
+                                <label for="contact_phone">
+                                    Phone
+                                </label>
+
+                                <input type="tel" name="phone" id="contact_phone" placeholder="+961...">
+                            </div>
+
+                            <div class="field">
+                                <label for="contact_address">
+                                    Address
+                                </label>
+
+                                <input type="text" name="address" id="contact_address" placeholder="Your address">
+                            </div>
+
+                            <div class="field full">
+
+                                <label for="contact_message">
+                                    Message
+                                </label>
+
+                                <textarea name="message" id="contact_message" placeholder="How can we help you?"
+                                    required></textarea>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-footer">
+
+                            <button type="submit" class="btn full" id="contactSubmit">
+                                <i class="bx bx-send"></i>
+                                Send Message
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<!-- =========================================================
+    <!-- =========================================================
      FILE MANAGER
      ========================================================= -->
 
-<section class="section auth-hidden" id="files" aria-hidden="true">
+    <section class="section auth-hidden" id="files" aria-hidden="true">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="section-header reveal">
+            <div class="section-header reveal">
 
-            <div class="eyebrow">
-                <i class="bx bx-folder"></i>
-                Document Center
-            </div>
-
-            <h2 class="section-title">
-                Your files,
-                <span>organized.</span>
-            </h2>
-
-            <p class="section-description">
-                Manage your documents locally in your browser.
-            </p>
-            <div class="protected-note">
-                <div>
-                    <i class="bx bx-lock-alt"></i>
-                    <span>Private area — Logged in successfully.</span>
-                </div>
-                <button class="btn danger small" id="logoutInPageBtn" type="button">
-                    <i class="bx bx-log-out"></i> Logout
-                </button>
-            </div>
-
-        </div>
-
-        <div class="file-manager reveal">
-
-            <div class="file-manager-top">
-
-                <div>
-                    <h3>File Management</h3>
-                    <p>
-                        Files are stored in your browser's local storage.
-                    </p>
+                <div class="eyebrow">
+                    <i class="bx bx-folder"></i>
+                    Document Center
                 </div>
 
-                <div class="file-stats">
+                <h2 class="section-title">
+                    Your files,
+                    <span>organized.</span>
+                </h2>
 
-                    <div class="mini-stat">
-                        <strong id="fileCount">0</strong>
-                        <span>FILES</span>
-                    </div>
-
-                    <div class="mini-stat">
-                        <strong id="imageCount">0</strong>
-                        <span>IMAGES</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div
-                class="upload-zone"
-                id="uploadZone"
-            >
-
-                <i class="bx bx-cloud-upload"></i>
-
-                <h4>
-                    Drop your file here
-                </h4>
-
-                <p>
-                    or click to browse your device
+                <p class="section-description">
+                    Manage your documents locally in your browser.
                 </p>
-
-                <input
-                    type="file"
-                    id="fileInput"
-                >
-
-            </div>
-
-            <div class="file-create">
-
-                <input
-                    type="text"
-                    id="title"
-                    placeholder="Enter a title for the file..."
-                >
-
-                <button
-                    class="btn"
-                    id="createFileBtn"
-                    type="button"
-                >
-                    <i class="bx bx-plus"></i>
-                    Add File
-                </button>
+                <div class="protected-note">
+                    <div>
+                        <i class="bx bx-lock-alt"></i>
+                        <span>Private area — Logged in successfully.</span>
+                    </div>
+                    <button class="btn danger small" id="logoutInPageBtn" type="button">
+                        <i class="bx bx-log-out"></i> Logout
+                    </button>
+                </div>
 
             </div>
 
-            <div class="file-toolbar">
+            <div class="file-manager reveal">
 
-                <div class="search-box">
+                <div class="file-manager-top">
 
-                    <i class="bx bx-search"></i>
+                    <div>
+                        <h3>File Management</h3>
+                        <p>
+                            Files are stored in your browser's local storage.
+                        </p>
+                    </div>
 
-                    <input
-                        type="search"
-                        id="search"
-                        placeholder="Search files..."
-                    >
+                    <div class="file-stats">
+
+                        <div class="mini-stat">
+                            <strong id="fileCount">0</strong>
+                            <span>FILES</span>
+                        </div>
+
+                        <div class="mini-stat">
+                            <strong id="imageCount">0</strong>
+                            <span>IMAGES</span>
+                        </div>
+
+                    </div>
 
                 </div>
 
-                <button
-                    class="btn danger small"
-                    id="deleteAllBtn"
-                    type="button"
-                >
-                    <i class="bx bx-trash"></i>
-                    Delete All
-                </button>
+                <div class="upload-zone" id="uploadZone">
 
-            </div>
+                    <i class="bx bx-cloud-upload"></i>
 
-            <div class="table-wrapper">
+                    <h4>
+                        Drop your file here
+                    </h4>
 
-                <table>
+                    <p>
+                        or click to browse your device
+                    </p>
 
-                    <thead>
+                    <input type="file" id="fileInput">
 
-                        <tr>
-                            <th>File</th>
-                            <th>Type</th>
-                            <th>Date</th>
-                            <th>Actions</th>
-                        </tr>
+                </div>
 
-                    </thead>
+                <div class="file-create">
 
-                    <tbody id="tbody"></tbody>
+                    <input type="text" id="title" placeholder="Enter a title for the file...">
 
-                </table>
+                    <button class="btn" id="createFileBtn" type="button">
+                        <i class="bx bx-plus"></i>
+                        Add File
+                    </button>
 
-                <div
-                    class="empty-state"
-                    id="emptyState"
-                >
-                    <i class="bx bx-folder-open"></i>
-                    No files yet.
+                </div>
+
+                <div class="file-toolbar">
+
+                    <div class="search-box">
+
+                        <i class="bx bx-search"></i>
+
+                        <input type="search" id="search" placeholder="Search files...">
+
+                    </div>
+
+                    <button class="btn danger small" id="deleteAllBtn" type="button">
+                        <i class="bx bx-trash"></i>
+                        Delete All
+                    </button>
+
+                </div>
+
+                <div class="table-wrapper">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>File</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tbody"></tbody>
+
+                    </table>
+
+                    <div class="empty-state" id="emptyState">
+                        <i class="bx bx-folder-open"></i>
+                        No files yet.
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-
-<!-- =========================================================
+    <!-- =========================================================
      LOGIN ACCESS
      Login is intentionally available from the navigation bar only.
      ========================================================= -->
 
-<section class="section" id="loginInfo" style="display:none;">
-    <div class="container">
-        <div class="login-wrapper">
-            <div class="login-card">
-                <div class="login-icon">
-                    <i class="bx bx-shield-quarter"></i>
+    <section class="section" id="loginInfo" style="display:none;">
+        <div class="container">
+            <div class="login-wrapper">
+                <div class="login-card">
+                    <div class="login-icon">
+                        <i class="bx bx-shield-quarter"></i>
+                    </div>
+                    <h2>Private Portal</h2>
+                    <p>
+                        Login is available from the navigation bar.
+                        Once authenticated, the Files area will become available.
+                    </p>
                 </div>
-                <h2>Private Portal</h2>
-                <p>
-                    Login is available from the navigation bar.
-                    Once authenticated, the Files area will become available.
-                </p>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- =========================================================
+    <!-- =========================================================
      FOOTER
      ========================================================= -->
 
-<footer>
+    <footer>
 
-    <div class="container footer-inner">
+        <div class="container footer-inner">
 
-        <div class="footer-brand">
+            <div class="footer-brand">
 
-            <img
-                src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
-                alt="Vistak"
-            >
+                <img src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
+                    alt="Vistak">
 
-            <p>
-                Travel • Study • Immigration • Investment
-            </p>
+                <p>
+                    Travel • Study • Immigration • Investment
+                </p>
+
+            </div>
+
+            <div class="footer-copy">
+                © <span id="year"></span> Vistak. All rights reserved.
+            </div>
+
+            <a href="#home" class="back-top" aria-label="Back to top">
+                <i class="bx bx-up-arrow-alt"></i>
+            </a>
 
         </div>
 
-        <div class="footer-copy">
-            © <span id="year"></span> Vistak. All rights reserved.
-        </div>
+    </footer>
 
-        <a
-            href="#home"
-            class="back-top"
-            aria-label="Back to top"
-        >
-            <i class="bx bx-up-arrow-alt"></i>
-        </a>
-
-    </div>
-
-</footer>
-
-<!-- =========================================================
+    <!-- =========================================================
      TOAST CONTAINER
      ========================================================= -->
 
-<div
-    class="toast-container"
-    id="toastContainer"
-    aria-live="polite"
-></div>
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
-<!-- =========================================================
+    <!-- =========================================================
      LOGIN MODAL
      ========================================================= -->
 
-<div
-    class="auth-modal"
-    id="authModal"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="authModalTitle"
->
-    <div class="auth-modal-card">
-        <div class="auth-modal-head">
-            <div>
-                <div class="auth-modal-icon">
-                    <i class="bx bx-lock-alt"></i>
+    <div class="auth-modal" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+        <div class="auth-modal-card">
+            <div class="auth-modal-head">
+                <div>
+                    <div class="auth-modal-icon">
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <h3 id="authModalTitle">Private Login</h3>
+                    <p>Sign in to access the protected Files area.</p>
                 </div>
-                <h3 id="authModalTitle">Private Login</h3>
-                <p>Sign in to access the protected Files area.</p>
-            </div>
 
-            <button
-                class="icon-btn"
-                id="authModalClose"
-                type="button"
-                aria-label="Close login"
-            >
-                <i class="bx bx-x"></i>
-            </button>
-        </div>
-
-        <form id="loginForm">
-            <div class="login-field">
-                <i class="bx bx-user"></i>
-                <input
-                    type="text"
-                    id="username"
-                    placeholder="Username"
-                    autocomplete="username"
-                    required
-                >
-            </div>
-
-            <div class="login-field">
-                <i class="bx bx-lock"></i>
-                <input
-                    type="password"
-                    id="password"
-                    placeholder="Password"
-                    autocomplete="current-password"
-                    required
-                >
-
-                <button
-                    type="button"
-                    class="password-toggle"
-                    id="passwordToggle"
-                    aria-label="Show password"
-                >
-                    <i class="bx bx-show"></i>
+                <button class="icon-btn" id="authModalClose" type="button" aria-label="Close login">
+                    <i class="bx bx-x"></i>
                 </button>
             </div>
 
-            <button type="submit" class="btn full">
-                <i class="bx bx-log-in"></i>
-                Sign In
-            </button>
+            <form id="loginForm">
+                <div class="login-field">
+                    <i class="bx bx-user"></i>
+                    <input type="text" id="username" placeholder="Username" autocomplete="username" required>
+                </div>
 
-            <div class="auth-status" id="authStatus"></div>
-        </form>
+                <div class="login-field">
+                    <i class="bx bx-lock"></i>
+                    <input type="password" id="password" placeholder="Password" autocomplete="current-password"
+                        required>
+
+                    <button type="button" class="password-toggle" id="passwordToggle" aria-label="Show password">
+                        <i class="bx bx-show"></i>
+                    </button>
+                </div>
+
+                <button type="submit" class="btn full">
+                    <i class="bx bx-log-in"></i>
+                    Sign In
+                </button>
+
+                <div class="auth-status" id="authStatus"></div>
+            </form>
+        </div>
     </div>
-</div>
 
-<!-- =========================================================
+    <!-- =========================================================
      PREVIEW MODAL
      ========================================================= -->
 
-<div
-    class="modal"
-    id="previewModal"
-    role="dialog"
-    aria-modal="true"
-    aria-label="File Preview"
->
+    <div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-label="File Preview">
 
-    <div class="modal-content">
+        <div class="modal-content">
 
-        <button
-            class="icon-btn modal-close"
-            id="modalClose"
-            type="button"
-        >
-            <i class="bx bx-x"></i>
-        </button>
+            <button class="icon-btn modal-close" id="modalClose" type="button">
+                <i class="bx bx-x"></i>
+            </button>
 
-        <h3 id="previewTitle">
-            File Preview
-        </h3>
+            <h3 id="previewTitle">
+                File Preview
+            </h3>
 
-        <div id="previewContent"></div>
+            <div id="previewContent"></div>
+
+        </div>
 
     </div>
 
-</div>
-
-<!-- =========================================================
+    <!-- =========================================================
      JAVASCRIPT
      ========================================================= -->
 
-<script>
-    "use strict";
+    <script>
+        "use strict";
 
-    // Safe global auth state available before every File Manager function.
-    window.__vistakAuthenticated = false;
+        // Safe global auth state available before every File Manager function.
+        window.__vistakAuthenticated = false;
 
-    /* =========================================================
-       GLOBAL HELPERS
-       ========================================================= */
+        /* =========================================================
+           GLOBAL HELPERS
+           ========================================================= */
 
-    const $ = (selector, parent = document) =>
-        parent.querySelector(selector);
+        const $ = (selector, parent = document) =>
+            parent.querySelector(selector);
 
-    const $$ = (selector, parent = document) =>
-        [...parent.querySelectorAll(selector)];
+        const $$ = (selector, parent = document) =>
+            [...parent.querySelectorAll(selector)];
 
-    /* =========================================================
-       PAGE LOADER
-       ========================================================= */
+        /* =========================================================
+           PAGE LOADER
+           ========================================================= */
 
-    window.addEventListener("load", () => {
+        window.addEventListener("load", () => {
 
-        setTimeout(() => {
-            $("#pageLoader")?.classList.add("hide");
-        }, 500);
+            setTimeout(() => {
+                $("#pageLoader")?.classList.add("hide");
+            }, 500);
 
-    });
+        });
 
-    /* =========================================================
-       YEAR
-       ========================================================= */
+        /* =========================================================
+           YEAR
+           ========================================================= */
 
-    $("#year").textContent = new Date().getFullYear();
+        $("#year").textContent = new Date().getFullYear();
 
-    /* =========================================================
-       HEADER SCROLL
-       ========================================================= */
+        /* =========================================================
+           HEADER SCROLL
+           ========================================================= */
 
-    const header = $("#header");
+        const header = $("#header");
 
-    function updateHeader() {
+        function updateHeader() {
 
-        if (window.scrollY > 30) {
-            header.classList.add("scrolled");
-        } else {
-            header.classList.remove("scrolled");
+            if (window.scrollY > 30) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+
         }
 
-    }
+        window.addEventListener("scroll", updateHeader, {
+            passive: true
+        });
 
-    window.addEventListener("scroll", updateHeader, {
-        passive: true
-    });
+        updateHeader();
 
-    updateHeader();
+        /* =========================================================
+           MOBILE MENU
+           ========================================================= */
 
-    /* =========================================================
-       MOBILE MENU
-       ========================================================= */
+        const menuIcon = $("#menu-icon");
+        const navList = $("#navList");
 
-    const menuIcon = $("#menu-icon");
-    const navList = $("#navList");
+        function closeMenu() {
 
-    function closeMenu() {
+            navList.classList.remove("open");
 
-        navList.classList.remove("open");
+            const icon = $("i", menuIcon);
 
-        const icon = $("i", menuIcon);
+            if (icon) {
+                icon.className = "bx bx-menu";
+            }
 
-        if (icon) {
-            icon.className = "bx bx-menu";
         }
 
-    }
+        menuIcon.addEventListener("click", () => {
 
-    menuIcon.addEventListener("click", () => {
+            navList.classList.toggle("open");
 
-        navList.classList.toggle("open");
+            const icon = $("i", menuIcon);
 
-        const icon = $("i", menuIcon);
+            if (navList.classList.contains("open")) {
+                icon.className = "bx bx-x";
+            } else {
+                icon.className = "bx bx-menu";
+            }
 
-        if (navList.classList.contains("open")) {
-            icon.className = "bx bx-x";
-        } else {
-            icon.className = "bx bx-menu";
+        });
+
+        $$(".nav-link").forEach(link => {
+
+            link.addEventListener("click", closeMenu);
+
+        });
+
+        /* =========================================================
+           THEME
+           ========================================================= */
+
+        const themeToggle = $("#themeToggle");
+
+        const savedTheme =
+            localStorage.getItem("vistak-theme");
+
+        if (savedTheme === "light") {
+            document.body.classList.add("light-theme");
         }
 
-    });
+        function updateThemeIcon() {
 
-    $$(".nav-link").forEach(link => {
+            const icon = $("i", themeToggle);
 
-        link.addEventListener("click", closeMenu);
+            if (document.body.classList.contains("light-theme")) {
+                icon.className = "bx bx-sun";
+                themeToggle.title = "Switch to dark mode";
+            } else {
+                icon.className = "bx bx-moon";
+                themeToggle.title = "Switch to light mode";
+            }
 
-    });
-
-    /* =========================================================
-       THEME
-       ========================================================= */
-
-    const themeToggle = $("#themeToggle");
-
-    const savedTheme =
-        localStorage.getItem("vistak-theme");
-
-    if (savedTheme === "light") {
-        document.body.classList.add("light-theme");
-    }
-
-    function updateThemeIcon() {
-
-        const icon = $("i", themeToggle);
-
-        if (document.body.classList.contains("light-theme")) {
-            icon.className = "bx bx-sun";
-            themeToggle.title = "Switch to dark mode";
-        } else {
-            icon.className = "bx bx-moon";
-            themeToggle.title = "Switch to light mode";
         }
-
-    }
-
-    updateThemeIcon();
-
-    themeToggle.addEventListener("click", () => {
-
-        document.body.classList.toggle("light-theme");
-
-        const mode =
-            document.body.classList.contains("light-theme")
-                ? "light"
-                : "dark";
-
-        localStorage.setItem("vistak-theme", mode);
 
         updateThemeIcon();
 
-    });
+        themeToggle.addEventListener("click", () => {
 
-    /* =========================================================
-       ACTIVE NAVIGATION
-       ========================================================= */
+            document.body.classList.toggle("light-theme");
 
-    const sections = $$(
-        "section[id]"
-    );
+            const mode =
+                document.body.classList.contains("light-theme")
+                    ? "light"
+                    : "dark";
 
-    const navLinks = $$(".nav-link");
+            localStorage.setItem("vistak-theme", mode);
 
-    const sectionObserver =
-        new IntersectionObserver(
-            entries => {
+            updateThemeIcon();
 
-                entries.forEach(entry => {
+        });
 
-                    if (!entry.isIntersecting) return;
+        /* =========================================================
+           ACTIVE NAVIGATION
+           ========================================================= */
 
-                    navLinks.forEach(link => {
-                        link.classList.remove("active");
-                    });
-
-                    const active =
-                        $(`.nav-link[href="#${entry.target.id}"]`);
-
-                    active?.classList.add("active");
-
-                });
-
-            },
-            {
-                rootMargin: "-35% 0px -55% 0px"
-            }
+        const sections = $$(
+            "section[id]"
         );
 
-    sections.forEach(section => {
-        sectionObserver.observe(section);
-    });
+        const navLinks = $$(".nav-link");
 
-    /* =========================================================
-       TYPING EFFECT
-       ========================================================= */
+        const sectionObserver =
+            new IntersectionObserver(
+                entries => {
 
-    const typingText = $("#typingText");
+                    entries.forEach(entry => {
 
-    const typingWords = [
-        "Study Abroad",
-        "Tourism",
-        "Family Visit",
-        "Immigration",
-        "Investment"
-    ];
+                        if (!entry.isIntersecting) return;
 
-    let wordIndex = 0;
-    let charIndex = 0;
-    let deleting = false;
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                        });
 
-    function typingEffect() {
+                        const active =
+                            $(`.nav-link[href="#${entry.target.id}"]`);
 
-        if (!typingText) return;
+                        active?.classList.add("active");
 
-        const word = typingWords[wordIndex];
+                    });
 
-        if (!deleting) {
+                },
+                {
+                    rootMargin: "-35% 0px -55% 0px"
+                }
+            );
 
-            typingText.textContent =
-                word.substring(0, charIndex + 1);
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
 
-            charIndex++;
+        /* =========================================================
+           TYPING EFFECT
+           ========================================================= */
 
-            if (charIndex === word.length) {
+        const typingText = $("#typingText");
 
-                deleting = true;
+        const typingWords = [
+            "Study Abroad",
+            "Tourism",
+            "Family Visit",
+            "Immigration",
+            "Investment"
+        ];
 
-                setTimeout(
-                    typingEffect,
-                    1500
-                );
+        let wordIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
 
-                return;
+        function typingEffect() {
+
+            if (!typingText) return;
+
+            const word = typingWords[wordIndex];
+
+            if (!deleting) {
+
+                typingText.textContent =
+                    word.substring(0, charIndex + 1);
+
+                charIndex++;
+
+                if (charIndex === word.length) {
+
+                    deleting = true;
+
+                    setTimeout(
+                        typingEffect,
+                        1500
+                    );
+
+                    return;
+
+                }
+
+            } else {
+
+                typingText.textContent =
+                    word.substring(0, charIndex - 1);
+
+                charIndex--;
+
+                if (charIndex === 0) {
+
+                    deleting = false;
+
+                    wordIndex =
+                        (wordIndex + 1) %
+                        typingWords.length;
+
+                }
 
             }
 
-        } else {
-
-            typingText.textContent =
-                word.substring(0, charIndex - 1);
-
-            charIndex--;
-
-            if (charIndex === 0) {
-
-                deleting = false;
-
-                wordIndex =
-                    (wordIndex + 1) %
-                    typingWords.length;
-
-            }
+            setTimeout(
+                typingEffect,
+                deleting ? 45 : 90
+            );
 
         }
 
-        setTimeout(
-            typingEffect,
-            deleting ? 45 : 90
-        );
+        typingEffect();
 
-    }
+        /* =========================================================
+           REVEAL ANIMATION
+           ========================================================= */
 
-    typingEffect();
+        const revealObserver =
+            new IntersectionObserver(
+                entries => {
 
-    /* =========================================================
-       REVEAL ANIMATION
-       ========================================================= */
+                    entries.forEach(entry => {
 
-    const revealObserver =
-        new IntersectionObserver(
-            entries => {
+                        if (entry.isIntersecting) {
 
-                entries.forEach(entry => {
+                            entry.target.classList.add("active");
 
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("active");
-
-                        revealObserver.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: .12
-            }
-        );
-
-    $$(".reveal").forEach(element => {
-        revealObserver.observe(element);
-    });
-
-    /* =========================================================
-       COUNTERS
-       ========================================================= */
-
-    let countersStarted = false;
-
-    function animateCounters() {
-
-        if (countersStarted) return;
-
-        const stats = $(".stats");
-
-        if (!stats) return;
-
-        const rect = stats.getBoundingClientRect();
-
-        if (
-            rect.top <
-            window.innerHeight * .85
-        ) {
-
-            countersStarted = true;
-
-            $$(".stat-number").forEach(counter => {
-
-                const target =
-                    Number(counter.dataset.target);
-
-                let current = 0;
-
-                const increment =
-                    Math.max(
-                        1,
-                        Math.ceil(target / 45)
-                    );
-
-                const interval =
-                    setInterval(() => {
-
-                        current += increment;
-
-                        if (current >= target) {
-
-                            current = target;
-
-                            clearInterval(interval);
+                            revealObserver.unobserve(
+                                entry.target
+                            );
 
                         }
 
-                        counter.textContent =
-                            current + "+";
+                    });
 
-                    }, 30);
+                },
+                {
+                    threshold: .12
+                }
+            );
 
-            });
+        $$(".reveal").forEach(element => {
+            revealObserver.observe(element);
+        });
+
+        /* =========================================================
+           COUNTERS
+           ========================================================= */
+
+        let countersStarted = false;
+
+        function animateCounters() {
+
+            if (countersStarted) return;
+
+            const stats = $(".stats");
+
+            if (!stats) return;
+
+            const rect = stats.getBoundingClientRect();
+
+            if (
+                rect.top <
+                window.innerHeight * .85
+            ) {
+
+                countersStarted = true;
+
+                $$(".stat-number").forEach(counter => {
+
+                    const target =
+                        Number(counter.dataset.target);
+
+                    let current = 0;
+
+                    const increment =
+                        Math.max(
+                            1,
+                            Math.ceil(target / 45)
+                        );
+
+                    const interval =
+                        setInterval(() => {
+
+                            current += increment;
+
+                            if (current >= target) {
+
+                                current = target;
+
+                                clearInterval(interval);
+
+                            }
+
+                            counter.textContent =
+                                current + "+";
+
+                        }, 30);
+
+                });
+
+            }
 
         }
 
-    }
+        window.addEventListener(
+            "scroll",
+            animateCounters,
+            { passive: true }
+        );
 
-    window.addEventListener(
-        "scroll",
-        animateCounters,
-        { passive: true }
-    );
+        animateCounters();
 
-    animateCounters();
+        /* =========================================================
+           TOAST
+           ========================================================= */
 
-    /* =========================================================
-       TOAST
-       ========================================================= */
+        function showToast(
+            title,
+            message,
+            type = "info"
+        ) {
 
-    function showToast(
-        title,
-        message,
-        type = "info"
-    ) {
+            const container =
+                $("#toastContainer");
 
-        const container =
-            $("#toastContainer");
+            const toast =
+                document.createElement("div");
 
-        const toast =
-            document.createElement("div");
+            toast.className =
+                `toast ${type}`;
 
-        toast.className =
-            `toast ${type}`;
+            const icon =
+                type === "success"
+                    ? "bx-check-circle"
+                    : type === "error"
+                        ? "bx-error-circle"
+                        : "bx-info-circle";
 
-        const icon =
-            type === "success"
-                ? "bx-check-circle"
-                : type === "error"
-                    ? "bx-error-circle"
-                    : "bx-info-circle";
-
-        toast.innerHTML = `
+            toast.innerHTML = `
             <i class="bx ${icon}"></i>
             <div>
                 <strong>${escapeHTML(title)}</strong>
@@ -3887,624 +3649,624 @@
             </div>
         `;
 
-        container.appendChild(toast);
+            container.appendChild(toast);
 
-        setTimeout(() => {
+            setTimeout(() => {
 
-            toast.style.opacity = "0";
-            toast.style.transform =
-                "translateX(30px)";
+                toast.style.opacity = "0";
+                toast.style.transform =
+                    "translateX(30px)";
 
-            setTimeout(
-                () => toast.remove(),
-                300
-            );
+                setTimeout(
+                    () => toast.remove(),
+                    300
+                );
 
-        }, 4000);
-
-    }
-
-    /* =========================================================
-       ESCAPE HTML
-       ========================================================= */
-
-    function escapeHTML(value) {
-
-        return String(value ?? "")
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
-
-    }
-
-    /* =========================================================
-       FORM SUBMISSION
-       ========================================================= */
-
-    async function submitForm(
-        form,
-        button,
-        successMessage
-    ) {
-
-        const accessKey =
-            form.querySelector(
-                '[name="access_key"]'
-            )?.value;
-
-        if (
-            !accessKey ||
-            accessKey === "YOUR_WEB3FORMS_ACCESS_KEY"
-        ) {
-
-            showToast(
-                "Configuration Required",
-                "Add your Web3Forms access key first.",
-                "error"
-            );
-
-            return;
+            }, 4000);
 
         }
 
-        const originalHTML =
-            button.innerHTML;
+        /* =========================================================
+           ESCAPE HTML
+           ========================================================= */
 
-        button.disabled = true;
+        function escapeHTML(value) {
 
-        button.innerHTML = `
+            return String(value ?? "")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+
+        }
+
+        /* =========================================================
+           FORM SUBMISSION
+           ========================================================= */
+
+        async function submitForm(
+            form,
+            button,
+            successMessage
+        ) {
+
+            const accessKey =
+                form.querySelector(
+                    '[name="access_key"]'
+                )?.value;
+
+            if (
+                !accessKey ||
+                accessKey === "YOUR_WEB3FORMS_ACCESS_KEY"
+            ) {
+
+                showToast(
+                    "Configuration Required",
+                    "Add your Web3Forms access key first.",
+                    "error"
+                );
+
+                return;
+
+            }
+
+            const originalHTML =
+                button.innerHTML;
+
+            button.disabled = true;
+
+            button.innerHTML = `
             <i class="bx bx-loader-alt bx-spin"></i>
             Sending...
         `;
 
-        try {
+            try {
 
-            const formData =
-                new FormData(form);
+                const formData =
+                    new FormData(form);
 
-            const response =
-                await fetch(
-                    form.action,
-                    {
-                        method: "POST",
-                        body: formData,
-                        headers: {
-                            Accept: "application/json"
+                const response =
+                    await fetch(
+                        form.action,
+                        {
+                            method: "POST",
+                            body: formData,
+                            headers: {
+                                Accept: "application/json"
+                            }
                         }
-                    }
-                );
+                    );
 
-            const result =
-                await response.json();
+                const result =
+                    await response.json();
 
-            if (
-                response.ok &&
-                result.success
-            ) {
+                if (
+                    response.ok &&
+                    result.success
+                ) {
+
+                    showToast(
+                        "Success",
+                        successMessage,
+                        "success"
+                    );
+
+                    form.reset();
+
+                } else {
+
+                    throw new Error(
+                        result.message ||
+                        "Unable to submit form."
+                    );
+
+                }
+
+            } catch (error) {
+
+                console.error(error);
 
                 showToast(
-                    "Success",
-                    successMessage,
-                    "success"
+                    "Something went wrong",
+                    "Please try again later.",
+                    "error"
                 );
 
-                form.reset();
+            } finally {
 
-            } else {
+                button.disabled = false;
 
-                throw new Error(
-                    result.message ||
-                    "Unable to submit form."
-                );
+                button.innerHTML =
+                    originalHTML;
 
             }
 
-        } catch (error) {
+        }
 
-            console.error(error);
+        /* =========================================================
+           BOOKING FORM
+           ========================================================= */
 
-            showToast(
-                "Something went wrong",
-                "Please try again later.",
-                "error"
-            );
+        const bookingForm =
+            $("#bookingForm");
 
-        } finally {
+        bookingForm?.addEventListener(
+            "submit",
+            event => {
 
-            button.disabled = false;
+                event.preventDefault();
 
-            button.innerHTML =
-                originalHTML;
+                submitForm(
+                    bookingForm,
+                    $("#bookingSubmit"),
+                    "Your booking request has been sent successfully."
+                );
+
+            }
+        );
+
+        /* =========================================================
+           DATE MINIMUM
+           ========================================================= */
+
+        const dateInput = $("#date");
+
+        if (dateInput) {
+
+            const today =
+                new Date()
+                    .toISOString()
+                    .split("T")[0];
+
+            dateInput.min = today;
 
         }
 
-    }
+        /* =========================================================
+           CONTACT FORM
+           ========================================================= */
 
-    /* =========================================================
-       BOOKING FORM
-       ========================================================= */
+        const contactForm =
+            $("#contactForm");
 
-    const bookingForm =
-        $("#bookingForm");
+        contactForm?.addEventListener(
+            "submit",
+            event => {
 
-    bookingForm?.addEventListener(
-        "submit",
-        event => {
+                event.preventDefault();
 
-            event.preventDefault();
+                submitForm(
+                    contactForm,
+                    $("#contactSubmit"),
+                    "Your message has been sent successfully."
+                );
 
-            submitForm(
-                bookingForm,
-                $("#bookingSubmit"),
-                "Your booking request has been sent successfully."
-            );
+            }
+        );
 
-        }
-    );
+        /* =========================================================
+           FILE MANAGER
+           ========================================================= */
 
-    /* =========================================================
-       DATE MINIMUM
-       ========================================================= */
+        const FILE_STORAGE_KEY =
+            "vistak_files_v2";
 
-    const dateInput = $("#date");
+        let files = [];
 
-    if (dateInput) {
+        try {
 
-        const today =
-            new Date()
-                .toISOString()
-                .split("T")[0];
+            files =
+                JSON.parse(
+                    localStorage.getItem(
+                        FILE_STORAGE_KEY
+                    )
+                ) || [];
 
-        dateInput.min = today;
+            if (!Array.isArray(files)) {
+                files = [];
+            }
 
-    }
-
-    /* =========================================================
-       CONTACT FORM
-       ========================================================= */
-
-    const contactForm =
-        $("#contactForm");
-
-    contactForm?.addEventListener(
-        "submit",
-        event => {
-
-            event.preventDefault();
-
-            submitForm(
-                contactForm,
-                $("#contactSubmit"),
-                "Your message has been sent successfully."
-            );
-
-        }
-    );
-
-    /* =========================================================
-       FILE MANAGER
-       ========================================================= */
-
-    const FILE_STORAGE_KEY =
-        "vistak_files_v2";
-
-    let files = [];
-
-    try {
-
-        files =
-            JSON.parse(
-                localStorage.getItem(
-                    FILE_STORAGE_KEY
-                )
-            ) || [];
-
-        if (!Array.isArray(files)) {
+        } catch {
             files = [];
         }
 
-    } catch {
-        files = [];
-    }
+        let selectedFile = null;
 
-    let selectedFile = null;
+        const fileInput =
+            $("#fileInput");
 
-    const fileInput =
-        $("#fileInput");
+        const uploadZone =
+            $("#uploadZone");
 
-    const uploadZone =
-        $("#uploadZone");
+        const titleInput =
+            $("#title");
 
-    const titleInput =
-        $("#title");
+        const tbody =
+            $("#tbody");
 
-    const tbody =
-        $("#tbody");
+        const emptyState =
+            $("#emptyState");
 
-    const emptyState =
-        $("#emptyState");
+        const fileCount =
+            $("#fileCount");
 
-    const fileCount =
-        $("#fileCount");
+        const imageCount =
+            $("#imageCount");
 
-    const imageCount =
-        $("#imageCount");
+        const searchInput =
+            $("#search");
 
-    const searchInput =
-        $("#search");
+        /* =========================================================
+           SAVE FILES
+           ========================================================= */
 
-    /* =========================================================
-       SAVE FILES
-       ========================================================= */
+        function saveFiles() {
 
-    function saveFiles() {
+            try {
 
-        try {
+                localStorage.setItem(
+                    FILE_STORAGE_KEY,
+                    JSON.stringify(files)
+                );
 
-            localStorage.setItem(
-                FILE_STORAGE_KEY,
-                JSON.stringify(files)
+            } catch (error) {
+
+                showToast(
+                    "Storage Error",
+                    "The file may be too large for browser storage.",
+                    "error"
+                );
+
+            }
+
+        }
+
+        /* =========================================================
+           FORMAT DATE
+           ========================================================= */
+
+        function formatDate(date) {
+
+            return new Intl.DateTimeFormat(
+                undefined,
+                {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric"
+                }
+            ).format(
+                new Date(date)
             );
 
-        } catch (error) {
+        }
+
+        /* =========================================================
+           FILE ICON
+           ========================================================= */
+
+        function getFileIcon(type) {
+
+            if (type?.startsWith("image/")) {
+                return "bx-image";
+            }
+
+            if (type === "application/pdf") {
+                return "bxs-file-pdf";
+            }
+
+            if (type?.includes("word")) {
+                return "bxs-file-doc";
+            }
+
+            if (type?.includes("excel") ||
+                type?.includes("spreadsheet")) {
+                return "bxs-file";
+            }
+
+            return "bx-file";
+
+        }
+
+        /* =========================================================
+           FILE SELECTION
+           ========================================================= */
+
+        function selectFile(file) {
+
+            if (!file) return;
+
+            selectedFile = file;
+
+            if (!titleInput.value.trim()) {
+
+                titleInput.value =
+                    file.name
+                        .replace(/\.[^/.]+$/, "");
+
+            }
 
             showToast(
-                "Storage Error",
-                "The file may be too large for browser storage.",
-                "error"
+                "File selected",
+                `${file.name} is ready to upload.`,
+                "info"
             );
 
         }
 
-    }
+        fileInput?.addEventListener(
+            "change",
+            event => {
 
-    /* =========================================================
-       FORMAT DATE
-       ========================================================= */
+                selectFile(
+                    event.target.files[0]
+                );
 
-    function formatDate(date) {
-
-        return new Intl.DateTimeFormat(
-            undefined,
-            {
-                year: "numeric",
-                month: "short",
-                day: "numeric"
             }
-        ).format(
-            new Date(date)
         );
 
-    }
-
-    /* =========================================================
-       FILE ICON
-       ========================================================= */
-
-    function getFileIcon(type) {
-
-        if (type?.startsWith("image/")) {
-            return "bx-image";
-        }
-
-        if (type === "application/pdf") {
-            return "bxs-file-pdf";
-        }
-
-        if (type?.includes("word")) {
-            return "bxs-file-doc";
-        }
-
-        if (type?.includes("excel") ||
-            type?.includes("spreadsheet")) {
-            return "bxs-file";
-        }
-
-        return "bx-file";
-
-    }
-
-    /* =========================================================
-       FILE SELECTION
-       ========================================================= */
-
-    function selectFile(file) {
-
-        if (!file) return;
-
-        selectedFile = file;
-
-        if (!titleInput.value.trim()) {
-
-            titleInput.value =
-                file.name
-                    .replace(/\.[^/.]+$/, "");
-
-        }
-
-        showToast(
-            "File selected",
-            `${file.name} is ready to upload.`,
-            "info"
+        uploadZone?.addEventListener(
+            "click",
+            () => fileInput.click()
         );
 
-    }
+        /* =========================================================
+           DRAG DROP
+           ========================================================= */
 
-    fileInput?.addEventListener(
-        "change",
-        event => {
+        [
+            "dragenter",
+            "dragover"
+        ].forEach(eventName => {
 
-            selectFile(
-                event.target.files[0]
+            uploadZone?.addEventListener(
+                eventName,
+                event => {
+
+                    event.preventDefault();
+
+                    uploadZone.classList.add(
+                        "dragging"
+                    );
+
+                }
             );
 
-        }
-    );
+        });
 
-    uploadZone?.addEventListener(
-        "click",
-        () => fileInput.click()
-    );
+        [
+            "dragleave",
+            "drop"
+        ].forEach(eventName => {
 
-    /* =========================================================
-       DRAG DROP
-       ========================================================= */
+            uploadZone?.addEventListener(
+                eventName,
+                event => {
 
-    [
-        "dragenter",
-        "dragover"
-    ].forEach(eventName => {
+                    event.preventDefault();
+
+                    uploadZone.classList.remove(
+                        "dragging"
+                    );
+
+                }
+            );
+
+        });
 
         uploadZone?.addEventListener(
-            eventName,
+            "drop",
             event => {
 
-                event.preventDefault();
+                const file =
+                    event.dataTransfer.files[0];
 
-                uploadZone.classList.add(
-                    "dragging"
-                );
+                selectFile(file);
 
             }
         );
 
-    });
+        /* =========================================================
+           CREATE FILE
+           ========================================================= */
 
-    [
-        "dragleave",
-        "drop"
-    ].forEach(eventName => {
+        $("#createFileBtn")?.addEventListener(
+            "click",
+            () => {
 
-        uploadZone?.addEventListener(
-            eventName,
-            event => {
+                const title =
+                    titleInput.value.trim();
 
-                event.preventDefault();
+                if (!selectedFile) {
 
-                uploadZone.classList.remove(
-                    "dragging"
-                );
+                    showToast(
+                        "No file selected",
+                        "Please choose a file first.",
+                        "error"
+                    );
 
-            }
-        );
+                    return;
 
-    });
+                }
 
-    uploadZone?.addEventListener(
-        "drop",
-        event => {
+                if (!title) {
 
-            const file =
-                event.dataTransfer.files[0];
+                    showToast(
+                        "Title required",
+                        "Please enter a title.",
+                        "error"
+                    );
 
-            selectFile(file);
+                    titleInput.focus();
 
-        }
-    );
+                    return;
 
-    /* =========================================================
-       CREATE FILE
-       ========================================================= */
+                }
 
-    $("#createFileBtn")?.addEventListener(
-        "click",
-        () => {
+                const reader =
+                    new FileReader();
 
-            const title =
-                titleInput.value.trim();
+                reader.onload = event => {
 
-            if (!selectedFile) {
+                    const fileObject = {
 
-                showToast(
-                    "No file selected",
-                    "Please choose a file first.",
-                    "error"
-                );
+                        id:
+                            Date.now().toString() +
+                            Math.random()
+                                .toString(36)
+                                .substring(2),
 
-                return;
+                        title,
 
-            }
+                        name:
+                            selectedFile.name,
 
-            if (!title) {
+                        type:
+                            selectedFile.type ||
+                            "application/octet-stream",
 
-                showToast(
-                    "Title required",
-                    "Please enter a title.",
-                    "error"
-                );
+                        size:
+                            selectedFile.size,
 
-                titleInput.focus();
+                        url:
+                            event.target.result,
 
-                return;
+                        createdAt:
+                            new Date().toISOString()
 
-            }
+                    };
 
-            const reader =
-                new FileReader();
+                    files.unshift(
+                        fileObject
+                    );
 
-            reader.onload = event => {
+                    saveFiles();
 
-                const fileObject = {
+                    renderFiles();
 
-                    id:
-                        Date.now().toString() +
-                        Math.random()
-                            .toString(36)
-                            .substring(2),
+                    selectedFile = null;
 
-                    title,
+                    fileInput.value = "";
 
-                    name:
-                        selectedFile.name,
+                    titleInput.value = "";
 
-                    type:
-                        selectedFile.type ||
-                        "application/octet-stream",
-
-                    size:
-                        selectedFile.size,
-
-                    url:
-                        event.target.result,
-
-                    createdAt:
-                        new Date().toISOString()
+                    showToast(
+                        "File added",
+                        "Your file has been saved successfully.",
+                        "success"
+                    );
 
                 };
 
-                files.unshift(
-                    fileObject
+                reader.onerror = () => {
+
+                    showToast(
+                        "Upload failed",
+                        "Unable to read this file.",
+                        "error"
+                    );
+
+                };
+
+                reader.readAsDataURL(
+                    selectedFile
                 );
 
-                saveFiles();
-
-                renderFiles();
-
-                selectedFile = null;
-
-                fileInput.value = "";
-
-                titleInput.value = "";
-
-                showToast(
-                    "File added",
-                    "Your file has been saved successfully.",
-                    "success"
-                );
-
-            };
-
-            reader.onerror = () => {
-
-                showToast(
-                    "Upload failed",
-                    "Unable to read this file.",
-                    "error"
-                );
-
-            };
-
-            reader.readAsDataURL(
-                selectedFile
-            );
-
-        }
-    );
-
-    /* =========================================================
-       FILE SIZE
-       ========================================================= */
-
-    function formatFileSize(bytes) {
-
-        if (!bytes) return "0 B";
-
-        const units = [
-            "B",
-            "KB",
-            "MB",
-            "GB"
-        ];
-
-        const index =
-            Math.floor(
-                Math.log(bytes) /
-                Math.log(1024)
-            );
-
-        return (
-            parseFloat(
-                (
-                    bytes /
-                    Math.pow(1024, index)
-                ).toFixed(2)
-            ) +
-            " " +
-            units[index]
+            }
         );
 
-    }
+        /* =========================================================
+           FILE SIZE
+           ========================================================= */
 
-    /* =========================================================
-       RENDER FILES
-       ========================================================= */
+        function formatFileSize(bytes) {
 
-    function renderFiles() {
+            if (!bytes) return "0 B";
 
-        if (!window.__vistakAuthenticated) {
-            if (tbody) tbody.innerHTML = "";
-            if (fileCount) fileCount.textContent = "0";
-            if (imageCount) imageCount.textContent = "0";
-            if (emptyState) emptyState.style.display = "block";
-            return;
-        }
+            const units = [
+                "B",
+                "KB",
+                "MB",
+                "GB"
+            ];
 
-        const query =
-            searchInput.value
-                .trim()
-                .toLowerCase();
-
-        const filtered =
-            files.filter(file => {
-
-                return (
-                    file.title
-                        .toLowerCase()
-                        .includes(query) ||
-
-                    file.name
-                        .toLowerCase()
-                        .includes(query)
+            const index =
+                Math.floor(
+                    Math.log(bytes) /
+                    Math.log(1024)
                 );
 
-            });
+            return (
+                parseFloat(
+                    (
+                        bytes /
+                        Math.pow(1024, index)
+                    ).toFixed(2)
+                ) +
+                " " +
+                units[index]
+            );
 
-        tbody.innerHTML = "";
+        }
 
-        fileCount.textContent =
-            files.length;
+        /* =========================================================
+           RENDER FILES
+           ========================================================= */
 
-        imageCount.textContent =
-            files.filter(
-                file =>
-                    file.type?.startsWith(
-                        "image/"
-                    )
-            ).length;
+        function renderFiles() {
 
-        emptyState.style.display =
-            filtered.length
-                ? "none"
-                : "block";
+            if (!window.__vistakAuthenticated) {
+                if (tbody) tbody.innerHTML = "";
+                if (fileCount) fileCount.textContent = "0";
+                if (imageCount) imageCount.textContent = "0";
+                if (emptyState) emptyState.style.display = "block";
+                return;
+            }
 
-        filtered.forEach(file => {
+            const query =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
 
-            const row =
-                document.createElement("tr");
+            const filtered =
+                files.filter(file => {
 
-            row.innerHTML = `
+                    return (
+                        file.title
+                            .toLowerCase()
+                            .includes(query) ||
+
+                        file.name
+                            .toLowerCase()
+                            .includes(query)
+                    );
+
+                });
+
+            tbody.innerHTML = "";
+
+            fileCount.textContent =
+                files.length;
+
+            imageCount.textContent =
+                files.filter(
+                    file =>
+                        file.type?.startsWith(
+                            "image/"
+                        )
+                ).length;
+
+            emptyState.style.display =
+                filtered.length
+                    ? "none"
+                    : "block";
+
+            filtered.forEach(file => {
+
+                const row =
+                    document.createElement("tr");
+
+                row.innerHTML = `
 
                 <td>
                     <div
@@ -4579,190 +4341,190 @@
                 </td>
             `;
 
-            tbody.appendChild(row);
+                tbody.appendChild(row);
 
-        });
+            });
 
-    }
+        }
 
-    /* =========================================================
-       FILE ACTIONS
-       ========================================================= */
+        /* =========================================================
+           FILE ACTIONS
+           ========================================================= */
 
-    tbody?.addEventListener(
-        "click",
-        event => {
+        tbody?.addEventListener(
+            "click",
+            event => {
 
-            const button =
-                event.target.closest(
-                    "button[data-action]"
-                );
-
-            if (!button) return;
-
-            if (!window.__vistakAuthenticated) {
-                showToast(
-                    "Access denied",
-                    "Please login before managing files.",
-                    "error"
-                );
-                return;
-            }
-
-            const id =
-                button.dataset.id;
-
-            const action =
-                button.dataset.action;
-
-            const file =
-                files.find(
-                    item => item.id === id
-                );
-
-            if (!file) return;
-
-            if (action === "delete") {
-
-                files =
-                    files.filter(
-                        item => item.id !== id
+                const button =
+                    event.target.closest(
+                        "button[data-action]"
                     );
+
+                if (!button) return;
+
+                if (!window.__vistakAuthenticated) {
+                    showToast(
+                        "Access denied",
+                        "Please login before managing files.",
+                        "error"
+                    );
+                    return;
+                }
+
+                const id =
+                    button.dataset.id;
+
+                const action =
+                    button.dataset.action;
+
+                const file =
+                    files.find(
+                        item => item.id === id
+                    );
+
+                if (!file) return;
+
+                if (action === "delete") {
+
+                    files =
+                        files.filter(
+                            item => item.id !== id
+                        );
+
+                    saveFiles();
+
+                    renderFiles();
+
+                    showToast(
+                        "Deleted",
+                        "File removed successfully.",
+                        "success"
+                    );
+
+                }
+
+                if (action === "preview") {
+
+                    previewFile(file);
+
+                }
+
+            }
+        );
+
+        /* =========================================================
+           SEARCH
+           ========================================================= */
+
+        searchInput?.addEventListener(
+            "input",
+            renderFiles
+        );
+
+        /* =========================================================
+           DELETE ALL
+           ========================================================= */
+
+        $("#deleteAllBtn")?.addEventListener(
+            "click",
+            () => {
+
+                if (!files.length) {
+
+                    showToast(
+                        "Nothing to delete",
+                        "Your file manager is already empty.",
+                        "info"
+                    );
+
+                    return;
+
+                }
+
+                const confirmed =
+                    confirm(
+                        `Delete all ${files.length} files?`
+                    );
+
+                if (!confirmed) return;
+
+                files = [];
 
                 saveFiles();
 
                 renderFiles();
 
                 showToast(
-                    "Deleted",
-                    "File removed successfully.",
+                    "Files deleted",
+                    "All files have been removed.",
                     "success"
                 );
 
             }
+        );
 
-            if (action === "preview") {
+        /* =========================================================
+           PREVIEW
+           ========================================================= */
 
-                previewFile(file);
+        const modal =
+            $("#previewModal");
 
-            }
+        const modalClose =
+            $("#modalClose");
 
-        }
-    );
+        const previewContent =
+            $("#previewContent");
 
-    /* =========================================================
-       SEARCH
-       ========================================================= */
+        const previewTitle =
+            $("#previewTitle");
 
-    searchInput?.addEventListener(
-        "input",
-        renderFiles
-    );
+        function previewFile(file) {
 
-    /* =========================================================
-       DELETE ALL
-       ========================================================= */
+            previewTitle.textContent =
+                file.title;
 
-    $("#deleteAllBtn")?.addEventListener(
-        "click",
-        () => {
+            previewContent.innerHTML = "";
 
-            if (!files.length) {
+            if (
+                file.type?.startsWith(
+                    "image/"
+                )
+            ) {
 
-                showToast(
-                    "Nothing to delete",
-                    "Your file manager is already empty.",
-                    "info"
+                const image =
+                    document.createElement("img");
+
+                image.src = file.url;
+
+                image.alt = file.name;
+
+                image.className =
+                    "preview-image";
+
+                previewContent.appendChild(
+                    image
                 );
 
-                return;
+            } else if (
+                file.type === "application/pdf"
+            ) {
 
-            }
+                const frame =
+                    document.createElement("iframe");
 
-            const confirmed =
-                confirm(
-                    `Delete all ${files.length} files?`
+                frame.src = file.url;
+
+                frame.className =
+                    "preview-frame";
+
+                previewContent.appendChild(
+                    frame
                 );
 
-            if (!confirmed) return;
+            } else {
 
-            files = [];
-
-            saveFiles();
-
-            renderFiles();
-
-            showToast(
-                "Files deleted",
-                "All files have been removed.",
-                "success"
-            );
-
-        }
-    );
-
-    /* =========================================================
-       PREVIEW
-       ========================================================= */
-
-    const modal =
-        $("#previewModal");
-
-    const modalClose =
-        $("#modalClose");
-
-    const previewContent =
-        $("#previewContent");
-
-    const previewTitle =
-        $("#previewTitle");
-
-    function previewFile(file) {
-
-        previewTitle.textContent =
-            file.title;
-
-        previewContent.innerHTML = "";
-
-        if (
-            file.type?.startsWith(
-                "image/"
-            )
-        ) {
-
-            const image =
-                document.createElement("img");
-
-            image.src = file.url;
-
-            image.alt = file.name;
-
-            image.className =
-                "preview-image";
-
-            previewContent.appendChild(
-                image
-            );
-
-        } else if (
-            file.type === "application/pdf"
-        ) {
-
-            const frame =
-                document.createElement("iframe");
-
-            frame.src = file.url;
-
-            frame.className =
-                "preview-frame";
-
-            previewContent.appendChild(
-                frame
-            );
-
-        } else {
-
-            previewContent.innerHTML = `
+                previewContent.innerHTML = `
                 <div
                     style="
                         text-align:center;
@@ -4784,443 +4546,444 @@
                 </div>
             `;
 
-        }
-
-        modal.classList.add("open");
-
-    }
-
-    function closeModal() {
-
-        modal.classList.remove("open");
-
-        previewContent.innerHTML = "";
-
-    }
-
-    modalClose?.addEventListener(
-        "click",
-        closeModal
-    );
-
-    modal?.addEventListener(
-        "click",
-        event => {
-
-            if (
-                event.target === modal
-            ) {
-                closeModal();
             }
 
-        }
-    );
-
-    document.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                event.key === "Escape"
-            ) {
-                closeModal();
-            }
+            modal.classList.add("open");
 
         }
-    );
 
-    renderFiles();
+        function closeModal() {
 
-    /* =========================================================
-       AUTHENTICATION / PROTECTED FILES
-       ========================================================= */
+            modal.classList.remove("open");
 
-    /*
-       Front-end demo credentials.
-       IMPORTANT:
-       This protects the UI and the browser-side Files area only.
-       For real security, replace this with Firebase Authentication
-       or another server-side authentication provider.
-    */
-    const AUTH_CONFIG = {
-        username: "admin",
-        password: "Vistak@2026"
-    };
+            previewContent.innerHTML = "";
 
-    const AUTH_STORAGE_KEY = "vistak_authenticated_v1";
-    const AUTH_USER_KEY = "vistak_authenticated_user_v1";
-
-    const authModal = $("#authModal");
-    const authModalClose = $("#authModalClose");
-    const authNavLink = $("#authNavLink");
-    const authNavText = $("#authNavText");
-    const authUserLabel = $("#authUserLabel");
-    const filesNavItem = $("#filesNavItem");
-    const filesSection = $("#files");
-    const loginForm = $("#loginForm");
-    const password = $("#password");
-    const passwordToggle = $("#passwordToggle");
-    const authStatus = $("#authStatus");
-
-    let isAuthenticated =
-        sessionStorage.getItem(AUTH_STORAGE_KEY) === "true";
-
-    let authenticatedUser =
-        sessionStorage.getItem(AUTH_USER_KEY) || "";
-
-    function setAuthStatus(message, type = "error") {
-        if (!authStatus) return;
-
-        authStatus.textContent = message;
-        authStatus.className = `auth-status ${type}`;
-    }
-
-    function clearAuthStatus() {
-        if (!authStatus) return;
-
-        authStatus.textContent = "";
-        authStatus.className = "auth-status";
-    }
-
-    function openLoginModal() {
-        if (!authModal) return;
-
-        clearAuthStatus();
-        authModal.classList.add("open");
-
-        setTimeout(() => {
-            $("#username")?.focus();
-        }, 100);
-    }
-
-    function closeLoginModal() {
-        authModal?.classList.remove("open");
-        clearAuthStatus();
-    }
-
-    function updateAuthUI() {
-        window.__vistakAuthenticated = isAuthenticated;
-
-        if (!filesSection || !filesNavItem || !authNavLink) return;
-
-        if (isAuthenticated) {
-            // إضافة الكلاس الذي يخفي كامل أقسام الموقع باستثناء الملفات
-            document.body.classList.add("logged-in-mode");
-
-            filesNavItem.style.display = "";
-            filesSection.classList.remove("auth-hidden");
-            filesSection.setAttribute("aria-hidden", "false");
-
-            authNavText.textContent = "Logout";
-
-            if (authUserLabel) {
-                authUserLabel.hidden = false;
-                authUserLabel.textContent =
-                    authenticatedUser
-                        ? `@${authenticatedUser}`
-                        : "";
-            }
-
-            authNavLink.querySelector("i")?.classList.remove(
-                "bx-log-in-circle"
-            );
-
-            authNavLink.querySelector("i")?.classList.add(
-                "bx-log-out-circle"
-            );
-
-            renderFiles();
-
-        } else {
-            // إزالة الكلاس لإعادة إظهار أقسام الموقع في حالة الخروج
-            document.body.classList.remove("logged-in-mode");
-
-            filesNavItem.style.display = "none";
-            filesSection.classList.add("auth-hidden");
-            filesSection.setAttribute("aria-hidden", "true");
-
-            authNavText.textContent = "Login";
-
-            if (authUserLabel) {
-                authUserLabel.hidden = true;
-                authUserLabel.textContent = "";
-            }
-
-            authNavLink.querySelector("i")?.classList.remove(
-                "bx-log-out-circle"
-            );
-
-            authNavLink.querySelector("i")?.classList.add(
-                "bx-log-in-circle"
-            );
-
-            if (location.hash === "#files") {
-                history.replaceState(
-                    null,
-                    "",
-                    location.pathname + location.search
-                );
-
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth"
-                });
-            }
-        }
-    }
-
-    function requireAuthentication(event) {
-        if (isAuthenticated) return true;
-
-        event?.preventDefault();
-        closeMenu();
-        openLoginModal();
-
-        showToast(
-            "Login required",
-            "Please sign in to access the Files area.",
-            "info"
-        );
-
-        return false;
-    }
-
-    function login(username, enteredPassword) {
-        if (
-            username === AUTH_CONFIG.username &&
-            enteredPassword === AUTH_CONFIG.password
-        ) {
-            isAuthenticated = true;
-            authenticatedUser = username;
-
-            sessionStorage.setItem(
-                AUTH_STORAGE_KEY,
-                "true"
-            );
-
-            sessionStorage.setItem(
-                AUTH_USER_KEY,
-                username
-            );
-
-            updateAuthUI();
-            closeLoginModal();
-
-            showToast(
-                "Login successful",
-                "Welcome to your private Portal.",
-                "success"
-            );
-
-            return true;
         }
 
-        setAuthStatus(
-            "Invalid username or password.",
-            "error"
+        modalClose?.addEventListener(
+            "click",
+            closeModal
         );
 
-        return false;
-    }
+        modal?.addEventListener(
+            "click",
+            event => {
 
-    function logout() {
-        isAuthenticated = false;
-        authenticatedUser = "";
+                if (
+                    event.target === modal
+                ) {
+                    closeModal();
+                }
 
-        sessionStorage.removeItem(
-            AUTH_STORAGE_KEY
+            }
         );
 
-        sessionStorage.removeItem(
-            AUTH_USER_KEY
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Escape"
+                ) {
+                    closeModal();
+                }
+
+            }
         );
 
-        updateAuthUI();
+        renderFiles();
 
-        showToast(
-            "Logged out",
-            "Your private Files access has been locked.",
-            "success"
-        );
-    }
+        /* =========================================================
+           AUTHENTICATION / PROTECTED FILES
+           ========================================================= */
 
-    authNavLink?.addEventListener(
-        "click",
-        event => {
-            event.preventDefault();
+        /*
+           Front-end demo credentials.
+           IMPORTANT:
+           This protects the UI and the browser-side Files area only.
+           For real security, replace this with Firebase Authentication
+           or another server-side authentication provider.
+        */
+        const AUTH_CONFIG = {
+            username: "admin",
+            password: "Vistak@2026"
+        };
+
+        const AUTH_STORAGE_KEY = "vistak_authenticated_v1";
+        const AUTH_USER_KEY = "vistak_authenticated_user_v1";
+
+        const authModal = $("#authModal");
+        const authModalClose = $("#authModalClose");
+        const authNavLink = $("#authNavLink");
+        const authNavText = $("#authNavText");
+        const authUserLabel = $("#authUserLabel");
+        const filesNavItem = $("#filesNavItem");
+        const filesSection = $("#files");
+        const loginForm = $("#loginForm");
+        const password = $("#password");
+        const passwordToggle = $("#passwordToggle");
+        const authStatus = $("#authStatus");
+
+        let isAuthenticated =
+            sessionStorage.getItem(AUTH_STORAGE_KEY) === "true";
+
+        let authenticatedUser =
+            sessionStorage.getItem(AUTH_USER_KEY) || "";
+
+        function setAuthStatus(message, type = "error") {
+            if (!authStatus) return;
+
+            authStatus.textContent = message;
+            authStatus.className = `auth-status ${type}`;
+        }
+
+        function clearAuthStatus() {
+            if (!authStatus) return;
+
+            authStatus.textContent = "";
+            authStatus.className = "auth-status";
+        }
+
+        function openLoginModal() {
+            if (!authModal) return;
+
+            clearAuthStatus();
+            authModal.classList.add("open");
+
+            setTimeout(() => {
+                $("#username")?.focus();
+            }, 100);
+        }
+
+        function closeLoginModal() {
+            authModal?.classList.remove("open");
+            clearAuthStatus();
+        }
+
+        function updateAuthUI() {
+            window.__vistakAuthenticated = isAuthenticated;
+
+            if (!filesSection || !filesNavItem || !authNavLink) return;
 
             if (isAuthenticated) {
-                logout();
+                // إضافة الكلاس الذي يخفي كامل أقسام الموقع باستثناء الملفات
+                document.body.classList.add("logged-in-mode");
+
+                filesNavItem.style.display = "";
+                filesSection.classList.remove("auth-hidden");
+                filesSection.setAttribute("aria-hidden", "false");
+
+                authNavText.textContent = "Logout";
+
+                if (authUserLabel) {
+                    authUserLabel.hidden = false;
+                    authUserLabel.textContent =
+                        authenticatedUser
+                            ? `@${authenticatedUser}`
+                            : "";
+                }
+
+                authNavLink.querySelector("i")?.classList.remove(
+                    "bx-log-in-circle"
+                );
+
+                authNavLink.querySelector("i")?.classList.add(
+                    "bx-log-out-circle"
+                );
+
+                renderFiles();
+
             } else {
-                openLoginModal();
+                // إزالة الكلاس لإعادة إظهار أقسام الموقع في حالة الخروج
+                document.body.classList.remove("logged-in-mode");
+
+                filesNavItem.style.display = "none";
+                filesSection.classList.add("auth-hidden");
+                filesSection.setAttribute("aria-hidden", "true");
+
+                authNavText.textContent = "Login";
+
+                if (authUserLabel) {
+                    authUserLabel.hidden = true;
+                    authUserLabel.textContent = "";
+                }
+
+                authNavLink.querySelector("i")?.classList.remove(
+                    "bx-log-out-circle"
+                );
+
+                authNavLink.querySelector("i")?.classList.add(
+                    "bx-log-in-circle"
+                );
+
+                if (location.hash === "#files") {
+                    history.replaceState(
+                        null,
+                        "",
+                        location.pathname + location.search
+                    );
+
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                }
             }
         }
-    );
 
-    $("#logoutInPageBtn")?.addEventListener(
-        "click",
-        () => {
-            logout();
-        }
-    );
+        function requireAuthentication(event) {
+            if (isAuthenticated) return true;
 
-    $("#filesNavLink")?.addEventListener(
-        "click",
-        event => {
-            if (!requireAuthentication(event)) {
-                return;
-            }
-
+            event?.preventDefault();
             closeMenu();
-        }
-    );
+            openLoginModal();
 
-    authModalClose?.addEventListener(
-        "click",
-        closeLoginModal
-    );
-
-    authModal?.addEventListener(
-        "click",
-        event => {
-            if (event.target === authModal) {
-                closeLoginModal();
-            }
-        }
-    );
-
-    document.addEventListener(
-        "keydown",
-        event => {
-            if (
-                event.key === "Escape" &&
-                authModal?.classList.contains("open")
-            ) {
-                closeLoginModal();
-            }
-        }
-    );
-
-    passwordToggle?.addEventListener(
-        "click",
-        () => {
-            const icon = $("i", passwordToggle);
-
-            if (password.type === "password") {
-                password.type = "text";
-                icon.className = "bx bx-hide";
-                passwordToggle.setAttribute(
-                    "aria-label",
-                    "Hide password"
-                );
-            } else {
-                password.type = "password";
-                icon.className = "bx bx-show";
-                passwordToggle.setAttribute(
-                    "aria-label",
-                    "Show password"
-                );
-            }
-        }
-    );
-
-    loginForm?.addEventListener(
-        "submit",
-        event => {
-            event.preventDefault();
-
-            const username =
-                $("#username")?.value.trim() || "";
-
-            const enteredPassword =
-                password?.value || "";
-
-            if (!username || !enteredPassword) {
-                setAuthStatus(
-                    "Please enter both username and password.",
-                    "error"
-                );
-                return;
-            }
-
-            if (login(username, enteredPassword)) {
-                loginForm.reset();
-            }
-        }
-    );
-
-    /*
-       Extra guard:
-       If someone manually changes the URL hash to #files,
-       the section is still blocked unless authenticated.
-    */
-    window.addEventListener(
-        "hashchange",
-        () => {
-            if (
-                location.hash === "#files" &&
-                !isAuthenticated
-            ) {
-                history.replaceState(
-                    null,
-                    "",
-                    location.pathname + location.search
-                );
-
-                openLoginModal();
-            }
-        }
-    );
-
-    /*
-       Protect all File Manager operations as well.
-       Even if a hidden UI control is triggered manually,
-       no file operation is allowed while logged out.
-    */
-    const originalSaveFiles = saveFiles;
-
-    saveFiles = function () {
-        if (!isAuthenticated) {
             showToast(
-                "Access denied",
-                "Please login before managing files.",
-                "error"
+                "Login required",
+                "Please sign in to access the Files area.",
+                "info"
             );
+
             return false;
         }
 
-        return originalSaveFiles();
-    };
-
-    /*
-       Initial authentication state.
-       sessionStorage means closing the browser tab/session
-       logs the user out automatically.
-    */
-    updateAuthUI();
-
-    /* =========================================================
-       ESCAPE MENU ON OUTSIDE CLICK
-       ========================================================= */
-
-    document.addEventListener(
-        "click",
-        event => {
-
+        function login(username, enteredPassword) {
             if (
-                navList.classList.contains("open") &&
-                !event.target.closest("nav") &&
-                !event.target.closest("#menu-icon")
+                username === AUTH_CONFIG.username &&
+                enteredPassword === AUTH_CONFIG.password
             ) {
+                isAuthenticated = true;
+                authenticatedUser = username;
 
-                closeMenu();
+                sessionStorage.setItem(
+                    AUTH_STORAGE_KEY,
+                    "true"
+                );
 
+                sessionStorage.setItem(
+                    AUTH_USER_KEY,
+                    username
+                );
+
+                updateAuthUI();
+                closeLoginModal();
+
+                showToast(
+                    "Login successful",
+                    "Welcome to your private Portal.",
+                    "success"
+                );
+
+                return true;
             }
 
-        }
-    );
+            setAuthStatus(
+                "Invalid username or password.",
+                "error"
+            );
 
-</script>
+            return false;
+        }
+
+        function logout() {
+            isAuthenticated = false;
+            authenticatedUser = "";
+
+            sessionStorage.removeItem(
+                AUTH_STORAGE_KEY
+            );
+
+            sessionStorage.removeItem(
+                AUTH_USER_KEY
+            );
+
+            updateAuthUI();
+
+            showToast(
+                "Logged out",
+                "Your private Files access has been locked.",
+                "success"
+            );
+        }
+
+        authNavLink?.addEventListener(
+            "click",
+            event => {
+                event.preventDefault();
+
+                if (isAuthenticated) {
+                    logout();
+                } else {
+                    openLoginModal();
+                }
+            }
+        );
+
+        $("#logoutInPageBtn")?.addEventListener(
+            "click",
+            () => {
+                logout();
+            }
+        );
+
+        $("#filesNavLink")?.addEventListener(
+            "click",
+            event => {
+                if (!requireAuthentication(event)) {
+                    return;
+                }
+
+                closeMenu();
+            }
+        );
+
+        authModalClose?.addEventListener(
+            "click",
+            closeLoginModal
+        );
+
+        authModal?.addEventListener(
+            "click",
+            event => {
+                if (event.target === authModal) {
+                    closeLoginModal();
+                }
+            }
+        );
+
+        document.addEventListener(
+            "keydown",
+            event => {
+                if (
+                    event.key === "Escape" &&
+                    authModal?.classList.contains("open")
+                ) {
+                    closeLoginModal();
+                }
+            }
+        );
+
+        passwordToggle?.addEventListener(
+            "click",
+            () => {
+                const icon = $("i", passwordToggle);
+
+                if (password.type === "password") {
+                    password.type = "text";
+                    icon.className = "bx bx-hide";
+                    passwordToggle.setAttribute(
+                        "aria-label",
+                        "Hide password"
+                    );
+                } else {
+                    password.type = "password";
+                    icon.className = "bx bx-show";
+                    passwordToggle.setAttribute(
+                        "aria-label",
+                        "Show password"
+                    );
+                }
+            }
+        );
+
+        loginForm?.addEventListener(
+            "submit",
+            event => {
+                event.preventDefault();
+
+                const username =
+                    $("#username")?.value.trim() || "";
+
+                const enteredPassword =
+                    password?.value || "";
+
+                if (!username || !enteredPassword) {
+                    setAuthStatus(
+                        "Please enter both username and password.",
+                        "error"
+                    );
+                    return;
+                }
+
+                if (login(username, enteredPassword)) {
+                    loginForm.reset();
+                }
+            }
+        );
+
+        /*
+           Extra guard:
+           If someone manually changes the URL hash to #files,
+           the section is still blocked unless authenticated.
+        */
+        window.addEventListener(
+            "hashchange",
+            () => {
+                if (
+                    location.hash === "#files" &&
+                    !isAuthenticated
+                ) {
+                    history.replaceState(
+                        null,
+                        "",
+                        location.pathname + location.search
+                    );
+
+                    openLoginModal();
+                }
+            }
+        );
+
+        /*
+           Protect all File Manager operations as well.
+           Even if a hidden UI control is triggered manually,
+           no file operation is allowed while logged out.
+        */
+        const originalSaveFiles = saveFiles;
+
+        saveFiles = function () {
+            if (!isAuthenticated) {
+                showToast(
+                    "Access denied",
+                    "Please login before managing files.",
+                    "error"
+                );
+                return false;
+            }
+
+            return originalSaveFiles();
+        };
+
+        /*
+           Initial authentication state.
+           sessionStorage means closing the browser tab/session
+           logs the user out automatically.
+        */
+        updateAuthUI();
+
+        /* =========================================================
+           ESCAPE MENU ON OUTSIDE CLICK
+           ========================================================= */
+
+        document.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    navList.classList.contains("open") &&
+                    !event.target.closest("nav") &&
+                    !event.target.closest("#menu-icon")
+                ) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+    </script>
 
 </body>
+
 </html>
