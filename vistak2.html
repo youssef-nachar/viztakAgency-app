@@ -11,16 +11,12 @@
     <!-- Icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png"
-        href="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png">
-
     <style>
         /* =========================================================
            VISTAK GLOBAL SYSTEM STYLES & CORE ENGINE
            ========================================================= */
 
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800;900&family=Cinzel:wght@600;700;800&display=swap');
 
         :root {
             --primary: #16e0ff;
@@ -233,7 +229,16 @@
             gap: 20px;
         }
 
-        .logo img { width: 120px; }
+        .logo-svg {
+            height: 52px;
+            width: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-svg:hover {
+            transform: scale(1.03);
+        }
 
         .navlist { display: flex; align-items: center; gap: 4px; }
         .navlist a {
@@ -389,16 +394,13 @@
         .tracker-step.completed i { background: var(--success); color: #000; border-color: var(--success); }
         .tracker-step.active i { background: var(--primary); color: #000; border-color: var(--primary); }
 
-        /* =========================================================
-           3D CINEMATIC DESTINATIONS SHOWCASE SLIDER (NEW SECTION)
-           ========================================================= */
+        /* 3D CINEMATIC DESTINATIONS SHOWCASE SLIDER */
         .showcase-section {
             position: relative;
             padding: 120px 0;
             overflow: hidden;
         }
 
-        /* Dynamic Blurred Background Engine */
         .showcase-bg-backdrop {
             position: absolute;
             inset: 0;
@@ -422,7 +424,6 @@
             z-index: 2;
         }
 
-        /* Slider Wrapper */
         .showcase-slider-wrapper {
             position: relative;
             margin-top: 40px;
@@ -439,7 +440,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
         }
 
         .showcase-slide {
@@ -643,9 +643,7 @@
             box-shadow: 0 0 10px var(--primary);
         }
 
-        /* =========================================================
-           TOURISM & HOTELS CARDS & SEARCH
-           ========================================================= */
+        /* TOURISM & HOTELS CARDS & SEARCH */
         .search-filter-bar {
             background: var(--card);
             border: 1px solid var(--border);
@@ -935,12 +933,101 @@
     </div>
 
     <!-- =========================================================
-     HEADER
+     HEADER (WITH CUSTOM SVG LOGO)
      ========================================================= -->
     <header id="header">
         <div class="header-inner">
             <a href="#home" class="logo">
-                <img src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png" alt="Vistak Logo">
+                <!-- VISTAK EMBEDDED VECTOR SVG LOGO -->
+                <svg class="logo-svg" viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <!-- Silver Gradient for Towers & Borders -->
+                        <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ffffff" />
+                            <stop offset="35%" stop-color="#e2e8f0" />
+                            <stop offset="70%" stop-color="#94a3b8" />
+                            <stop offset="100%" stop-color="#cbd5e1" />
+                        </linearGradient>
+
+                        <!-- Metallic Gold Gradient for Airplane & Accents -->
+                        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#fef08a" />
+                            <stop offset="50%" stop-color="#d97706" />
+                            <stop offset="100%" stop-color="#b45309" />
+                        </linearGradient>
+
+                        <!-- Subtle Glow Effect -->
+                        <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="3" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+
+                    <!-- TOP ARCHITECTURAL TOWERS -->
+                    <g fill="url(#silverGrad)">
+                        <polygon points="160,50 178,42 178,92 160,92" />
+                        <polygon points="186,35 204,27 204,92 186,92" />
+                        <polygon points="212,20 230,12 230,92 212,92" />
+                    </g>
+
+                    <!-- FLYING AIRPLANE ICON -->
+                    <g transform="translate(290, 36) rotate(-10)" fill="url(#goldGrad)" filter="url(#glowEffect)">
+                        <path d="M 0,0 L 18,-6 L 24,-18 L 29,-18 L 26,-4 L 38,-2 L 43,-8 L 47,-8 L 44,2 L 47,12 L 43,12 L 38,6 L 26,6 L 29,20 L 24,20 L 18,8 L 0,2 Z" />
+                    </g>
+
+                    <!-- FRAMING BOX -->
+                    <path d="M 120,68 L 120,45 L 260,45 M 310,45 L 370,45 L 370,118 L 120,118 L 120,95" 
+                          fill="none" stroke="url(#silverGrad)" stroke-width="5" stroke-linecap="square" />
+
+                    <!-- ARABIC TYPOGRAPHY (فيزتاك) -->
+                    <g fill="url(#silverGrad)">
+                        <!-- ف -->
+                        <path d="M 335,92 L 350,92 L 350,75 L 335,75 Z M 335,108 L 360,108 L 360,68 L 325,68 L 325,108 Z" />
+                        <rect x="338" y="58" width="8" height="8" fill="url(#goldGrad)" />
+
+                        <!-- ي -->
+                        <path d="M 300,108 L 320,108 L 320,82 L 308,82 L 308,98 L 300,98 Z" />
+                        <rect x="302" y="112" width="6" height="6" fill="url(#goldGrad)" />
+                        <rect x="312" y="112" width="6" height="6" fill="url(#goldGrad)" />
+
+                        <!-- ز -->
+                        <path d="M 280,108 L 295,108 L 295,78 L 280,78 Z" />
+                        <rect x="284" y="66" width="7" height="7" fill="url(#goldGrad)" />
+
+                        <!-- ت -->
+                        <path d="M 242,108 L 275,108 L 275,82 L 263,82 L 263,98 L 242,98 Z" />
+                        <rect x="247" y="70" width="6" height="6" fill="url(#goldGrad)" />
+                        <rect x="257" y="70" width="6" height="6" fill="url(#goldGrad)" />
+
+                        <!-- ا -->
+                        <rect x="228" y="60" width="10" height="48" />
+
+                        <!-- ك -->
+                        <path d="M 140,108 L 220,108 L 220,98 L 152,98 L 152,82 L 210,82 L 210,72 L 140,72 Z" />
+                        <!-- Hamza ء -->
+                        <path d="M 148,68 Q 154,62 160,68 T 154,76 L 162,76" fill="none" stroke="url(#silverGrad)" stroke-width="3" />
+                    </g>
+
+                    <!-- LATIN BRAND TEXT "VISTAK" -->
+                    <text x="225" y="162" 
+                          font-family="'Cinzel', 'Times New Roman', serif" 
+                          font-size="46" 
+                          font-weight="800" 
+                          letter-spacing="12" 
+                          fill="url(#silverGrad)" 
+                          text-anchor="middle">VISTAK</text>
+
+                    <!-- SUB-TEXT "AGENCY" & UNDERLINE -->
+                    <line x1="110" y1="182" x2="210" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
+                    <text x="225" y="187" 
+                          font-family="'Inter', sans-serif" 
+                          font-size="14" 
+                          font-weight="700" 
+                          letter-spacing="8" 
+                          fill="url(#silverGrad)" 
+                          text-anchor="middle">AGENCY</text>
+                    <line x1="240" y1="182" x2="340" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
+                </svg>
             </a>
 
             <nav>
@@ -961,7 +1048,7 @@
                     <span style="font-weight: 800; font-size: 11px;">عربي</span>
                 </button>
                 <button class="icon-btn" id="themeToggle" title="Toggle Theme"><i class="bx bx-moon"></i></button>
-                <button class="btn small" id="authNavBtn"><i class="bx bx-log-in-circle"></i> <span id="authNavText">Login</span></button>
+                <a href="index.html" class="btn small" id="authNavBtn"><i class="bx bx-home"></i> <span id="authNavText">vistak</span></a>
                 <button class="icon-btn" id="menu-icon" style="display: none;"><i class="bx bx-menu"></i></button>
             </div>
         </div>
@@ -1008,7 +1095,7 @@
     </section>
 
     <!-- =========================================================
-     NEW: 3D CINEMATIC DESTINATIONS SHOWCASE GALLERY
+     3D CINEMATIC DESTINATIONS SHOWCASE GALLERY
      ========================================================= -->
     <section class="showcase-section" id="gallery">
         <div class="showcase-bg-backdrop" id="showcaseBackdrop"></div>
@@ -1462,7 +1549,10 @@
     <footer style="border-top:1px solid var(--border); padding: 40px 0; margin-top:60px;">
         <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
             <div>
-                <img src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png" alt="Vistak" style="width:100px;">
+                <!-- FOOTER LOGO -->
+                <svg class="logo-svg" viewBox="0 0 450 200" style="height: 40px;">
+                    <use href="#header .logo-svg"></use>
+                </svg>
                 <p style="font-size:11px; color:var(--text-muted); margin-top:5px;">© <span id="year"></span> Vistak. Enterprise Portal Edition.</p>
             </div>
             <div style="display:flex; gap:15px; font-size:18px;">
@@ -1524,9 +1614,7 @@
 
     <div class="toast-container" id="toastContainer"></div>
 
-    <!-- =========================================================
-     JAVASCRIPT LOGIC
-     ========================================================= -->
+    <!-- JAVASCRIPT LOGIC -->
     <script>
         "use strict";
 
@@ -1588,9 +1676,7 @@
             });
         }
 
-        // =========================================================
         // 3D SHOWCASE GALLERY SLIDER ENGINE
-        // =========================================================
         const showcaseSlides = Array.from(document.querySelectorAll('.showcase-slide'));
         const showcaseDotsContainer = document.getElementById('showcaseDots');
         const showcaseProgressBar = document.getElementById('showcaseProgressBar');
@@ -1598,10 +1684,8 @@
         const showcaseStage = document.getElementById('showcaseStage');
         let currentShowcaseIndex = 0;
         const autoPlayDuration = 4000;
-        let showcaseTimer = null;
         let progressAnimation = null;
 
-        // Generate Pagination Dots
         showcaseSlides.forEach((_, idx) => {
             const dot = document.createElement('div');
             dot.className = `showcase-dot ${idx === 0 ? 'active' : ''}`;
@@ -1631,12 +1715,10 @@
                 }
             });
 
-            // Update Pagination Dots
             showcaseDots.forEach((dot, idx) => {
                 dot.classList.toggle('active', idx === currentShowcaseIndex);
             });
 
-            // Update Dynamic Background Image
             const activeSlide = showcaseSlides[currentShowcaseIndex];
             if (activeSlide) {
                 const bgUrl = activeSlide.getAttribute('data-bg');
@@ -1678,7 +1760,6 @@
             }, 30);
         }
 
-        // Click on side cards to bring to focus
         showcaseSlides.forEach((slide, idx) => {
             slide.addEventListener('click', () => {
                 if (currentShowcaseIndex !== idx) {
@@ -1687,7 +1768,6 @@
             });
         });
 
-        // Event Listeners for Controls
         document.getElementById('showcaseNextBtn').addEventListener('click', () => {
             nextSlide();
         });
@@ -1696,7 +1776,6 @@
             prevSlide();
         });
 
-        // Pause autoplay on mouse hover
         showcaseStage.addEventListener('mouseenter', () => {
             if (progressAnimation) clearInterval(progressAnimation);
         });
@@ -1705,7 +1784,6 @@
             resetProgressBar();
         });
 
-        // Touch Swipe Support for Mobile
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -1728,7 +1806,6 @@
             }
         }
 
-        // Initialize Showcase Engine
         updateShowcase();
 
         // BOOKING MODAL LOGIC
@@ -1831,7 +1908,6 @@
                 </tr>
             `).join('');
 
-            // Calculate Storage Mock
             const totalBytes = state.files.reduce((acc, curr) => acc + curr.size, 0);
             const totalMB = (totalBytes / (1024 * 1024)).toFixed(2);
             document.getElementById('storageTxt').textContent = `Used: ${totalMB} MB`;
@@ -1845,23 +1921,10 @@
             showToast("Document removed", "info");
         }
 
-        // AUTH SYSTEM
-        const authBtn = document.getElementById('authNavBtn');
+        // AUTH HANDLER
         const authModal = document.getElementById('authModal');
         const filesSection = document.getElementById('files');
         const filesNavLink = document.getElementById('filesNavLink');
-
-        authBtn.addEventListener('click', () => {
-            if(state.authenticated) {
-                state.authenticated = false;
-                filesSection.style.display = 'none';
-                filesNavLink.style.display = 'none';
-                document.getElementById('authNavText').textContent = 'Login';
-                showToast("Signed out successfully", "info");
-            } else {
-                authModal.classList.add('open');
-            }
-        });
 
         function closeAuthModal() {
             authModal.classList.remove('open');
@@ -1873,7 +1936,6 @@
             authModal.classList.remove('open');
             filesSection.style.display = 'block';
             filesNavLink.style.display = 'block';
-            document.getElementById('authNavText').textContent = 'Logout';
             showToast("Authenticated. Document Vault Unlocked.", "success");
             window.location.hash = "#files";
         }
