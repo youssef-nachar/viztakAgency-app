@@ -2550,6 +2550,744 @@
             font-size: 0.85rem;
             color: #94a3b8;
         }
+
+        /* =========================================================
+   VISTAK FOOTER V2
+   PREMIUM / LUXURY / ENTERPRISE
+   ========================================================= */
+
+        .vistak-footer-v2 {
+
+            position: relative;
+
+            margin-top: 90px;
+
+            padding: 75px 0 25px;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 10% 10%,
+                    rgba(22, 224, 255, .055),
+                    transparent 30%),
+                radial-gradient(circle at 90% 80%,
+                    rgba(217, 119, 6, .055),
+                    transparent 30%),
+                linear-gradient(180deg,
+                    rgba(255, 255, 255, .015),
+                    transparent 70%);
+
+            border-top: 1px solid var(--border);
+
+        }
+
+
+        /* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+        .footer-v2-glow {
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            filter: blur(120px);
+
+            opacity: .06;
+
+            pointer-events: none;
+
+        }
+
+
+        .footer-v2-glow-1 {
+
+            left: -160px;
+            top: -160px;
+
+            background: var(--primary);
+
+        }
+
+
+        .footer-v2-glow-2 {
+
+            right: -160px;
+            bottom: -180px;
+
+            background: #d97706;
+
+        }
+
+
+        /* =========================================================
+   MAIN GRID
+   ========================================================= */
+
+        .footer-v2-main {
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1.3fr;
+
+            gap: 60px;
+
+            padding-bottom: 55px;
+
+        }
+
+
+        /* =========================================================
+   BRAND
+   ========================================================= */
+
+        .footer-v2-brand {
+
+            max-width: 390px;
+
+        }
+
+
+        .footer-v2-logo {
+
+            display: block;
+
+            width: 245px;
+
+            text-decoration: none;
+
+            transition:
+                transform .35s ease,
+                filter .35s ease;
+
+        }
+
+
+        .footer-v2-logo:hover {
+
+            transform: translateY(-4px);
+
+            filter:
+                drop-shadow(0 10px 25px rgba(22, 224, 255, .12));
+
+        }
+
+
+        .footer-v2-logo svg {
+
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+        }
+
+
+        /* =========================================================
+   TAGLINE
+   ========================================================= */
+
+        .footer-v2-tagline {
+
+            margin-top: 2px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            color: var(--primary);
+
+        }
+
+
+        .footer-v2-description {
+
+            max-width: 330px;
+
+            margin-top: 13px;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+            color: var(--text-muted);
+
+        }
+
+
+        /* =========================================================
+   SOCIAL
+   ========================================================= */
+
+        .footer-v2-social {
+
+            display: flex;
+
+            gap: 8px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .footer-v2-social a {
+
+            width: 37px;
+            height: 37px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 10px;
+
+            color: var(--text-secondary);
+
+            background:
+                rgba(255, 255, 255, .025);
+
+            border: 1px solid var(--border);
+
+            text-decoration: none;
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .footer-v2-social a:hover {
+
+            color: var(--primary);
+
+            border-color:
+                rgba(22, 224, 255, .35);
+
+            background:
+                rgba(22, 224, 255, .06);
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 10px 25px rgba(22, 224, 255, .08);
+
+        }
+
+
+        /* =========================================================
+   COLUMNS
+   ========================================================= */
+
+        .footer-v2-column {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+
+        }
+
+
+        .footer-v2-column h4 {
+
+            margin: 5px 0 14px;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: var(--text);
+
+        }
+
+
+        .footer-v2-column h4::after {
+
+            content: "";
+
+            display: block;
+
+            width: 25px;
+
+            height: 2px;
+
+            margin-top: 9px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--primary),
+                    transparent);
+
+        }
+
+
+        .footer-v2-column>a {
+
+            position: relative;
+
+            width: fit-content;
+
+            font-size: 11px;
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            transition:
+                .25s ease;
+
+        }
+
+
+        .footer-v2-column>a::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -3px;
+
+            width: 0;
+
+            height: 1px;
+
+            background: var(--primary);
+
+            transition: .25s ease;
+
+        }
+
+
+        .footer-v2-column>a:hover {
+
+            color: var(--text);
+
+            transform: translateX(4px);
+
+        }
+
+
+        .footer-v2-column>a:hover::before {
+
+            width: 100%;
+
+        }
+
+
+        /* =========================================================
+   CONTACT
+   ========================================================= */
+
+        .footer-v2-contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+        }
+
+
+        .footer-v2-contact-item>i {
+
+            width: 35px;
+            height: 35px;
+
+            display: grid;
+
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border-radius: 9px;
+
+            color: var(--primary);
+
+            background:
+                rgba(22, 224, 255, .045);
+
+            border:
+                1px solid rgba(22, 224, 255, .12);
+
+            font-size: 16px;
+
+        }
+
+
+        .footer-v2-contact-item span {
+
+            display: block;
+
+            margin-bottom: 3px;
+
+            font-size: 8px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            color: var(--text-muted);
+
+        }
+
+
+        .footer-v2-contact-item strong {
+
+            display: block;
+
+            font-size: 10px;
+
+            color: var(--text-secondary);
+
+        }
+
+
+        /* =========================================================
+   DIVIDER
+   ========================================================= */
+
+        .footer-v2-divider {
+
+            position: relative;
+
+            height: 1px;
+
+            margin-bottom: 20px;
+
+            background: var(--border);
+
+        }
+
+
+        .footer-v2-divider span {
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 50%;
+
+            width: 70px;
+
+            height: 2px;
+
+            transform:
+                translate(-50%, -50%);
+
+            background:
+                linear-gradient(90deg,
+                    transparent,
+                    #d97706,
+                    var(--primary),
+                    #d97706,
+                    transparent);
+
+            box-shadow:
+                0 0 12px rgba(217, 119, 6, .25);
+
+        }
+
+
+        /* =========================================================
+   BOTTOM
+   ========================================================= */
+
+        .footer-v2-bottom {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            font-size: 9px;
+
+            color: var(--text-muted);
+
+        }
+
+
+        .footer-v2-copy {
+
+            white-space: nowrap;
+
+        }
+
+
+        .footer-v2-bottom-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+        }
+
+
+        .footer-v2-bottom-links a {
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            transition: .2s ease;
+
+        }
+
+
+        .footer-v2-bottom-links a:hover {
+
+            color: var(--primary);
+
+        }
+
+
+        .footer-v2-secure {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            color: var(--success);
+
+            font-weight: 800;
+
+        }
+
+
+        .footer-v2-secure i {
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================================================
+   BACK TO TOP
+   ========================================================= */
+
+        .footer-v2-back-top {
+
+            position: absolute !important;
+
+            right: 30px;
+
+            bottom: 25px;
+
+            width: 42px;
+
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 12px;
+
+            color: var(--primary);
+
+            background:
+                rgba(22, 224, 255, .055);
+
+            border:
+                1px solid rgba(22, 224, 255, .18);
+
+            text-decoration: none;
+
+            transition: .3s ease;
+
+        }
+
+
+        .footer-v2-back-top:hover {
+
+            transform:
+                translateY(-5px);
+
+            background:
+                rgba(22, 224, 255, .10);
+
+            box-shadow:
+                0 10px 30px rgba(22, 224, 255, .12);
+
+        }
+
+
+        /* =========================================================
+   RTL
+   ========================================================= */
+
+        body.rtl-mode .footer-v2-column>a:hover {
+
+            transform:
+                translateX(-4px);
+
+        }
+
+
+        body.rtl-mode .footer-v2-back-top {
+
+            right: auto;
+
+            left: 30px;
+
+        }
+
+
+        /* =========================================================
+   TABLET
+   ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .footer-v2-main {
+
+                grid-template-columns:
+                    1.5fr 1fr 1fr;
+
+                gap: 40px;
+
+            }
+
+            .footer-v2-brand {
+
+                grid-column: 1 / -1;
+
+                max-width: 600px;
+
+            }
+
+        }
+
+
+        /* =========================================================
+   MOBILE
+   ========================================================= */
+
+        @media (max-width: 650px) {
+
+            .vistak-footer-v2 {
+
+                margin-top: 65px;
+
+                padding-top: 55px;
+
+            }
+
+
+            .footer-v2-main {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 35px 25px;
+
+            }
+
+
+            .footer-v2-brand {
+
+                grid-column: 1 / -1;
+
+            }
+
+
+            .footer-v2-logo {
+
+                width: 220px;
+
+            }
+
+
+            .footer-v2-bottom {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding-right: 50px;
+
+            }
+
+
+            .footer-v2-bottom-links {
+
+                flex-wrap: wrap;
+
+                gap: 12px;
+
+            }
+
+
+            .footer-v2-back-top {
+
+                right: 15px;
+
+                bottom: 18px;
+
+            }
+
+        }
+
+
+        /* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+        @media (max-width: 430px) {
+
+            .footer-v2-main {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .footer-v2-brand {
+
+                grid-column: auto;
+
+            }
+
+
+            .footer-v2-column {
+
+                padding-top: 20px;
+
+                border-top:
+                    1px solid var(--border);
+
+            }
+
+
+            .footer-v2-copy {
+
+                white-space: normal;
+
+                line-height: 1.7;
+
+            }
+
+        }
     </style>
 </head>
 
@@ -3880,33 +4618,425 @@
      FOOTER
      ========================================================= -->
 
-    <footer>
+    <!-- =========================================================
+     VISTAK PREMIUM FOOTER — VERSION 2
+     ========================================================= -->
 
-        <div class="container footer-inner">
+    <footer class="vistak-footer-v2">
 
-            <div class="footer-brand">
+        <div class="footer-v2-glow footer-v2-glow-1"></div>
+        <div class="footer-v2-glow footer-v2-glow-2"></div>
 
-                <img src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"
-                    alt="Vistak">
+        <div class="container">
 
-                <p>
-                    Travel • Study • Immigration • Investment
-                </p>
+            <!-- MAIN FOOTER -->
+            <div class="footer-v2-main">
+
+                <!-- BRAND -->
+                <div class="footer-v2-brand">
+
+                    <a href="#home" class="footer-v2-logo">
+
+                        <!-- YOUR ORIGINAL VISTAK LOGO -->
+                        <svg class="logo-svg" viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
+
+                            <defs>
+
+                                <linearGradient id="footerSilverV2" x1="0%" y1="0%" x2="100%" y2="100%">
+
+                                    <stop offset="0%" stop-color="#ffffff" />
+                                    <stop offset="35%" stop-color="#e2e8f0" />
+                                    <stop offset="70%" stop-color="#94a3b8" />
+                                    <stop offset="100%" stop-color="#cbd5e1" />
+
+                                </linearGradient>
+
+                                <linearGradient id="footerGoldV2" x1="0%" y1="0%" x2="100%" y2="100%">
+
+                                    <stop offset="0%" stop-color="#fef08a" />
+                                    <stop offset="50%" stop-color="#d97706" />
+                                    <stop offset="100%" stop-color="#b45309" />
+
+                                </linearGradient>
+
+                                <filter id="footerGlowV2" x="-30%" y="-30%" width="160%" height="160%">
+
+                                    <feGaussianBlur stdDeviation="3" result="blur" />
+
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+
+                                </filter>
+
+                            </defs>
+
+
+                            <!-- ARCHITECTURAL TOWERS -->
+
+                            <g fill="url(#footerSilverV2)">
+
+                                <polygon points="160,50 178,42 178,92 160,92" />
+                                <polygon points="186,35 204,27 204,92 186,92" />
+                                <polygon points="212,20 230,12 230,92 212,92" />
+
+                            </g>
+
+
+                            <!-- AIRPLANE -->
+
+                            <g transform="translate(290,36) rotate(-10)" fill="url(#footerGoldV2)"
+                                filter="url(#footerGlowV2)">
+
+                                <path d="
+                                M0,0
+                                L18,-6
+                                L24,-18
+                                L29,-18
+                                L26,-4
+                                L38,-2
+                                L43,-8
+                                L47,-8
+                                L44,2
+                                L47,12
+                                L43,12
+                                L38,6
+                                L26,6
+                                L29,20
+                                L24,20
+                                L18,8
+                                L0,2 Z" />
+
+                            </g>
+
+
+                            <!-- FRAME -->
+
+                            <path d="M120 68
+                               L120 45
+                               L260 45
+                               M310 45
+                               L370 45
+                               L370 118
+                               L120 118
+                               L120 95" fill="none" stroke="url(#footerSilverV2)" stroke-width="5"
+                                stroke-linecap="square" />
+
+
+                            <!-- ARABIC LOGO -->
+
+                            <g fill="url(#footerSilverV2)">
+
+                                <path d="
+                                M335 92
+                                L350 92
+                                L350 75
+                                L335 75
+                                Z
+                                M335 108
+                                L360 108
+                                L360 68
+                                L325 68
+                                L325 108
+                                Z" />
+
+                                <rect x="338" y="58" width="8" height="8" fill="url(#footerGoldV2)" />
+
+
+                                <path d="
+                                M300 108
+                                L320 108
+                                L320 82
+                                L308 82
+                                L308 98
+                                L300 98 Z" />
+
+                                <rect x="302" y="112" width="6" height="6" fill="url(#footerGoldV2)" />
+
+                                <rect x="312" y="112" width="6" height="6" fill="url(#footerGoldV2)" />
+
+
+                                <path d="
+                                M280 108
+                                L295 108
+                                L295 78
+                                L280 78 Z" />
+
+                                <rect x="284" y="66" width="7" height="7" fill="url(#footerGoldV2)" />
+
+
+                                <path d="
+                                M242 108
+                                L275 108
+                                L275 82
+                                L263 82
+                                L263 98
+                                L242 98 Z" />
+
+                                <rect x="247" y="70" width="6" height="6" fill="url(#footerGoldV2)" />
+
+                                <rect x="257" y="70" width="6" height="6" fill="url(#footerGoldV2)" />
+
+
+                                <rect x="228" y="60" width="10" height="48" />
+
+
+                                <path d="
+                                M140 108
+                                L220 108
+                                L220 98
+                                L152 98
+                                L152 82
+                                L210 82
+                                L210 72
+                                L140 72 Z" />
+
+                            </g>
+
+
+                            <!-- VISTAK -->
+
+                            <text x="225" y="162" font-family="'Cinzel','Times New Roman',serif" font-size="46"
+                                font-weight="800" letter-spacing="12" fill="url(#footerSilverV2)" text-anchor="middle">
+
+                                VISTAK
+
+                            </text>
+
+
+                            <!-- AGENCY -->
+
+                            <line x1="110" y1="182" x2="210" y2="182" stroke="url(#footerSilverV2)" stroke-width="2" />
+
+                            <text x="225" y="187" font-family="'Inter',sans-serif" font-size="14" font-weight="700"
+                                letter-spacing="8" fill="url(#footerSilverV2)" text-anchor="middle">
+
+                                AGENCY
+
+                            </text>
+
+                            <line x1="240" y1="182" x2="340" y2="182" stroke="url(#footerSilverV2)" stroke-width="2" />
+
+                        </svg>
+
+                    </a>
+
+
+                    <p class="footer-v2-tagline">
+                        Travel • Study • Immigration • Investment
+                    </p>
+
+
+                    <p class="footer-v2-description">
+                        Your gateway to global opportunities,
+                        premium destinations and international services.
+                    </p>
+
+
+                    <!-- SOCIAL -->
+
+                    <div class="footer-v2-social">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+
+                        <a href="#" aria-label="Twitter">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NAVIGATION -->
+
+                <div class="footer-v2-column">
+
+                    <h4>Explore</h4>
+
+                    <a href="#home">
+                        Home
+                    </a>
+
+                    <a href="#gallery">
+                        Destinations
+                    </a>
+
+                    <a href="#tourism">
+                        Tourism
+                    </a>
+
+                    <a href="#hotels">
+                        Hotels
+                    </a>
+
+                    <a href="#services">
+                        Services
+                    </a>
+
+                </div>
+
+
+                <!-- SERVICES -->
+
+                <div class="footer-v2-column">
+
+                    <h4>Services</h4>
+
+                    <a href="#services">
+                        Travel Planning
+                    </a>
+
+                    <a href="#services">
+                        Visa Assistance
+                    </a>
+
+                    <a href="#services">
+                        Immigration
+                    </a>
+
+                    <a href="#services">
+                        Investment
+                    </a>
+
+                    <a href="#services">
+                        Global Mobility
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-v2-column footer-v2-contact">
+
+                    <h4>Get in touch</h4>
+
+
+                    <div class="footer-v2-contact-item">
+
+                        <i class="bx bx-envelope"></i>
+
+                        <div>
+
+                            <span>Email</span>
+
+                            <strong>
+                                hello@vistak.agency
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="footer-v2-contact-item">
+
+                        <i class="bx bx-phone"></i>
+
+                        <div>
+
+                            <span>Phone</span>
+
+                            <strong>
+                                +961 00 000 000
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="footer-v2-contact-item">
+
+                        <i class="bx bx-world"></i>
+
+                        <div>
+
+                            <span>Coverage</span>
+
+                            <strong>
+                                Worldwide
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="footer-copy">
-                © <span id="year"></span> Vistak. All rights reserved.
+
+            <!-- GOLD DIVIDER -->
+
+            <div class="footer-v2-divider">
+
+                <span></span>
+
             </div>
 
-            <a href="#home" class="back-top" aria-label="Back to top">
-                <i class="bx bx-up-arrow-alt"></i>
-            </a>
+
+            <!-- BOTTOM -->
+
+            <div class="footer-v2-bottom">
+
+                <div class="footer-v2-copy">
+
+                    © <span id="year"></span>
+                    Vistak Agency.
+                    All rights reserved.
+
+                </div>
+
+
+                <div class="footer-v2-bottom-links">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms of Service
+                    </a>
+
+                    <a href="#">
+                        Security
+                    </a>
+
+                </div>
+
+
+                <div class="footer-v2-secure">
+
+                    <i class="bx bx-shield-quarter"></i>
+
+                    Secure Platform
+
+                </div>
+
+            </div>
 
         </div>
 
-    </footer>
 
+        <!-- BACK TO TOP -->
+
+        <a href="#home" class="back-top footer-v2-back-top" aria-label="Back to top">
+
+            <i class="bx bx-up-arrow-alt"></i>
+
+        </a>
+
+    </footer>
     <!-- =========================================================
      TOAST CONTAINER
      ========================================================= -->
