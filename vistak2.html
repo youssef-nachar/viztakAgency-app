@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vistak - Travel, Tourism, Hotel Booking, Study Abroad and Immigration Consultancy">
+    <meta name="description"
+        content="Vistak - Travel, Tourism, Hotel Booking, Study Abroad and Immigration Consultancy">
     <meta name="theme-color" content="#07111f">
     <title>Vistak | Premium Travel, Tourism & Hotel Booking Portal</title>
 
@@ -110,14 +111,42 @@
             mask-image: linear-gradient(to bottom, black, transparent 90%);
         }
 
-        img { max-width: 100%; display: block; }
-        a { color: inherit; text-decoration: none; }
-        button, input, textarea, select { font: inherit; }
-        button { cursor: pointer; border: none; background: none; }
-        ul { list-style: none; }
+        img {
+            max-width: 100%;
+            display: block;
+        }
 
-        .container { width: min(1180px, 90%); margin-inline: auto; }
-        .section { padding: 110px 0; position: relative; }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: min(1180px, 90%);
+            margin-inline: auto;
+        }
+
+        .section {
+            padding: 110px 0;
+            position: relative;
+        }
 
         .section-header {
             text-align: center;
@@ -197,8 +226,16 @@
             color: var(--primary);
         }
 
-        .btn.small { min-height: 38px; padding: 0 14px; border-radius: 10px; font-size: 12px; }
-        .btn.full { width: 100%; }
+        .btn.small {
+            min-height: 38px;
+            padding: 0 14px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        .btn.full {
+            width: 100%;
+        }
 
         /* HEADER */
         header {
@@ -240,7 +277,12 @@
             transform: scale(1.03);
         }
 
-        .navlist { display: flex; align-items: center; gap: 4px; }
+        .navlist {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
         .navlist a {
             display: flex;
             align-items: center;
@@ -253,12 +295,17 @@
             transition: var(--transition);
         }
 
-        .navlist a:hover, .navlist a.active {
+        .navlist a:hover,
+        .navlist a.active {
             color: var(--primary);
             background: rgba(255, 255, 255, .06);
         }
 
-        .header-actions { display: flex; align-items: center; gap: 8px; }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
         .icon-btn {
             width: 40px;
@@ -295,12 +342,25 @@
         }
 
         @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
-        .ticker-item { display: inline-flex; align-items: center; gap: 8px; color: var(--text-secondary); }
-        .ticker-item i { color: var(--primary); }
+        .ticker-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+        }
+
+        .ticker-item i {
+            color: var(--primary);
+        }
 
         /* HERO SECTION */
         .hero {
@@ -332,7 +392,10 @@
             font-size: 16px;
         }
 
-        .typing { color: var(--primary); font-weight: 800; }
+        .typing {
+            color: var(--primary);
+            font-weight: 800;
+        }
 
         /* TRACKER WIDGET */
         .tracker-card {
@@ -376,8 +439,14 @@
             z-index: 2;
         }
 
-        .tracker-step.completed { color: var(--success); }
-        .tracker-step.active { color: var(--primary); font-weight: bold; }
+        .tracker-step.completed {
+            color: var(--success);
+        }
+
+        .tracker-step.active {
+            color: var(--primary);
+            font-weight: bold;
+        }
 
         .tracker-step i {
             width: 32px;
@@ -391,8 +460,17 @@
             font-size: 16px;
         }
 
-        .tracker-step.completed i { background: var(--success); color: #000; border-color: var(--success); }
-        .tracker-step.active i { background: var(--primary); color: #000; border-color: var(--primary); }
+        .tracker-step.completed i {
+            background: var(--success);
+            color: #000;
+            border-color: var(--success);
+        }
+
+        .tracker-step.active i {
+            background: var(--primary);
+            color: #000;
+            border-color: var(--primary);
+        }
 
         /* 3D CINEMATIC DESTINATIONS SHOWCASE SLIDER */
         .showcase-section {
@@ -449,7 +527,7 @@
             border-radius: var(--radius-lg);
             overflow: hidden;
             border: 1px solid var(--border-light);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
             transition: transform 0.8s cubic-bezier(0.25, 1, 0.3, 1), opacity 0.8s ease, border-color 0.4s ease, filter 0.8s ease;
             cursor: pointer;
             user-select: none;
@@ -529,7 +607,7 @@
             opacity: 1;
             z-index: 10;
             border-color: rgba(22, 224, 255, 0.5);
-            box-shadow: 0 0 50px rgba(22, 224, 255, 0.25), 0 30px 60px rgba(0,0,0,0.8);
+            box-shadow: 0 0 50px rgba(22, 224, 255, 0.25), 0 30px 60px rgba(0, 0, 0, 0.8);
             filter: blur(0px) brightness(1);
         }
 
@@ -656,7 +734,8 @@
             margin-bottom: 40px;
         }
 
-        .search-filter-bar input, .search-filter-bar select {
+        .search-filter-bar input,
+        .search-filter-bar select {
             flex: 1;
             min-width: 180px;
             padding: 12px 15px;
@@ -803,12 +882,22 @@
             margin-top: 20px;
         }
 
-        .calc-field { display: flex; flex-direction: column; gap: 8px; }
-        .calc-field label { font-size: 12px; color: var(--text-secondary); font-weight: 700; }
+        .calc-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .calc-field label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-weight: 700;
+        }
+
         .calc-field select {
             padding: 12px;
             border-radius: 12px;
-            background: rgba(0,0,0,0.2);
+            background: rgba(0, 0, 0, 0.2);
             border: 1px solid var(--border);
             color: var(--text);
             outline: none;
@@ -825,7 +914,11 @@
             justify-content: space-between;
         }
 
-        .calc-score { font-size: 28px; font-weight: 900; color: var(--primary); }
+        .calc-score {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary);
+        }
 
         /* COMPARATOR TOOL */
         .comparator-grid {
@@ -842,7 +935,11 @@
             border-radius: var(--radius-md);
         }
 
-        .compare-card h4 { color: var(--primary); margin-bottom: 15px; font-size: 18px; }
+        .compare-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
 
         /* REVIEWS / TESTIMONIALS */
         .reviews-grid {
@@ -859,9 +956,28 @@
             position: relative;
         }
 
-        .review-stars { color: var(--warning); margin-bottom: 10px; }
-        .review-user { display: flex; align-items: center; gap: 12px; margin-top: 15px; }
-        .review-avatar { width: 45px; height: 45px; border-radius: 50%; background: var(--border-light); display: grid; place-items: center; font-weight: bold; color: var(--primary); }
+        .review-stars {
+            color: var(--warning);
+            margin-bottom: 10px;
+        }
+
+        .review-user {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .review-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--border-light);
+            display: grid;
+            place-items: center;
+            font-weight: bold;
+            color: var(--primary);
+        }
 
         /* FILE MANAGER METRICS */
         .storage-meter {
@@ -880,55 +996,1616 @@
         }
 
         /* MODAL & TOAST */
-        .modal, .auth-modal {
-            position: fixed; inset: 0; z-index: 4000; display: none;
-            place-items: center; padding: 20px; background: rgba(0, 0, 0, .75); backdrop-filter: blur(10px);
-        }
-        .modal.open, .auth-modal.open { display: grid; }
-        .modal-content, .auth-modal-card {
-            width: min(550px, 100%); background: var(--card-solid);
-            padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-light);
-            box-shadow: var(--shadow); position: relative;
+        .modal,
+        .auth-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 4000;
+            display: none;
+            place-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, .75);
+            backdrop-filter: blur(10px);
         }
 
-        .toast-container { position: fixed; bottom: 20px; right: 20px; z-index: 5000; display: grid; gap: 10px; }
+        .modal.open,
+        .auth-modal.open {
+            display: grid;
+        }
+
+        .modal-content,
+        .auth-modal-card {
+            width: min(550px, 100%);
+            background: var(--card-solid);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .toast-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 5000;
+            display: grid;
+            gap: 10px;
+        }
+
         .toast {
-            background: var(--card-solid); border: 1px solid var(--border-light);
-            padding: 15px 20px; border-radius: 12px; display: flex; align-items: center; gap: 12px;
-            color: var(--text); box-shadow: var(--shadow);
+            background: var(--card-solid);
+            border: 1px solid var(--border-light);
+            padding: 15px 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            box-shadow: var(--shadow);
         }
 
         /* RESPONSIVE DESIGN */
         @media (max-width: 900px) {
-            .hero-grid, .comparator-grid { grid-template-columns: 1fr; }
-            #menu-icon { display: grid !important; }
-            .navlist { display: none; }
-            .navlist.open {
-                display: flex; position: fixed; top: var(--header-height); right: 0;
-                width: 250px; height: 100vh; background: var(--bg-secondary);
-                flex-direction: column; padding: 30px; border-left: 1px solid var(--border);
+
+            .hero-grid,
+            .comparator-grid {
+                grid-template-columns: 1fr;
             }
-            .showcase-stage { height: 380px; }
-            .showcase-slide { height: 350px; }
-            .showcase-slide-overlay { padding: 20px; }
-            .showcase-slide-title { font-size: 22px; }
-            .showcase-slide[data-state="next"] { transform: translateX(35%) translateZ(-150px) scale(0.8); }
-            .showcase-slide[data-state="prev"] { transform: translateX(-35%) translateZ(-150px) scale(0.8); }
+
+            #menu-icon {
+                display: grid !important;
+            }
+
+            .navlist {
+                display: none;
+            }
+
+            .navlist.open {
+                display: flex;
+                position: fixed;
+                top: var(--header-height);
+                right: 0;
+                width: 250px;
+                height: 100vh;
+                background: var(--bg-secondary);
+                flex-direction: column;
+                padding: 30px;
+                border-left: 1px solid var(--border);
+            }
+
+            .showcase-stage {
+                height: 380px;
+            }
+
+            .showcase-slide {
+                height: 350px;
+            }
+
+            .showcase-slide-overlay {
+                padding: 20px;
+            }
+
+            .showcase-slide-title {
+                font-size: 22px;
+            }
+
+            .showcase-slide[data-state="next"] {
+                transform: translateX(35%) translateZ(-150px) scale(0.8);
+            }
+
+            .showcase-slide[data-state="prev"] {
+                transform: translateX(-35%) translateZ(-150px) scale(0.8);
+            }
+        }
+
+        /* =========================================================
+   VISTAK PRO ENHANCEMENT LAYER
+   UX, ACCESSIBILITY, PERFORMANCE & INTERACTION SYSTEM
+   ========================================================= */
+
+        :root {
+            --header-height: 84px;
+            --max-content: 1240px;
+            --focus: 0 0 0 4px rgba(22, 224, 255, .16);
+            --glass: rgba(255, 255, 255, .055);
+            --glass-strong: rgba(255, 255, 255, .09);
+        }
+
+        body {
+            min-height: 100vh;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body.is-loading {
+            overflow: hidden
+        }
+
+        ::selection {
+            background: rgba(22, 224, 255, .25);
+            color: var(--text)
+        }
+
+        :focus-visible {
+            outline: none;
+            box-shadow: var(--focus);
+            border-color: var(--primary) !important
+        }
+
+        button:disabled {
+            opacity: .55;
+            cursor: not-allowed;
+            transform: none !important
+        }
+
+        img {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg))
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--text-muted)
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px
+        }
+
+        .skip-link {
+            position: fixed;
+            top: -100px;
+            left: 16px;
+            z-index: 99999;
+            padding: 12px 16px;
+            border-radius: 10px;
+            background: var(--primary);
+            color: #00121a;
+            font-weight: 900;
+        }
+
+        .skip-link:focus {
+            top: 16px
+        }
+
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 99998;
+            display: grid;
+            place-items: center;
+            background: var(--bg);
+            transition: opacity .45s ease, visibility .45s ease;
+        }
+
+        #preloader.hide {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none
+        }
+
+        .loader-core {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            position: relative;
+            display: grid;
+            place-items: center
+        }
+
+        .loader-core:before,
+        .loader-core:after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 2px solid transparent;
+        }
+
+        .loader-core:before {
+            border-top-color: var(--primary);
+            animation: spin 1s linear infinite
+        }
+
+        .loader-core:after {
+            inset: 9px;
+            border-right-color: var(--secondary);
+            animation: spin 1.5s linear reverse infinite
+        }
+
+        .loader-core i {
+            font-size: 25px;
+            color: var(--primary)
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            z-index: 9999;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            box-shadow: 0 0 16px rgba(22, 224, 255, .55);
+            pointer-events: none;
+        }
+
+
+        .hero-visual {
+            position: relative
+        }
+
+        .hero-visual img {
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            transition: transform .6s ease, filter .6s ease
+        }
+
+        .hero-visual:hover img {
+            transform: translateY(-6px) scale(1.015);
+            filter: saturate(1.08)
+        }
+
+        .hero-orbit {
+            position: absolute;
+            inset: auto -8px -12px auto;
+            width: 145px;
+            padding: 14px;
+            border: 1px solid var(--border-light);
+            border-radius: 18px;
+            background: rgba(5, 15, 27, .72);
+            backdrop-filter: blur(18px);
+            box-shadow: var(--shadow);
+            animation: floatCard 4s ease-in-out infinite;
+        }
+
+        body.rtl-mode .hero-orbit {
+            right: auto;
+            left: -8px
+        }
+
+        .hero-orbit strong {
+            display: block;
+            font-size: 18px;
+            color: var(--primary)
+        }
+
+        .hero-orbit span {
+            display: block;
+            font-size: 10px;
+            color: var(--text-muted)
+        }
+
+        @keyframes floatCard {
+            50% {
+                transform: translateY(-9px)
+            }
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .hero-stat {
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--glass);
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-size: 18px;
+            color: var(--text)
+        }
+
+        .hero-stat span {
+            font-size: 10px;
+            color: var(--text-muted)
+        }
+
+        .section.reveal,
+        .portal-card.reveal,
+        .compare-card.reveal,
+        .review-card.reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .7s ease, transform .7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1 !important;
+            transform: none !important
+        }
+
+        .portal-card {
+            position: relative
+        }
+
+        .card-tools {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            z-index: 3;
+            display: flex;
+            gap: 6px;
+        }
+
+        body.rtl-mode .card-tools {
+            right: auto;
+            left: 14px
+        }
+
+        .favorite-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 11px;
+            display: grid;
+            place-items: center;
+            background: rgba(5, 15, 27, .72);
+            border: 1px solid rgba(255, 255, 255, .16);
+            color: #fff;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .favorite-btn:hover,
+        .favorite-btn.active {
+            color: var(--danger);
+            border-color: rgba(255, 85, 116, .5);
+            transform: scale(1.06)
+        }
+
+        .card-match {
+            font-size: 10px;
+            color: var(--success);
+            font-weight: 800;
+            margin-bottom: 5px
+        }
+
+        .empty-state {
+            grid-column: 1/-1;
+            padding: 45px 20px;
+            text-align: center;
+            border: 1px dashed var(--border-light);
+            border-radius: var(--radius-md);
+            color: var(--text-muted);
+            background: var(--glass);
+        }
+
+        .empty-state i {
+            font-size: 42px;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 10px
+        }
+
+        .modal-content,
+        .auth-modal-card {
+            max-height: min(88vh, 760px);
+            overflow: auto
+        }
+
+        .modal-content form,
+        .auth-modal-card form {
+            display: grid;
+            gap: 0
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            margin-bottom: 14px
+        }
+
+        .form-field.full {
+            grid-column: 1/-1
+        }
+
+        .form-field label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            font-weight: 800
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 13px;
+            border-radius: 11px;
+            border: 1px solid var(--border);
+            background: rgba(0, 0, 0, .18);
+            color: var(--text);
+            outline: none;
+        }
+
+        .booking-summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 13px;
+            border-radius: 12px;
+            background: rgba(22, 224, 255, .055);
+            border: 1px solid rgba(22, 224, 255, .16);
+            margin-bottom: 16px;
+        }
+
+        .booking-summary small {
+            display: block;
+            color: var(--text-muted)
+        }
+
+        .booking-summary strong {
+            color: var(--primary)
+        }
+
+        .password-meter {
+            height: 5px;
+            background: var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 7px
+        }
+
+        .password-meter span {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: var(--danger);
+            transition: .3s
+        }
+
+        .command-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 8000;
+            display: none;
+            place-items: start center;
+            padding: 12vh 20px;
+            background: rgba(0, 0, 0, .72);
+            backdrop-filter: blur(16px);
+        }
+
+        .command-overlay.open {
+            display: grid
+        }
+
+        .command-box {
+            width: min(680px, 100%);
+            background: var(--card-solid);
+            border: 1px solid var(--border-light);
+            border-radius: 22px;
+            box-shadow: 0 35px 100px rgba(0, 0, 0, .55);
+            overflow: hidden;
+        }
+
+        .command-head {
+            padding: 14px;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .command-head input {
+            width: 100%;
+            border: 0;
+            background: transparent;
+            color: var(--text);
+            outline: 0;
+            font-size: 16px
+        }
+
+        .command-results {
+            max-height: 55vh;
+            overflow: auto;
+            padding: 8px
+        }
+
+        .command-item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 12px;
+            color: var(--text-secondary);
+            text-align: start;
+        }
+
+        .command-item:hover,
+        .command-item.active {
+            background: rgba(255, 255, 255, .055);
+            color: var(--text)
+        }
+
+        .command-item i {
+            font-size: 20px;
+            color: var(--primary)
+        }
+
+        .privacy-banner {
+            position: fixed;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            z-index: 7000;
+            width: min(900px, calc(100% - 40px));
+            margin: auto;
+            padding: 15px 17px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            background: var(--card-solid);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(18px);
+        }
+
+        .privacy-banner p {
+            font-size: 11px;
+            color: var(--text-secondary)
+        }
+
+        .privacy-actions {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0
+        }
+
+        .status-panel {
+            margin-top: 16px;
+            padding: 16px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: var(--glass);
+            display: none;
+        }
+
+        .status-panel.show {
+            display: block;
+            animation: fadeIn .35s ease
+        }
+
+        .status-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: rgba(37, 214, 149, .09);
+            color: var(--success);
+            font-size: 10px;
+            font-weight: 900;
+        }
+
+        .status-line {
+            height: 5px;
+            background: var(--border);
+            border-radius: 20px;
+            margin: 12px 0;
+            overflow: hidden
+        }
+
+        .status-line span {
+            display: block;
+            height: 100%;
+            width: 50%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 20px
+        }
+
+        .status-meta {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px
+        }
+
+        .status-meta div {
+            padding: 9px;
+            border: 1px solid var(--border);
+            border-radius: 10px
+        }
+
+        .status-meta small {
+            display: block;
+            color: var(--text-muted);
+            font-size: 9px
+        }
+
+        .status-meta strong {
+            font-size: 11px
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .toast {
+            animation: toastIn .35s ease
+        }
+
+        .toast.success {
+            border-color: rgba(37, 214, 149, .35)
+        }
+
+        .toast.warning {
+            border-color: rgba(255, 189, 89, .35)
+        }
+
+        .toast.danger {
+            border-color: rgba(255, 85, 116, .35)
+        }
+
+        .toast.info {
+            border-color: rgba(22, 224, 255, .25)
+        }
+
+        @keyframes toastIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px) scale(.97)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        [data-tooltip] {
+            position: relative
+        }
+
+        [data-tooltip]:hover:after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            padding: 5px 8px;
+            border-radius: 7px;
+            background: #000;
+            color: #fff;
+            font-size: 9px;
+            z-index: 30;
+        }
+
+        @media (max-width:900px) {
+            .hero-stats {
+                grid-template-columns: 1fr 1fr 1fr
+            }
+
+            .hero-orbit {
+                position: relative;
+                right: auto;
+                left: auto;
+                bottom: auto;
+                width: 100%;
+                margin-top: 10px
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr
+            }
+
+            .form-field.full {
+                grid-column: auto
+            }
+
+            .privacy-banner {
+                flex-direction: column;
+                align-items: stretch
+            }
+
+            .privacy-actions {
+                justify-content: flex-end
+            }
+        }
+
+        @media (max-width:560px) {
+            .hero-stats {
+                grid-template-columns: 1fr
+            }
+
+            .showcase-controls {
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center
+            }
+
+            .showcase-progress-container {
+                order: 5;
+                width: 100%
+            }
+
+            .status-meta {
+                grid-template-columns: 1fr
+            }
+
+            .privacy-actions {
+                width: 100%
+            }
+
+            .privacy-actions .btn {
+                flex: 1
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important
+            }
+        }
+
+
+        /* =========================================================
+   VISTAK PREMIUM FOOTER
+   ========================================================= */
+
+        .vistak-footer {
+            position: relative;
+            margin-top: 100px;
+            padding: 75px 0 25px;
+
+            background:
+                radial-gradient(circle at 15% 20%,
+                    rgba(22, 224, 255, .055),
+                    transparent 32%),
+                radial-gradient(circle at 85% 70%,
+                    rgba(138, 92, 246, .055),
+                    transparent 30%),
+                linear-gradient(180deg,
+                    rgba(255, 255, 255, .018),
+                    transparent);
+
+            border-top: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+
+        /* ---------------------------------------------------------
+   BACKGROUND GLOWS
+   --------------------------------------------------------- */
+
+        .footer-glow {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+
+            border-radius: 50%;
+
+            filter: blur(100px);
+
+            opacity: .08;
+
+            pointer-events: none;
+        }
+
+        .footer-glow-1 {
+            top: -180px;
+            left: 5%;
+
+            background: var(--primary);
+        }
+
+        .footer-glow-2 {
+            right: 5%;
+            bottom: -200px;
+
+            background: var(--secondary);
+        }
+
+
+        /* ---------------------------------------------------------
+   FOOTER CONTAINER
+   --------------------------------------------------------- */
+
+        .footer-container {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        /* ---------------------------------------------------------
+   TOP
+   --------------------------------------------------------- */
+
+        .footer-top {
+
+            display: grid;
+
+            grid-template-columns:
+                1.8fr 1fr 1.2fr 1.5fr;
+
+            gap: 55px;
+
+            padding-bottom: 55px;
+        }
+
+
+        /* ---------------------------------------------------------
+   BRAND
+   --------------------------------------------------------- */
+
+        .footer-brand {
+            max-width: 370px;
+        }
+
+
+        .footer-logo {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            text-decoration: none;
+
+            margin-bottom: 20px;
+        }
+
+
+        .footer-logo-mark {
+
+            width: 45px;
+            height: 45px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 14px;
+
+            color: var(--primary);
+
+            background:
+                linear-gradient(135deg,
+                    rgba(22, 224, 255, .13),
+                    rgba(138, 92, 246, .10));
+
+            border: 1px solid rgba(22, 224, 255, .20);
+
+            box-shadow:
+                0 0 30px rgba(22, 224, 255, .08);
+
+            font-size: 22px;
+        }
+
+
+        .footer-logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .footer-logo-text strong {
+
+            font-family: "Cinzel", serif;
+
+            font-size: 23px;
+
+            letter-spacing: 5px;
+
+            line-height: 1;
+
+            background:
+                linear-gradient(135deg,
+                    #fff,
+                    #9ca3af);
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+
+        .footer-logo-text span {
+
+            margin-top: 5px;
+
+            font-size: 8px;
+
+            letter-spacing: 6px;
+
+            color: var(--text-muted);
+        }
+
+
+        .footer-description {
+
+            max-width: 350px;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+            color: var(--text-muted);
+
+            margin-bottom: 20px;
+        }
+
+
+        /* ---------------------------------------------------------
+   STATUS
+   --------------------------------------------------------- */
+
+        .footer-status {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 7px 11px;
+
+            border-radius: 999px;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            color: var(--success);
+
+            background: rgba(37, 214, 149, .055);
+
+            border: 1px solid rgba(37, 214, 149, .14);
+        }
+
+
+        .status-dot {
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: var(--success);
+
+            box-shadow:
+                0 0 10px var(--success);
+
+            animation: footerPulse 2s infinite;
+        }
+
+
+        @keyframes footerPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: .45;
+                transform: scale(.75);
+            }
+
+        }
+
+
+        /* ---------------------------------------------------------
+   SOCIAL
+   --------------------------------------------------------- */
+
+        .footer-socials {
+
+            display: flex;
+
+            gap: 9px;
+
+            margin-top: 22px;
+        }
+
+
+        .footer-socials a {
+
+            width: 39px;
+            height: 39px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 11px;
+
+            color: var(--text-secondary);
+
+            background: rgba(255, 255, 255, .025);
+
+            border: 1px solid var(--border);
+
+            text-decoration: none;
+
+            transition:
+                transform .25s ease,
+                color .25s ease,
+                border-color .25s ease,
+                background .25s ease;
+        }
+
+
+        .footer-socials a:hover {
+
+            transform: translateY(-4px);
+
+            color: var(--primary);
+
+            border-color: rgba(22, 224, 255, .35);
+
+            background: rgba(22, 224, 255, .07);
+
+            box-shadow:
+                0 10px 30px rgba(22, 224, 255, .08);
+        }
+
+
+        /* ---------------------------------------------------------
+   COLUMNS
+   --------------------------------------------------------- */
+
+        .footer-column {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 11px;
+        }
+
+
+        .footer-column h4 {
+
+            position: relative;
+
+            margin: 0 0 12px;
+
+            font-size: 11px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            color: var(--text);
+
+        }
+
+
+        .footer-column h4::after {
+
+            content: "";
+
+            display: block;
+
+            width: 24px;
+            height: 2px;
+
+            margin-top: 9px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(90deg,
+                    var(--primary),
+                    transparent);
+        }
+
+
+        .footer-column>a {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            width: fit-content;
+
+            font-size: 11px;
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            transition:
+                color .2s ease,
+                transform .2s ease;
+        }
+
+
+        .footer-column>a i {
+
+            font-size: 14px;
+
+            color: var(--primary);
+
+            opacity: 0;
+
+            transform: translateX(-5px);
+
+            transition: .2s ease;
+        }
+
+
+        .footer-column>a:hover {
+
+            color: var(--text);
+
+            transform: translateX(4px);
+        }
+
+
+        .footer-column>a:hover i {
+
+            opacity: 1;
+
+            transform: translateX(0);
+        }
+
+
+        /* ---------------------------------------------------------
+   CONTACT
+   --------------------------------------------------------- */
+
+        .footer-contact {
+
+            gap: 15px;
+        }
+
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+        }
+
+
+        .contact-icon {
+
+            width: 37px;
+            height: 37px;
+
+            flex-shrink: 0;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 10px;
+
+            color: var(--primary);
+
+            background: rgba(22, 224, 255, .045);
+
+            border: 1px solid rgba(22, 224, 255, .12);
+
+            font-size: 17px;
+        }
+
+
+        .contact-item span {
+
+            display: block;
+
+            margin-bottom: 3px;
+
+            font-size: 8px;
+
+            color: var(--text-muted);
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+
+        .contact-item strong {
+
+            display: block;
+
+            font-size: 10px;
+
+            color: var(--text-secondary);
+        }
+
+
+        /* ---------------------------------------------------------
+   CTA
+   --------------------------------------------------------- */
+
+        .footer-cta {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 20px 22px;
+
+            margin-bottom: 28px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(100deg,
+                    rgba(22, 224, 255, .055),
+                    rgba(138, 92, 246, .035));
+
+            border: 1px solid var(--border-light);
+
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, .025);
+        }
+
+
+        .footer-cta-content {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+        }
+
+
+        .footer-cta-icon {
+
+            width: 45px;
+            height: 45px;
+
+            display: grid;
+            place-items: center;
+
+            flex-shrink: 0;
+
+            border-radius: 13px;
+
+            color: var(--primary);
+
+            background: rgba(22, 224, 255, .08);
+
+            border: 1px solid rgba(22, 224, 255, .16);
+
+            font-size: 21px;
+        }
+
+
+        .footer-cta h3 {
+
+            margin: 0 0 4px;
+
+            font-size: 14px;
+
+            color: var(--text);
+        }
+
+
+        .footer-cta p {
+
+            margin: 0;
+
+            font-size: 10px;
+
+            color: var(--text-muted);
+        }
+
+
+        .footer-cta-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 10px 15px;
+
+            border-radius: 10px;
+
+            color: #00131b;
+
+            background: var(--primary);
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            text-decoration: none;
+
+            white-space: nowrap;
+
+            transition: .25s ease;
+        }
+
+
+        .footer-cta-btn:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 30px rgba(22, 224, 255, .18);
+        }
+
+
+        .footer-cta-btn i {
+
+            font-size: 16px;
+        }
+
+
+        /* ---------------------------------------------------------
+   BOTTOM
+   --------------------------------------------------------- */
+
+        .footer-bottom {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding-top: 22px;
+
+            border-top: 1px solid var(--border);
+
+            font-size: 9px;
+
+            color: var(--text-muted);
+        }
+
+
+        .footer-copyright,
+        .footer-legal {
+
+            display: flex;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+
+        .footer-divider {
+
+            width: 3px;
+            height: 3px;
+
+            border-radius: 50%;
+
+            background: var(--text-muted);
+
+            opacity: .5;
+        }
+
+
+        .footer-legal a {
+
+            color: var(--text-muted);
+
+            text-decoration: none;
+
+            transition: .2s ease;
+        }
+
+
+        .footer-legal a:hover {
+
+            color: var(--primary);
+        }
+
+
+        .footer-secure {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            color: var(--success);
+
+            font-weight: 800;
+        }
+
+
+        .footer-secure i {
+
+            font-size: 13px;
+        }
+
+
+        /* ---------------------------------------------------------
+   RTL
+   --------------------------------------------------------- */
+
+        body.rtl-mode .footer-column>a:hover {
+
+            transform: translateX(-4px);
+        }
+
+        body.rtl-mode .footer-column>a i {
+
+            transform: translateX(5px);
+        }
+
+        body.rtl-mode .footer-column>a:hover i {
+
+            transform: translateX(0);
+        }
+
+
+        /* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+        @media (max-width: 900px) {
+
+            .footer-top {
+
+                grid-template-columns:
+                    1.5fr 1fr 1fr;
+
+                gap: 35px;
+            }
+
+            .footer-brand {
+
+                grid-column: 1 / -1;
+
+                max-width: 600px;
+            }
+
+        }
+
+
+        @media (max-width: 650px) {
+
+            .vistak-footer {
+
+                margin-top: 70px;
+
+                padding-top: 55px;
+            }
+
+            .footer-top {
+
+                grid-template-columns: 1fr 1fr;
+
+                gap: 35px 25px;
+            }
+
+            .footer-brand {
+
+                grid-column: 1 / -1;
+            }
+
+            .footer-cta {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .footer-cta-btn {
+
+                width: 100%;
+
+                justify-content: center;
+            }
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 430px) {
+
+            .footer-top {
+
+                grid-template-columns: 1fr;
+            }
+
+            .footer-column {
+
+                border-top: 1px solid var(--border);
+
+                padding-top: 22px;
+            }
+
+            .footer-copyright,
+            .footer-legal {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+            .footer-divider {
+
+                display: none;
+            }
+
         }
     </style>
 </head>
 
-<body>
+<body class="is-loading">
+
+    <a class="skip-link" href="#home">Skip to main content</a>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div id="preloader" aria-label="Loading Vistak">
+        <div class="loader-core"><i class="bx bx-globe"></i></div>
+    </div>
+
 
     <!-- =========================================================
      LIVE TICKER BAR (SYSTEM UPDATES)
      ========================================================= -->
     <div class="live-ticker">
         <div class="ticker-track">
-            <div class="ticker-item"><i class="bx bx-news"></i> Canada Express Entry Draw: 1,400 Invitations Issued</div>
-            <div class="ticker-item"><i class="bx bx-hotel"></i> Exclusive Hotel Deals: Up to 35% Off in Dubai & Paris</div>
-            <div class="ticker-item"><i class="bx bx-plane-takeoff"></i> Schengen Area: Digital Visa System Rollout Pending</div>
-            <div class="ticker-item"><i class="bx bx-map-pin"></i> New Tourism Packages Released for Bali & Maldives</div>
+            <div class="ticker-item"><i class="bx bx-news"></i> Canada Express Entry Draw: 1,400 Invitations Issued
+            </div>
+            <div class="ticker-item"><i class="bx bx-hotel"></i> Exclusive Hotel Deals: Up to 35% Off in Dubai & Paris
+            </div>
+            <div class="ticker-item"><i class="bx bx-plane-takeoff"></i> Schengen Area: Digital Visa System Rollout
+                Pending</div>
+            <div class="ticker-item"><i class="bx bx-map-pin"></i> New Tourism Packages Released for Bali & Maldives
+            </div>
         </div>
     </div>
 
@@ -972,17 +2649,19 @@
 
                     <!-- FLYING AIRPLANE ICON -->
                     <g transform="translate(290, 36) rotate(-10)" fill="url(#goldGrad)" filter="url(#glowEffect)">
-                        <path d="M 0,0 L 18,-6 L 24,-18 L 29,-18 L 26,-4 L 38,-2 L 43,-8 L 47,-8 L 44,2 L 47,12 L 43,12 L 38,6 L 26,6 L 29,20 L 24,20 L 18,8 L 0,2 Z" />
+                        <path
+                            d="M 0,0 L 18,-6 L 24,-18 L 29,-18 L 26,-4 L 38,-2 L 43,-8 L 47,-8 L 44,2 L 47,12 L 43,12 L 38,6 L 26,6 L 29,20 L 24,20 L 18,8 L 0,2 Z" />
                     </g>
 
                     <!-- FRAMING BOX -->
-                    <path d="M 120,68 L 120,45 L 260,45 M 310,45 L 370,45 L 370,118 L 120,118 L 120,95" 
-                          fill="none" stroke="url(#silverGrad)" stroke-width="5" stroke-linecap="square" />
+                    <path d="M 120,68 L 120,45 L 260,45 M 310,45 L 370,45 L 370,118 L 120,118 L 120,95" fill="none"
+                        stroke="url(#silverGrad)" stroke-width="5" stroke-linecap="square" />
 
                     <!-- ARABIC TYPOGRAPHY (فيزتاك) -->
                     <g fill="url(#silverGrad)">
                         <!-- ف -->
-                        <path d="M 335,92 L 350,92 L 350,75 L 335,75 Z M 335,108 L 360,108 L 360,68 L 325,68 L 325,108 Z" />
+                        <path
+                            d="M 335,92 L 350,92 L 350,75 L 335,75 Z M 335,108 L 360,108 L 360,68 L 325,68 L 325,108 Z" />
                         <rect x="338" y="58" width="8" height="8" fill="url(#goldGrad)" />
 
                         <!-- ي -->
@@ -1005,41 +2684,40 @@
                         <!-- ك -->
                         <path d="M 140,108 L 220,108 L 220,98 L 152,98 L 152,82 L 210,82 L 210,72 L 140,72 Z" />
                         <!-- Hamza ء -->
-                        <path d="M 148,68 Q 154,62 160,68 T 154,76 L 162,76" fill="none" stroke="url(#silverGrad)" stroke-width="3" />
+                        <path d="M 148,68 Q 154,62 160,68 T 154,76 L 162,76" fill="none" stroke="url(#silverGrad)"
+                            stroke-width="3" />
                     </g>
 
                     <!-- LATIN BRAND TEXT "VISTAK" -->
-                    <text x="225" y="162" 
-                          font-family="'Cinzel', 'Times New Roman', serif" 
-                          font-size="46" 
-                          font-weight="800" 
-                          letter-spacing="12" 
-                          fill="url(#silverGrad)" 
-                          text-anchor="middle">VISTAK</text>
+                    <text x="225" y="162" font-family="'Cinzel', 'Times New Roman', serif" font-size="46"
+                        font-weight="800" letter-spacing="12" fill="url(#silverGrad)" text-anchor="middle">VISTAK</text>
 
                     <!-- SUB-TEXT "AGENCY" & UNDERLINE -->
                     <line x1="110" y1="182" x2="210" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
-                    <text x="225" y="187" 
-                          font-family="'Inter', sans-serif" 
-                          font-size="14" 
-                          font-weight="700" 
-                          letter-spacing="8" 
-                          fill="url(#silverGrad)" 
-                          text-anchor="middle">AGENCY</text>
+                    <text x="225" y="187" font-family="'Inter', sans-serif" font-size="14" font-weight="700"
+                        letter-spacing="8" fill="url(#silverGrad)" text-anchor="middle">AGENCY</text>
                     <line x1="240" y1="182" x2="340" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
                 </svg>
             </a>
 
             <nav>
                 <ul class="navlist" id="navList">
-                    <li><a href="#home" class="nav-link active" data-en="Home" data-ar="الرئيسية"><i class="bx bx-home-alt"></i> <span class="lang-txt">Home</span></a></li>
-                    <li><a href="#gallery" class="nav-link" data-en="Gallery" data-ar="المعرض"><i class="bx bx-images"></i> <span class="lang-txt">Gallery</span></a></li>
-                    <li><a href="#tourism" class="nav-link" data-en="Tourism" data-ar="السياحة"><i class="bx bx-map-alt"></i> <span class="lang-txt">Tourism</span></a></li>
-                    <li><a href="#hotels" class="nav-link" data-en="Hotels" data-ar="الفنادق"><i class="bx bx-hotel"></i> <span class="lang-txt">Hotels</span></a></li>
-                    <li><a href="#tracker" class="nav-link" data-en="Tracker" data-ar="تتبع الطلب"><i class="bx bx-radar"></i> <span class="lang-txt">Tracker</span></a></li>
-                    <li><a href="#eligibility" class="nav-link" data-en="Eligibility" data-ar="الأهلية"><i class="bx bx-calculator"></i> <span class="lang-txt">Eligibility</span></a></li>
-                    <li><a href="#services" class="nav-link" data-en="Services" data-ar="الخدمات"><i class="bx bx-grid-alt"></i> <span class="lang-txt">Services</span></a></li>
-                    <li><a href="#files" class="nav-link" id="filesNavLink" style="display:none;" data-en="Files" data-ar="الملفات"><i class="bx bx-folder"></i> <span class="lang-txt">Files</span></a></li>
+                    <li><a href="#home" class="nav-link active" data-en="Home" data-ar="الرئيسية"><i
+                                class="bx bx-home-alt"></i> <span class="lang-txt">Home</span></a></li>
+                    <li><a href="#gallery" class="nav-link" data-en="Gallery" data-ar="المعرض"><i
+                                class="bx bx-images"></i> <span class="lang-txt">Gallery</span></a></li>
+                    <li><a href="#tourism" class="nav-link" data-en="Tourism" data-ar="السياحة"><i
+                                class="bx bx-map-alt"></i> <span class="lang-txt">Tourism</span></a></li>
+                    <li><a href="#hotels" class="nav-link" data-en="Hotels" data-ar="الفنادق"><i
+                                class="bx bx-hotel"></i> <span class="lang-txt">Hotels</span></a></li>
+                    <li><a href="#tracker" class="nav-link" data-en="Tracker" data-ar="تتبع الطلب"><i
+                                class="bx bx-radar"></i> <span class="lang-txt">Tracker</span></a></li>
+                    <li><a href="#eligibility" class="nav-link" data-en="Eligibility" data-ar="الأهلية"><i
+                                class="bx bx-calculator"></i> <span class="lang-txt">Eligibility</span></a></li>
+                    <li><a href="#services" class="nav-link" data-en="Services" data-ar="الخدمات"><i
+                                class="bx bx-grid-alt"></i> <span class="lang-txt">Services</span></a></li>
+                    <li><a href="#files" class="nav-link" id="filesNavLink" style="display:none;" data-en="Files"
+                            data-ar="الملفات"><i class="bx bx-folder"></i> <span class="lang-txt">Files</span></a></li>
                 </ul>
             </nav>
 
@@ -1048,7 +2726,8 @@
                     <span style="font-weight: 800; font-size: 11px;">عربي</span>
                 </button>
                 <button class="icon-btn" id="themeToggle" title="Toggle Theme"><i class="bx bx-moon"></i></button>
-                <a href="index.html" class="btn small" id="authNavBtn"><i class="bx bx-home"></i> <span id="authNavText">vistak</span></a>
+                <a href="index.html" class="btn small" id="authNavBtn"><i class="bx bx-home"></i> <span
+                        id="authNavText">vistak</span></a>
                 <button class="icon-btn" id="menu-icon" style="display: none;"><i class="bx bx-menu"></i></button>
             </div>
         </div>
@@ -1064,19 +2743,22 @@
                     <div class="eyebrow"><i class="bx bx-globe"></i> International Travel & Tourism Portal</div>
                     <h1>Global Travel & <br><span class="gradient">Seamless Booking.</span></h1>
                     <p class="hero-subtitle">
-                        Discover top tourist destinations, book luxury hotels, and manage university admissions or international relocation seamlessly.
+                        Discover top tourist destinations, book luxury hotels, and manage university admissions or
+                        international relocation seamlessly.
                         <br><span class="typing" id="typingText">Luxury Hotel Booking</span>
                     </p>
 
                     <!-- TRACKER INTEGRATION -->
                     <div class="tracker-card" id="tracker">
                         <div style="display:flex; justify-content:space-between; align-items:center;">
-                            <strong style="font-size:14px;"><i class="bx bx-search-alt" style="color:var(--primary);"></i> Track Your Application / Booking Status</strong>
+                            <strong style="font-size:14px;"><i class="bx bx-search-alt"
+                                    style="color:var(--primary);"></i> Track Your Application / Booking Status</strong>
                             <span style="font-size:10px; color:var(--text-muted);">Real-time Sync</span>
                         </div>
                         <div class="tracker-input-group">
                             <input type="text" id="trackInput" placeholder="Enter Ref Number (e.g. VSK-8821)">
-                            <button class="btn small" onclick="checkStatus()"><i class="bx bx-right-arrow-alt"></i> Track</button>
+                            <button class="btn small" onclick="checkStatus()"><i class="bx bx-right-arrow-alt"></i>
+                                Track</button>
                         </div>
                         <div class="tracker-steps" id="trackerVisual" style="display:none;">
                             <div class="tracker-step completed"><i class="bx bx-check"></i> Submitted</div>
@@ -1088,7 +2770,20 @@
                 </div>
 
                 <div class="hero-visual" style="text-align: center;">
-                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80" alt="World Travel" style="margin: 0 auto; width: 85%; border-radius: 24px; border: 1px solid var(--border-light); box-shadow: var(--shadow);">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=800&q=80"
+                        alt="World Travel"
+                        style="margin: 0 auto; width: 85%; border-radius: 24px; border: 1px solid var(--border-light); box-shadow: var(--shadow);">
+                    <div class="hero-orbit" aria-label="Vistak service metrics">
+                        <strong>24/7</strong>
+                        <span>Global assistance</span>
+                    </div>
+                    <div class="hero-stats" aria-label="Vistak highlights">
+                        <div class="hero-stat"><strong data-counter="120">0+</strong><span>Destinations</span></div>
+                        <div class="hero-stat"><strong data-counter="850">0+</strong><span>Partner stays</span></div>
+                        <div class="hero-stat"><strong data-counter="98">0%</strong><span>Client satisfaction</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1103,83 +2798,107 @@
             <div class="section-header">
                 <div class="eyebrow"><i class="bx bx-landscape"></i> Visual Journey</div>
                 <h2 class="section-title">Explore <span>Iconic Wonders</span></h2>
-                <p class="section-description">Immerse yourself in breathtaking destinations around the globe with our dynamic 3D experience.</p>
+                <p class="section-description">Immerse yourself in breathtaking destinations around the globe with our
+                    dynamic 3D experience.</p>
             </div>
 
             <div class="showcase-slider-wrapper" id="showcaseWrapper">
                 <div class="showcase-stage" id="showcaseStage">
-                    
+
                     <!-- Slide 1 -->
-                    <div class="showcase-slide" data-index="0" data-bg="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80" alt="Maldives Islands">
+                    <div class="showcase-slide" data-index="0"
+                        data-bg="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=80"
+                            alt="Maldives Islands">
                         <div class="showcase-slide-overlay">
                             <span class="showcase-slide-badge">Tropical Paradise</span>
                             <h3 class="showcase-slide-title">Maldives Atolls</h3>
-                            <p class="showcase-slide-desc">Crystal clear turquoise waters, pristine white sandy beaches, and luxury overwater bungalows.</p>
+                            <p class="showcase-slide-desc">Crystal clear turquoise waters, pristine white sandy beaches,
+                                and luxury overwater bungalows.</p>
                             <div class="showcase-slide-meta">
                                 <span><i class="bx bx-map"></i> Indian Ocean</span>
                                 <span><i class="bx bx-sun"></i> Year-round Warmth</span>
-                                <button class="btn small" style="margin-left: auto;" onclick="openBookingModal('Maldives Islands Resort', '$3,500')">Explore Package</button>
+                                <button class="btn small" style="margin-left: auto;"
+                                    onclick="openBookingModal('Maldives Islands Resort', '$3,500')">Explore
+                                    Package</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="showcase-slide" data-index="1" data-bg="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80">
-                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=80" alt="Paris Eiffel Tower">
+                    <div class="showcase-slide" data-index="1"
+                        data-bg="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1000&q=80"
+                            alt="Paris Eiffel Tower">
                         <div class="showcase-slide-overlay">
                             <span class="showcase-slide-badge">Cultural Icon</span>
                             <h3 class="showcase-slide-title">Paris & The Seine</h3>
-                            <p class="showcase-slide-desc">Experience timeless romance, classic European architecture, world-class cuisine, and art.</p>
+                            <p class="showcase-slide-desc">Experience timeless romance, classic European architecture,
+                                world-class cuisine, and art.</p>
                             <div class="showcase-slide-meta">
                                 <span><i class="bx bx-map"></i> France</span>
                                 <span><i class="bx bx-heart"></i> Romantic Escape</span>
-                                <button class="btn small" style="margin-left: auto;" onclick="openBookingModal('Parisian Dreams Tour', '$2,100')">Explore Package</button>
+                                <button class="btn small" style="margin-left: auto;"
+                                    onclick="openBookingModal('Parisian Dreams Tour', '$2,100')">Explore
+                                    Package</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="showcase-slide" data-index="2" data-bg="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80">
-                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=80" alt="Dubai Skyline">
+                    <div class="showcase-slide" data-index="2"
+                        data-bg="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=80"
+                            alt="Dubai Skyline">
                         <div class="showcase-slide-overlay">
                             <span class="showcase-slide-badge">Futuristic City</span>
                             <h3 class="showcase-slide-title">Dubai Metropolis</h3>
-                            <p class="showcase-slide-desc">Towering skyscrapers, desert safaris, ultra-luxurious shopping centers, and vibrant nightlife.</p>
+                            <p class="showcase-slide-desc">Towering skyscrapers, desert safaris, ultra-luxurious
+                                shopping centers, and vibrant nightlife.</p>
                             <div class="showcase-slide-meta">
                                 <span><i class="bx bx-map"></i> UAE</span>
                                 <span><i class="bx bx-building-house"></i> Luxury Lifestyle</span>
-                                <button class="btn small" style="margin-left: auto;" onclick="openBookingModal('Dubai Wonders Tour', '$1,800')">Explore Package</button>
+                                <button class="btn small" style="margin-left: auto;"
+                                    onclick="openBookingModal('Dubai Wonders Tour', '$1,800')">Explore Package</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 4 -->
-                    <div class="showcase-slide" data-index="3" data-bg="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80">
-                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=80" alt="Bali Indonesia">
+                    <div class="showcase-slide" data-index="3"
+                        data-bg="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1000&q=80"
+                            alt="Bali Indonesia">
                         <div class="showcase-slide-overlay">
                             <span class="showcase-slide-badge">Nature & Spirituality</span>
                             <h3 class="showcase-slide-title">Bali Sanctuary</h3>
-                            <p class="showcase-slide-desc">Lush green rice terraces, ancient sacred temples, volcanic peaks, and serene beach retreats.</p>
+                            <p class="showcase-slide-desc">Lush green rice terraces, ancient sacred temples, volcanic
+                                peaks, and serene beach retreats.</p>
                             <div class="showcase-slide-meta">
                                 <span><i class="bx bx-map"></i> Indonesia</span>
                                 <span><i class="bx bx-spa"></i> Wellness & Relax</span>
-                                <button class="btn small" style="margin-left: auto;" onclick="openBookingModal('Bali Sanctuary Trip', '$1,400')">Explore Package</button>
+                                <button class="btn small" style="margin-left: auto;"
+                                    onclick="openBookingModal('Bali Sanctuary Trip', '$1,400')">Explore Package</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 5 -->
-                    <div class="showcase-slide" data-index="4" data-bg="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1600&q=80">
-                        <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1000&q=80" alt="Swiss Alps">
+                    <div class="showcase-slide" data-index="4"
+                        data-bg="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1600&q=80">
+                        <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=1000&q=80"
+                            alt="Swiss Alps">
                         <div class="showcase-slide-overlay">
                             <span class="showcase-slide-badge">Alpine Wonders</span>
                             <h3 class="showcase-slide-title">Swiss Alps Peaks</h3>
-                            <p class="showcase-slide-desc">Snow-covered mountain peaks, scenic alpine train rides, world-class skiing, and mountain lodges.</p>
+                            <p class="showcase-slide-desc">Snow-covered mountain peaks, scenic alpine train rides,
+                                world-class skiing, and mountain lodges.</p>
                             <div class="showcase-slide-meta">
                                 <span><i class="bx bx-map"></i> Switzerland</span>
                                 <span><i class="bx bx-landscape"></i> Mountain Views</span>
-                                <button class="btn small" style="margin-left: auto;" onclick="openBookingModal('Swiss Alps Adventure', '$2,900')">Explore Package</button>
+                                <button class="btn small" style="margin-left: auto;"
+                                    onclick="openBookingModal('Swiss Alps Adventure', '$2,900')">Explore
+                                    Package</button>
                             </div>
                         </div>
                     </div>
@@ -1189,7 +2908,7 @@
                 <!-- Controls -->
                 <div class="showcase-controls">
                     <button class="showcase-nav-btn" id="showcasePrevBtn"><i class="bx bx-chevron-left"></i></button>
-                    
+
                     <div class="showcase-progress-container">
                         <div class="showcase-progress-bar" id="showcaseProgressBar"></div>
                     </div>
@@ -1227,62 +2946,73 @@
 
             <!-- Tourism Cards -->
             <div class="card-grid" id="tourismContainer">
-                <div class="portal-card">
+                <div class="portal-card" data-category="beach"
+                    data-search="bali indonesia tropical beach relaxation culture">
                     <div class="card-img-wrapper">
                         <span class="badge">Popular Choice</span>
-                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80"
+                            alt="Bali">
                     </div>
                     <div class="card-body">
                         <div class="card-location"><i class="bx bx-map"></i> Indonesia</div>
                         <h3 class="card-title">Tropical Bali Escape</h3>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Enjoy breathtaking beaches, private pool villas, and rich culture.</p>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Enjoy breathtaking beaches, private
+                            pool villas, and rich culture.</p>
                         <div class="card-features">
                             <span><i class="bx bx-time"></i> 7 Days / 6 Nights</span>
                             <span><i class="bx bx-car"></i> Transfers Included</span>
                         </div>
                         <div class="card-footer">
                             <div class="card-price">$1,250 <small>/ Person</small></div>
-                            <button class="btn small" onclick="openBookingModal('Tropical Bali Escape', '$1,250')">Book Now</button>
+                            <button class="btn small" onclick="openBookingModal('Tropical Bali Escape', '$1,250')">Book
+                                Now</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="portal-card">
+                <div class="portal-card" data-category="cultural" data-search="paris france cultural historic romance">
                     <div class="card-img-wrapper">
                         <span class="badge">Luxury Tour</span>
-                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" alt="Paris">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
+                            alt="Paris">
                     </div>
                     <div class="card-body">
                         <div class="card-location"><i class="bx bx-map"></i> France</div>
                         <h3 class="card-title">Parisian Romance & Heritage</h3>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Eiffel tower tours, museum access, and fine dining experience.</p>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Eiffel tower tours, museum access, and
+                            fine dining experience.</p>
                         <div class="card-features">
                             <span><i class="bx bx-time"></i> 5 Days / 4 Nights</span>
                             <span><i class="bx bx-walk"></i> Guided Tours</span>
                         </div>
                         <div class="card-footer">
                             <div class="card-price">$1,890 <small>/ Person</small></div>
-                            <button class="btn small" onclick="openBookingModal('Parisian Romance', '$1,890')">Book Now</button>
+                            <button class="btn small" onclick="openBookingModal('Parisian Romance', '$1,890')">Book
+                                Now</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="portal-card">
+                <div class="portal-card" data-category="adventure"
+                    data-search="dubai uae adventure desert safari luxury">
                     <div class="card-img-wrapper">
                         <span class="badge">Best Value</span>
-                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80" alt="Dubai">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=600&q=80"
+                            alt="Dubai">
                     </div>
                     <div class="card-body">
                         <div class="card-location"><i class="bx bx-map"></i> United Arab Emirates</div>
                         <h3 class="card-title">Dubai Future & Desert Safari</h3>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Burj Khalifa access, desert safari, and luxury shopping tours.</p>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Burj Khalifa access, desert safari,
+                            and luxury shopping tours.</p>
                         <div class="card-features">
                             <span><i class="bx bx-time"></i> 6 Days / 5 Nights</span>
                             <span><i class="bx bx-dish"></i> Breakfast Included</span>
                         </div>
                         <div class="card-footer">
                             <div class="card-price">$1,100 <small>/ Person</small></div>
-                            <button class="btn small" onclick="openBookingModal('Dubai Future Tour', '$1,100')">Book Now</button>
+                            <button class="btn small" onclick="openBookingModal('Dubai Future Tour', '$1,100')">Book
+                                Now</button>
                         </div>
                     </div>
                 </div>
@@ -1309,20 +3039,23 @@
                     <option value="5">5 Stars Luxury</option>
                     <option value="4">4 Stars Comfort</option>
                 </select>
-                <button class="btn small" onclick="filterHotels()"><i class="bx bx-search-alt-2"></i> Find Hotels</button>
+                <button class="btn small" onclick="filterHotels()"><i class="bx bx-search-alt-2"></i> Find
+                    Hotels</button>
             </div>
 
             <!-- Hotel Cards -->
             <div class="card-grid" id="hotelsContainer">
-                <div class="portal-card">
+                <div class="portal-card" data-rating="5" data-search="maldives azure ocean resort luxury hotel resort">
                     <div class="card-img-wrapper">
                         <span class="badge"><i class="bx bxs-star" style="color:var(--warning)"></i> 5.0 Rated</span>
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Hotel">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80"
+                            alt="Hotel">
                     </div>
                     <div class="card-body">
                         <div class="card-location"><i class="bx bx-map"></i> Maldives</div>
                         <h3 class="card-title">The Azure Ocean Resort</h3>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Overwater villas with private infinity pools and glass floors.</p>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Overwater villas with private infinity
+                            pools and glass floors.</p>
                         <div class="card-features">
                             <span><i class="bx bx-wifi"></i> Free WiFi</span>
                             <span><i class="bx bx-swim"></i> Private Pool</span>
@@ -1330,47 +3063,54 @@
                         </div>
                         <div class="card-footer">
                             <div class="card-price">$450 <small>/ Night</small></div>
-                            <button class="btn small secondary" onclick="openBookingModal('The Azure Ocean Resort', '$450/night')">Reserve Room</button>
+                            <button class="btn small secondary"
+                                onclick="openBookingModal('The Azure Ocean Resort', '$450/night')">Reserve Room</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="portal-card">
+                <div class="portal-card" data-rating="5" data-search="swiss alps alpine luxury grand lodge hotel">
                     <div class="card-img-wrapper">
                         <span class="badge"><i class="bx bxs-star" style="color:var(--warning)"></i> 4.9 Rated</span>
-                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Hotel">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80"
+                            alt="Hotel">
                     </div>
                     <div class="card-body">
                         <div class="card-location"><i class="bx bx-map"></i> Swiss Alps</div>
                         <h3 class="card-title">Alpine Luxury Grand Lodge</h3>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Panoramic mountain views, ski-in access, and cozy heated suites.</p>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Panoramic mountain views, ski-in
+                            access, and cozy heated suites.</p>
                         <div class="card-features">
                             <span><i class="bx bx-check-shield"></i> All Inclusive</span>
                             <span><i class="bx bx-drink"></i> Lounge & Bar</span>
                         </div>
                         <div class="card-footer">
                             <div class="card-price">$380 <small>/ Night</small></div>
-                            <button class="btn small secondary" onclick="openBookingModal('Alpine Luxury Lodge', '$380/night')">Reserve Room</button>
+                            <button class="btn small secondary"
+                                onclick="openBookingModal('Alpine Luxury Lodge', '$380/night')">Reserve Room</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="portal-card">
+                <div class="portal-card" data-rating="4" data-search="london royal crest hotel luxury uk">
                     <div class="card-img-wrapper">
                         <span class="badge"><i class="bx bxs-star" style="color:var(--warning)"></i> 4.8 Rated</span>
-                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Hotel">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80"
+                            alt="Hotel">
                     </div>
                     <div class="card-body">
                         <div class="card-location"><i class="bx bx-map"></i> London, UK</div>
                         <h3 class="card-title">The Royal Crest Hotel</h3>
-                        <p style="font-size: 13px; color: var(--text-secondary);">Located in central London, historic elegance with modern technology.</p>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Located in central London, historic
+                            elegance with modern technology.</p>
                         <div class="card-features">
                             <span><i class="bx bx-dumbbell"></i> Fitness Center</span>
                             <span><i class="bx bx-restaurant"></i> Michelin Star Dining</span>
                         </div>
                         <div class="card-footer">
                             <div class="card-price">$290 <small>/ Night</small></div>
-                            <button class="btn small secondary" onclick="openBookingModal('The Royal Crest Hotel', '$290/night')">Reserve Room</button>
+                            <button class="btn small secondary"
+                                onclick="openBookingModal('The Royal Crest Hotel', '$290/night')">Reserve Room</button>
                         </div>
                     </div>
                 </div>
@@ -1440,22 +3180,26 @@
                 <div class="compare-card">
                     <i class="bx bx-map-alt" style="font-size:30px; color:var(--primary);"></i>
                     <h3 style="margin: 10px 0;">Tourism & Travel</h3>
-                    <p style="font-size:13px; color:var(--text-secondary);">Outbound travel and customized itinerary design.</p>
+                    <p style="font-size:13px; color:var(--text-secondary);">Outbound travel and customized itinerary
+                        design.</p>
                 </div>
                 <div class="compare-card">
                     <i class="bx bx-hotel" style="font-size:30px; color:var(--primary);"></i>
                     <h3 style="margin: 10px 0;">Hotel Reservations</h3>
-                    <p style="font-size:13px; color:var(--text-secondary);">Exclusive rates for luxury hotels and resorts worldwide.</p>
+                    <p style="font-size:13px; color:var(--text-secondary);">Exclusive rates for luxury hotels and
+                        resorts worldwide.</p>
                 </div>
                 <div class="compare-card">
                     <i class="bx bx-book-open" style="font-size:30px; color:var(--primary);"></i>
                     <h3 style="margin: 10px 0;">Study Abroad</h3>
-                    <p style="font-size:13px; color:var(--text-secondary);">University placement and student visa processing.</p>
+                    <p style="font-size:13px; color:var(--text-secondary);">University placement and student visa
+                        processing.</p>
                 </div>
                 <div class="compare-card">
                     <i class="bx bx-briefcase" style="font-size:30px; color:var(--primary);"></i>
                     <h3 style="margin: 10px 0;">Immigration</h3>
-                    <p style="font-size:13px; color:var(--text-secondary);">Legal residency and work permit consultancy.</p>
+                    <p style="font-size:13px; color:var(--text-secondary);">Residency and work-permit guidance subject
+                        to applicable rules.</p>
                 </div>
             </div>
         </div>
@@ -1473,24 +3217,30 @@
 
             <div class="reviews-grid">
                 <div class="review-card">
-                    <div class="review-stars"><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div>
-                    <p style="font-size:13px; color:var(--text-secondary);">"Booking our hotel in the Maldives through Vistak was seamless! Great discount and instant confirmation."</p>
+                    <div class="review-stars"><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i
+                            class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div>
+                    <p style="font-size:13px; color:var(--text-secondary);">"Booking our hotel in the Maldives through
+                        Vistak was seamless! Great discount and instant confirmation."</p>
                     <div class="review-user">
                         <div class="review-avatar">K.A</div>
                         <div>
                             <strong style="font-size:13px;">Karim A.</strong>
-                            <span style="display:block; font-size:10px; color:var(--text-muted);">Hotel Booking • Maldives</span>
+                            <span style="display:block; font-size:10px; color:var(--text-muted);">Hotel Booking •
+                                Maldives</span>
                         </div>
                     </div>
                 </div>
                 <div class="review-card">
-                    <div class="review-stars"><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div>
-                    <p style="font-size:13px; color:var(--text-secondary);">"The Paris tourist package was amazing. Everything from airport pickup to hotel stay was organized."</p>
+                    <div class="review-stars"><i class="bx bxs-star"></i><i class="bx bxs-star"></i><i
+                            class="bx bxs-star"></i><i class="bx bxs-star"></i><i class="bx bxs-star"></i></div>
+                    <p style="font-size:13px; color:var(--text-secondary);">"The Paris tourist package was amazing.
+                        Everything from airport pickup to hotel stay was organized."</p>
                     <div class="review-user">
                         <div class="review-avatar">S.M</div>
                         <div>
                             <strong style="font-size:13px;">Sarah M.</strong>
-                            <span style="display:block; font-size:10px; color:var(--text-muted);">Tourism Package • France</span>
+                            <span style="display:block; font-size:10px; color:var(--text-muted);">Tourism Package •
+                                France</span>
                         </div>
                     </div>
                 </div>
@@ -1504,16 +3254,18 @@
     <section class="section" id="files" style="display:none;">
         <div class="container">
             <div class="section-header">
-                <div class="eyebrow"><i class="bx bx-shield-quarter"></i> Encrypted Document Vault</div>
+                <div class="eyebrow"><i class="bx bx-shield-quarter"></i> Local Document Vault</div>
                 <h2 class="section-title">Manage <span>Your Files</span></h2>
-                
+
                 <!-- STORAGE METRICS -->
                 <div style="max-width:300px; margin: 15px auto 0;">
                     <div style="display:flex; justify-content:space-between; font-size:11px; color:var(--text-muted);">
                         <span>Browser Vault Capacity</span>
                         <span id="storageTxt">Used: 0.0 MB</span>
                     </div>
-                    <div class="storage-meter"><div class="storage-progress" id="storageBar"></div></div>
+                    <div class="storage-meter">
+                        <div class="storage-progress" id="storageBar"></div>
+                    </div>
                 </div>
             </div>
 
@@ -1521,7 +3273,8 @@
                 <div class="tracker-input-group">
                     <input type="text" id="fileTitleInput" placeholder="Document Title / Name">
                     <input type="file" id="fileDirectInput" style="display:none;">
-                    <button class="btn small secondary" onclick="document.getElementById('fileDirectInput').click()"><i class="bx bx-upload"></i> Upload File</button>
+                    <button class="btn small secondary" onclick="document.getElementById('fileDirectInput').click()"><i
+                            class="bx bx-upload"></i> Upload File</button>
                 </div>
                 <div style="margin-top:20px; overflow-x:auto;">
                     <table style="width:100%; border-collapse:collapse; text-align:left; font-size:13px;">
@@ -1534,7 +3287,8 @@
                         </thead>
                         <tbody id="fileTableBody">
                             <tr>
-                                <td colspan="3" style="padding:20px; text-align:center; color:var(--text-muted);">No documents uploaded yet.</td>
+                                <td colspan="3" style="padding:20px; text-align:center; color:var(--text-muted);">No
+                                    documents uploaded yet.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1543,24 +3297,275 @@
         </div>
     </section>
 
+
+    <!-- =========================================================
+     ADVANCED COMMAND CENTER
+     ========================================================= -->
+    <div class="command-overlay" id="commandOverlay" role="dialog" aria-modal="true" aria-label="Quick navigation">
+        <div class="command-box">
+            <div class="command-head">
+                <input id="commandInput" type="search" autocomplete="off"
+                    placeholder="Search Vistak… (Press Ctrl/Cmd + K)">
+            </div>
+            <div class="command-results" id="commandResults"></div>
+        </div>
+    </div>
+
+    <!-- PRIVACY / LOCAL DEMO NOTICE -->
+    <div class="privacy-banner" id="privacyBanner">
+        <p><strong>Local demo mode:</strong> preferences, favorites and demo bookings can be stored in this browser. No
+            real payment or backend booking is performed by this standalone file.</p>
+        <div class="privacy-actions">
+            <button class="btn small secondary" id="privacyDismiss">Got it</button>
+        </div>
+    </div>
+
+
     <!-- =========================================================
      FOOTER
      ========================================================= -->
-    <footer style="border-top:1px solid var(--border); padding: 40px 0; margin-top:60px;">
-        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
-            <div>
-                <!-- FOOTER LOGO -->
-                <svg class="logo-svg" viewBox="0 0 450 200" style="height: 40px;">
-                    <use href="#header .logo-svg"></use>
-                </svg>
-                <p style="font-size:11px; color:var(--text-muted); margin-top:5px;">© <span id="year"></span> Vistak. Enterprise Portal Edition.</p>
+    <!-- =========================================================
+     PREMIUM VISTAK FOOTER
+     ========================================================= -->
+    <footer class="vistak-footer">
+
+        <!-- Glow Background -->
+        <div class="footer-glow footer-glow-1"></div>
+        <div class="footer-glow footer-glow-2"></div>
+
+        <div class="container footer-container">
+
+            <!-- TOP FOOTER -->
+            <div class="footer-top">
+
+                <!-- BRAND -->
+                <div class="footer-brand">
+
+                    <a href="#home" class="footer-logo">
+                        <div class="footer-logo-mark">
+                            <i class="bx bx-globe"></i>
+                        </div>
+
+                        <div class="footer-logo-text">
+                            <strong>VISTAK</strong>
+                            <span>AGENCY</span>
+                        </div>
+                    </a>
+
+                    <p class="footer-description">
+                        Premium global travel, tourism, hospitality and
+                        international services — designed for modern travelers
+                        and global citizens.
+                    </p>
+
+                    <div class="footer-status">
+                        <span class="status-dot"></span>
+                        <span>Global Operations Active</span>
+                    </div>
+
+                    <!-- SOCIAL -->
+                    <div class="footer-socials">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+
+                        <a href="#" aria-label="X">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMPANY -->
+                <div class="footer-column">
+
+                    <h4>Company</h4>
+
+                    <a href="#home">
+                        <i class="bx bx-chevron-right"></i>
+                        Home
+                    </a>
+
+                    <a href="#services">
+                        <i class="bx bx-chevron-right"></i>
+                        Services
+                    </a>
+
+                    <a href="#tourism">
+                        <i class="bx bx-chevron-right"></i>
+                        Tourism
+                    </a>
+
+                    <a href="#hotels">
+                        <i class="bx bx-chevron-right"></i>
+                        Hotels
+                    </a>
+
+                    <a href="#gallery">
+                        <i class="bx bx-chevron-right"></i>
+                        Destinations
+                    </a>
+
+                </div>
+
+
+                <!-- SERVICES -->
+                <div class="footer-column">
+
+                    <h4>Our Services</h4>
+
+                    <a href="#services">
+                        <i class="bx bx-chevron-right"></i>
+                        Travel Planning
+                    </a>
+
+                    <a href="#services">
+                        <i class="bx bx-chevron-right"></i>
+                        Hotel Reservations
+                    </a>
+
+                    <a href="#services">
+                        <i class="bx bx-chevron-right"></i>
+                        Visa Assistance
+                    </a>
+
+                    <a href="#services">
+                        <i class="bx bx-chevron-right"></i>
+                        Airport Transfers
+                    </a>
+
+                    <a href="#services">
+                        <i class="bx bx-chevron-right"></i>
+                        Global Relocation
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACT -->
+                <div class="footer-column footer-contact">
+
+                    <h4>Contact</h4>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bx bx-envelope"></i>
+                        </div>
+
+                        <div>
+                            <span>Email</span>
+                            <strong>hello@vistak.agency</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bx bx-phone"></i>
+                        </div>
+
+                        <div>
+                            <span>Phone</span>
+                            <strong>+961 00 000 000</strong>
+                        </div>
+                    </div>
+
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bx bx-world"></i>
+                        </div>
+
+                        <div>
+                            <span>Operations</span>
+                            <strong>Worldwide</strong>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-            <div style="display:flex; gap:15px; font-size:18px;">
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class="bx bxl-instagram"></i></a>
-                <a href="#"><i class="bx bxl-linkedin"></i></a>
+
+
+            <!-- NEWSLETTER / CTA -->
+            <div class="footer-cta">
+
+                <div class="footer-cta-content">
+
+                    <div class="footer-cta-icon">
+                        <i class="bx bx-paper-plane"></i>
+                    </div>
+
+                    <div>
+                        <h3>Plan your next journey.</h3>
+
+                        <p>
+                            Discover premium destinations, exclusive stays
+                            and global services with Vistak.
+                        </p>
+                    </div>
+
+                </div>
+
+                <a href="#tourism" class="footer-cta-btn">
+                    Explore Vistak
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
             </div>
+
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+
+                <div class="footer-copyright">
+
+                    <span>
+                        © <span id="year"></span>
+                        Vistak Agency.
+                        All rights reserved.
+                    </span>
+
+                    <span class="footer-divider"></span>
+
+                    <span>
+                        Enterprise Portal Edition
+                    </span>
+
+                </div>
+
+
+                <div class="footer-legal">
+
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Security</a>
+
+                    <span class="footer-secure">
+                        <i class="bx bx-shield-quarter"></i>
+                        Secure Platform
+                    </span>
+
+                </div>
+
+            </div>
+
         </div>
+
+
+        <!-- BACK TO TOP -->
+
     </footer>
 
     <!-- =========================================================
@@ -1573,20 +3578,59 @@
                 <button class="icon-btn" onclick="closeBookingModal()"><i class="bx bx-x"></i></button>
             </div>
             <form onsubmit="confirmBooking(event)">
-                <div style="margin-bottom:15px;">
-                    <label style="font-size:12px; color:var(--text-secondary);">Selected Offer</label>
-                    <input type="text" id="selectedOffer" readonly style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.4); color:var(--primary); font-weight:bold;">
+                <div class="booking-summary">
+                    <div><small>Selected offer</small><strong id="selectedOfferText">—</strong></div>
+                    <div><small>Starting from</small><strong id="selectedPriceText">—</strong></div>
                 </div>
-                <div style="margin-bottom:15px;">
-                    <input type="text" id="clientName" placeholder="Full Name" required style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.2); color:#fff;">
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="clientName">Full Name</label>
+                        <input class="form-control" type="text" id="clientName" autocomplete="name"
+                            placeholder="Your full name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="clientEmail">Email Address</label>
+                        <input class="form-control" type="email" id="clientEmail" autocomplete="email"
+                            placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="clientPhone">Phone</label>
+                        <input class="form-control" type="tel" id="clientPhone" autocomplete="tel" placeholder="+961 …"
+                            required>
+                    </div>
+                    <div class="form-field">
+                        <label for="bookingGuests">Guests</label>
+                        <select class="form-control" id="bookingGuests">
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6+ Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="bookingDate">Preferred Date</label>
+                        <input class="form-control" type="date" id="bookingDate" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="bookingType">Request Type</label>
+                        <select class="form-control" id="bookingType">
+                            <option>Booking request</option>
+                            <option>Availability check</option>
+                            <option>Custom itinerary</option>
+                            <option>Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-field full">
+                        <label for="bookingNotes">Notes</label>
+                        <textarea class="form-control" id="bookingNotes"
+                            placeholder="Special requirements, airport transfer, room preference…"></textarea>
+                    </div>
                 </div>
-                <div style="margin-bottom:15px;">
-                    <input type="email" id="clientEmail" placeholder="Email Address" required style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.2); color:#fff;">
-                </div>
-                <div style="margin-bottom:15px;">
-                    <input type="date" id="bookingDate" required style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.2); color:#fff;">
-                </div>
-                <button type="submit" class="btn full"><i class="bx bx-check-circle"></i> Confirm Booking Request</button>
+                <button type="submit" class="btn full"><i class="bx bx-check-circle"></i> Submit Professional
+                    Request</button>
+
             </form>
         </div>
     </div>
@@ -1602,10 +3646,14 @@
             </div>
             <form id="loginForm" onsubmit="handleLogin(event)">
                 <div style="margin-bottom:15px;">
-                    <input type="text" id="username" placeholder="Username" style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.2); color:#fff;" required>
+                    <input type="text" id="username" placeholder="Username"
+                        style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.2); color:#fff;"
+                        required>
                 </div>
                 <div style="margin-bottom:15px;">
-                    <input type="password" id="password" placeholder="Password" style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.2); color:#fff;" required>
+                    <input type="password" id="password" placeholder="Password"
+                        style="width:100%; padding:12px; border-radius:10px; border:1px solid var(--border); background:rgba(0,0,0,0.2); color:#fff;"
+                        required>
                 </div>
                 <button type="submit" class="btn full"><i class="bx bx-log-in"></i> Access Private Portal</button>
             </form>
@@ -1700,7 +3748,7 @@
 
             showcaseSlides.forEach((slide, i) => {
                 slide.removeAttribute('data-state');
-                
+
                 let prevIndex = (currentShowcaseIndex - 1 + total) % total;
                 let nextIndex = (currentShowcaseIndex + 1) % total;
 
@@ -1831,7 +3879,7 @@
             const cards = document.querySelectorAll('#tourismContainer .portal-card');
             cards.forEach(card => {
                 const text = card.textContent.toLowerCase();
-                if(text.includes(query)) {
+                if (text.includes(query)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
@@ -1845,7 +3893,7 @@
             const cards = document.querySelectorAll('#hotelsContainer .portal-card');
             cards.forEach(card => {
                 const text = card.textContent.toLowerCase();
-                if(text.includes(query)) {
+                if (text.includes(query)) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';
@@ -1858,7 +3906,7 @@
         function checkStatus() {
             const input = document.getElementById('trackInput').value.trim();
             const visual = document.getElementById('trackerVisual');
-            if(!input) {
+            if (!input) {
                 showToast("Please enter a valid Reference Number", "warning");
                 return;
             }
@@ -1883,20 +3931,20 @@
         const fileDirectInput = document.getElementById('fileDirectInput');
         fileDirectInput.addEventListener('change', (e) => {
             const file = e.target.files[0];
-            if(!file) return;
+            if (!file) return;
             const customTitle = document.getElementById('fileTitleInput').value.trim();
             const fileName = customTitle || file.name;
-            
+
             state.files.push({ name: fileName, status: 'Encrypted', size: file.size });
             renderFilesTable();
             document.getElementById('fileTitleInput').value = '';
             fileDirectInput.value = '';
-            showToast("Document Uploaded Securely", "success");
+            showToast("Document added to local vault", "success");
         });
 
         function renderFilesTable() {
             const tbody = document.getElementById('fileTableBody');
-            if(state.files.length === 0) {
+            if (state.files.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="3" style="padding:20px; text-align:center; color:var(--text-muted);">No documents uploaded yet.</td></tr>`;
                 return;
             }
@@ -1936,7 +3984,7 @@
             authModal.classList.remove('open');
             filesSection.style.display = 'block';
             filesNavLink.style.display = 'block';
-            showToast("Authenticated. Document Vault Unlocked.", "success");
+            showToast("Portal access enabled. Local vault unlocked.", "success");
             window.location.hash = "#files";
         }
 
@@ -1955,20 +4003,414 @@
         let wIdx = 0, cIdx = 0, deleting = false;
         function typeEffect() {
             const target = document.getElementById('typingText');
-            if(!target) return;
+            if (!target) return;
             const current = words[wIdx];
-            if(!deleting) {
+            if (!deleting) {
                 target.textContent = current.substring(0, cIdx + 1);
                 cIdx++;
-                if(cIdx === current.length) { deleting = true; setTimeout(typeEffect, 2000); return; }
+                if (cIdx === current.length) { deleting = true; setTimeout(typeEffect, 2000); return; }
             } else {
                 target.textContent = current.substring(0, cIdx - 1);
                 cIdx--;
-                if(cIdx === 0) { deleting = false; wIdx = (wIdx + 1) % words.length; }
+                if (cIdx === 0) { deleting = false; wIdx = (wIdx + 1) % words.length; }
             }
             setTimeout(typeEffect, deleting ? 50 : 100);
         }
         typeEffect();
+
+
+        /* =========================================================
+           VISTAK PRO APPLICATION ENGINE
+           ========================================================= */
+        (() => {
+            const $ = (s, root = document) => root.querySelector(s);
+            const $$ = (s, root = document) => [...root.querySelectorAll(s)];
+            const STORAGE = 'vistak_pro_state_v2';
+
+            // Persistent state
+            const persisted = JSON.parse(localStorage.getItem(STORAGE) || '{}');
+            state.theme = persisted.theme || state.theme || 'dark';
+            state.lang = persisted.lang || state.lang || 'en';
+            state.favorites = Array.isArray(persisted.favorites) ? persisted.favorites : [];
+            state.bookings = Array.isArray(persisted.bookings) ? persisted.bookings : [];
+            state.files = Array.isArray(persisted.files) ? persisted.files : [];
+
+            const saveState = () => {
+                localStorage.setItem(STORAGE, JSON.stringify({
+                    theme: state.theme,
+                    lang: state.lang,
+                    favorites: state.favorites,
+                    bookings: state.bookings,
+                    files: state.files
+                }));
+            };
+
+            // Preloader
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    $('#preloader')?.classList.add('hide');
+                    document.body.classList.remove('is-loading');
+                }, 350);
+            });
+
+            // Theme + language persistence
+            const applyTheme = () => {
+                document.body.classList.toggle('light-theme', state.theme === 'light');
+                if ($('#themeToggle')) $('#themeToggle').innerHTML = state.theme === 'light'
+                    ? '<i class="bx bx-sun"></i>' : '<i class="bx bx-moon"></i>';
+            };
+            const applyLang = () => {
+                document.body.classList.toggle('rtl-mode', state.lang === 'ar');
+                if ($('#langToggle')) $('#langToggle').innerHTML =
+                    `<span style="font-weight:800;font-size:11px;">${state.lang === 'ar' ? 'EN' : 'عربي'}</span>`;
+                if (typeof updateLanguageUI === 'function') updateLanguageUI();
+            };
+            applyTheme(); applyLang();
+
+            $('#themeToggle')?.addEventListener('click', () => {
+                state.theme = state.theme === 'dark' ? 'light' : 'dark';
+                applyTheme(); saveState();
+                showToast(state.theme === 'light' ? 'Light mode activated' : 'Dark mode activated', 'info');
+            });
+            $('#langToggle')?.addEventListener('click', () => {
+                state.lang = state.lang === 'en' ? 'ar' : 'en';
+                applyLang(); saveState();
+            });
+
+            // Scroll progress + back to top
+            const progress = $('#scrollProgress');
+            const backTop = $('#backToTop');
+            const updateScrollUI = () => {
+                const max = document.documentElement.scrollHeight - innerHeight;
+                const pct = max > 0 ? (scrollY / max) * 100 : 0;
+                if (progress) progress.style.width = `${pct}%`;
+                backTop?.classList.toggle('show', scrollY > 500);
+                $('#header')?.classList.toggle('scrolled', scrollY > 50);
+            };
+            addEventListener('scroll', updateScrollUI, { passive: true });
+            updateScrollUI();
+            backTop?.addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
+
+            // Active navigation with IntersectionObserver
+            const navLinks = $$('.nav-link');
+            const sections = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+            const navObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
+                });
+            }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+            sections.forEach(s => navObserver.observe(s));
+
+            // Close mobile menu after navigation
+            navLinks.forEach(link => link.addEventListener('click', () => $('#navList')?.classList.remove('open')));
+
+            // Reveal-on-scroll
+            $$('.section,.portal-card,.compare-card,.review-card').forEach(el => el.classList.add('reveal'));
+            const revealObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: .08 });
+            $$('.reveal').forEach(el => revealObserver.observe(el));
+
+            // Animated counters
+            const counterObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    const el = entry.target, target = Number(el.dataset.counter || 0), suffix = el.textContent.includes('%') ? '%' : '+';
+                    let start = 0, t0 = performance.now();
+                    const tick = t => {
+                        const p = Math.min((t - t0) / 1000, 1);
+                        const eased = 1 - Math.pow(1 - p, 3);
+                        el.textContent = `${Math.round(target * eased)}${suffix}`;
+                        if (p < 1) requestAnimationFrame(tick);
+                    };
+                    requestAnimationFrame(tick);
+                    counterObserver.unobserve(el);
+                });
+            }, { threshold: .7 });
+            $$('[data-counter]').forEach(el => counterObserver.observe(el));
+
+            // Favorites
+            const favoriteKey = card => (card.querySelector('.card-title')?.textContent || '').trim();
+            const injectFavoriteButtons = () => {
+                $$('.portal-card').forEach(card => {
+                    if (card.querySelector('.favorite-btn')) return;
+                    const tools = document.createElement('div');
+                    tools.className = 'card-tools';
+                    const btn = document.createElement('button');
+                    btn.className = 'favorite-btn';
+                    btn.type = 'button';
+                    btn.setAttribute('aria-label', 'Add to favorites');
+                    btn.innerHTML = '<i class="bx bx-heart"></i>';
+                    const key = favoriteKey(card);
+                    if (state.favorites.includes(key)) btn.classList.add('active');
+                    btn.addEventListener('click', e => {
+                        e.stopPropagation();
+                        const active = btn.classList.toggle('active');
+                        state.favorites = active
+                            ? [...new Set([...state.favorites, key])]
+                            : state.favorites.filter(x => x !== key);
+                        btn.innerHTML = `<i class="bx ${active ? 'bxs-heart' : 'bx-heart'}"></i>`;
+                        saveState();
+                        showToast(active ? 'Added to favorites' : 'Removed from favorites', 'info');
+                    });
+                    tools.appendChild(btn);
+                    card.appendChild(tools);
+                });
+            };
+            injectFavoriteButtons();
+            $$('.favorite-btn').forEach(b => {
+                if (b.classList.contains('active')) b.innerHTML = '<i class="bx bxs-heart"></i>';
+            });
+
+            // Real filtering: tourism category + search
+            const filterCards = (containerId, searchId, selectId, mode) => {
+                const container = $(`#${containerId}`);
+                if (!container) return;
+                const q = ($(`#${searchId}`)?.value || '').trim().toLowerCase();
+                const selected = ($(`#${selectId}`)?.value || 'all').toLowerCase();
+                const cards = $$('.portal-card', container);
+                let visible = 0;
+                cards.forEach(card => {
+                    const text = `${card.textContent} ${card.dataset.search || ''}`.toLowerCase();
+                    const matchesQ = !q || text.includes(q);
+                    const matchesFilter = mode === 'tourism'
+                        ? selected === 'all' || (card.dataset.category || '').toLowerCase() === selected
+                        : selected === 'all' || (card.dataset.rating || '') === selected;
+                    const show = matchesQ && matchesFilter;
+                    card.style.display = show ? 'flex' : 'none';
+                    if (show) visible++;
+                });
+                let empty = container.querySelector('.empty-state');
+                if (!visible) {
+                    if (!empty) {
+                        empty = document.createElement('div');
+                        empty.className = 'empty-state';
+                        empty.innerHTML = '<i class="bx bx-search-alt"></i><strong>No matching results</strong><p>Try another destination, category or rating.</p>';
+                        container.appendChild(empty);
+                    }
+                    empty.style.display = 'block';
+                } else if (empty) empty.style.display = 'none';
+            };
+
+            window.filterTourism = () => {
+                filterCards('tourismContainer', 'tourismSearch', 'tourismCategory', 'tourism');
+                showToast('Tourism results updated', 'info');
+            };
+            window.filterHotels = () => {
+                filterCards('hotelsContainer', 'hotelSearch', 'hotelRating', 'hotel');
+                showToast('Hotel results updated', 'info');
+            };
+            $('#tourismSearch')?.addEventListener('input', () => filterCards('tourismContainer', 'tourismSearch', 'tourismCategory', 'tourism'));
+            $('#tourismCategory')?.addEventListener('change', () => filterCards('tourismContainer', 'tourismSearch', 'tourismCategory', 'tourism'));
+            $('#hotelSearch')?.addEventListener('input', () => filterCards('hotelsContainer', 'hotelSearch', 'hotelRating', 'hotel'));
+            $('#hotelRating')?.addEventListener('change', () => filterCards('hotelsContainer', 'hotelSearch', 'hotelRating', 'hotel'));
+
+            // Professional booking workflow
+            const bookingDate = $('#bookingDate');
+            if (bookingDate) bookingDate.min = new Date().toISOString().split('T')[0];
+
+            let activeOffer = { item: '', price: '' };
+            const originalOpenBooking = window.openBookingModal;
+            window.openBookingModal = (item, price) => {
+                activeOffer = { item, price };
+                $('#selectedOffer') && ($('#selectedOffer').value = `${item} (${price})`);
+                $('#selectedOfferText') && ($('#selectedOfferText').textContent = item);
+                $('#selectedPriceText') && ($('#selectedPriceText').textContent = price);
+                $('#bookingModal')?.classList.add('open');
+                setTimeout(() => $('#clientName')?.focus(), 100);
+            };
+
+            window.closeBookingModal = () => {
+                $('#bookingModal')?.classList.remove('open');
+            };
+
+            window.confirmBooking = e => {
+                e.preventDefault();
+                const form = e.currentTarget;
+                if (!form.checkValidity()) { form.reportValidity(); return; }
+                const refNo = `VSK-${Math.floor(100000 + Math.random() * 900000)}`;
+                const booking = {
+                    ref: refNo,
+                    item: activeOffer.item || $('#selectedOfferText')?.textContent || 'Vistak Request',
+                    price: activeOffer.price || $('#selectedPriceText')?.textContent || '',
+                    name: $('#clientName')?.value.trim(),
+                    email: $('#clientEmail')?.value.trim(),
+                    phone: $('#clientPhone')?.value.trim(),
+                    guests: $('#bookingGuests')?.value,
+                    date: $('#bookingDate')?.value,
+                    type: $('#bookingType')?.value,
+                    notes: $('#bookingNotes')?.value.trim(),
+                    createdAt: new Date().toISOString(),
+                    status: 'Submitted'
+                };
+                state.bookings.unshift(booking);
+                saveState();
+                closeBookingModal();
+                form.reset();
+                if (bookingDate) bookingDate.min = new Date().toISOString().split('T')[0];
+                showToast(`Request submitted successfully • ${refNo}`, 'success');
+                const track = $('#trackInput');
+                if (track) track.value = refNo;
+                checkStatus();
+            };
+
+            // Close modals by overlay / Escape
+            $$('.modal,.auth-modal,.command-overlay').forEach(overlay => {
+                overlay.addEventListener('click', e => {
+                    if (e.target === overlay) overlay.classList.remove('open');
+                });
+            });
+
+            // Better tracker with demo records + generated booking references
+            const trackerPanel = document.createElement('div');
+            trackerPanel.className = 'status-panel';
+            trackerPanel.id = 'statusPanel';
+            trackerPanel.innerHTML = `
+        <div class="status-top"><strong id="statusTitle">Application found</strong><span class="status-badge"><i class="bx bx-radio-circle-marked"></i> Live demo</span></div>
+        <div class="status-line"><span id="statusProgress"></span></div>
+        <div class="status-meta">
+            <div><small>Reference</small><strong id="statusRef">—</strong></div>
+            <div><small>Stage</small><strong id="statusStage">—</strong></div>
+            <div><small>Last update</small><strong id="statusDate">—</strong></div>
+        </div>`;
+            $('#tracker')?.appendChild(trackerPanel);
+
+            window.checkStatus = () => {
+                const input = ($('#trackInput')?.value || '').trim().toUpperCase();
+                if (!input) { showToast('Please enter a reference number', 'warning'); return; }
+                const booking = state.bookings.find(b => b.ref === input);
+                const panel = $('#statusPanel');
+                if (!panel) return;
+                panel.classList.add('show');
+                $('#statusRef').textContent = input;
+                const stages = ['Submitted', 'Review', 'Processing', 'Approved'];
+                const stage = booking?.status || stages[Math.abs(input.split('').reduce((a, c) => a + c.charCodeAt(0), 0)) % 3];
+                const idx = Math.max(0, stages.indexOf(stage));
+                $('#statusStage').textContent = stage;
+                $('#statusProgress').style.width = `${((idx + 1) / stages.length) * 100}%`;
+                $('#statusDate').textContent = booking ? new Date(booking.createdAt).toLocaleDateString() : 'Demo sync';
+                $('#statusTitle').textContent = booking ? `Request ${input} located` : `Reference ${input} recognized`;
+                $('#trackerVisual').style.display = 'flex';
+                $$('#trackerVisual .tracker-step').forEach((el, i) => {
+                    el.classList.toggle('completed', i < idx);
+                    el.classList.toggle('active', i === idx);
+                });
+                showToast(booking ? 'Booking record synchronized' : 'Demo tracking result loaded', 'info');
+            };
+
+            // Persisted files (metadata only in this standalone demo)
+            const renderPersistentFiles = () => {
+                if (typeof renderFilesTable === 'function') renderFilesTable();
+            };
+            renderPersistentFiles();
+
+            // Command palette
+            const commandOverlay = $('#commandOverlay');
+            const commandInput = $('#commandInput');
+            const commandResults = $('#commandResults');
+            const commands = [
+                ['Home', 'Go to homepage', 'bx-home-alt', '#home'],
+                ['Gallery', 'Open destinations gallery', 'bx-images', '#gallery'],
+                ['Tourism', 'Browse travel packages', 'bx-map-alt', '#tourism'],
+                ['Hotels', 'Find luxury stays', 'bx-hotel', '#hotels'],
+                ['Tracker', 'Track a request', 'bx-radar', '#tracker'],
+                ['Eligibility', 'Open eligibility tool', 'bx-calculator', '#eligibility'],
+                ['Services', 'View global services', 'bx-grid-alt', '#services'],
+                ['Toggle theme', 'Switch dark/light mode', 'bx-moon', 'theme'],
+            ];
+            const renderCommands = q => {
+                const list = commands.filter(c => c[0].toLowerCase().includes(q.toLowerCase()) || c[1].toLowerCase().includes(q.toLowerCase()));
+                commandResults.innerHTML = list.map((c, i) => `
+            <button class="command-item ${i === 0 ? 'active' : ''}" data-action="${c[3]}">
+                <i class="bx ${c[2]}"></i><span><strong>${c[0]}</strong><small style="display:block;color:var(--text-muted)">${c[1]}</small></span>
+            </button>`).join('') ||
+                    '<div class="empty-state" style="border:0"><i class="bx bx-search"></i>No command found</div>';
+                $$('.command-item', commandResults).forEach(btn => btn.addEventListener('click', () => {
+                    const action = btn.dataset.action;
+                    commandOverlay.classList.remove('open');
+                    if (action === 'theme') $('#themeToggle')?.click();
+                    else document.querySelector(action)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }));
+            };
+            const openCommand = () => {
+                commandOverlay.classList.add('open');
+                commandInput.value = '';
+                renderCommands('');
+                setTimeout(() => commandInput.focus(), 50);
+            };
+            commandInput?.addEventListener('input', e => renderCommands(e.target.value));
+            document.addEventListener('keydown', e => {
+                if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openCommand(); }
+                if (e.key === 'Escape') {
+                    commandOverlay?.classList.remove('open');
+                    $('#bookingModal')?.classList.remove('open');
+                    $('#authModal')?.classList.remove('open');
+                }
+            });
+
+            // Privacy banner
+            if (localStorage.getItem('vistak_privacy_ack') === '1') $('#privacyBanner')?.remove();
+            $('#privacyDismiss')?.addEventListener('click', () => {
+                localStorage.setItem('vistak_privacy_ack', '1');
+                $('#privacyBanner')?.remove();
+            });
+
+            // Keyboard-friendly tracker
+            $('#trackInput')?.addEventListener('keydown', e => { if (e.key === 'Enter') checkStatus(); });
+
+            // Password strength feedback for auth demo
+            const password = $('#password');
+            if (password) {
+                const meter = document.createElement('div');
+                meter.className = 'password-meter';
+                meter.innerHTML = '<span></span>';
+                password.parentElement?.appendChild(meter);
+                password.addEventListener('input', () => {
+                    const v = password.value, score = (v.length >= 8) + (v.length >= 12) + (/[A-Z]/.test(v)) + (/[0-9]/.test(v)) + (/[^A-Za-z0-9]/.test(v));
+                    const width = Math.min(score / 5 * 100, 100);
+                    meter.firstElementChild.style.width = width + '%';
+                    meter.firstElementChild.style.background = score >= 4 ? 'var(--success)' : score >= 2 ? 'var(--warning)' : 'var(--danger)';
+                });
+            }
+
+            // Improve auth demo messaging: this remains a frontend demo, not real authentication.
+            const authForm = $('#loginForm');
+            if (authForm) {
+                authForm.addEventListener('submit', e => {
+                    // Original handler performs the demo unlock.
+                    setTimeout(() => {
+                        state.authenticated = true;
+                        saveState();
+                    }, 0);
+                });
+            }
+
+            // Accessibility labels
+            $('#themeToggle')?.setAttribute('aria-label', 'Toggle color theme');
+            $('#langToggle')?.setAttribute('aria-label', 'Switch language');
+            $('#menu-icon')?.setAttribute('aria-label', 'Open navigation menu');
+
+            // Save files after original upload handler changes them.
+            const originalRenderFiles = window.renderFilesTable;
+            if (originalRenderFiles) {
+                window.renderFilesTable = () => {
+                    originalRenderFiles();
+                    saveState();
+                };
+            }
+
+            // Initial UI refresh
+            injectFavoriteButtons();
+            filterCards('tourismContainer', 'tourismSearch', 'tourismCategory', 'tourism');
+            filterCards('hotelsContainer', 'hotelSearch', 'hotelRating', 'hotel');
+        })();
+
     </script>
 </body>
 
