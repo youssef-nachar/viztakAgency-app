@@ -10,6 +10,8 @@
 
     <!-- Icons -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png"
@@ -315,6 +317,253 @@
             font-weight: 700;
             transition: var(--transition);
         }
+         /* =========================================================
+               HEADER REFINED
+               تصميم متناسق للـ Header بدون تعارض مع الـ CSS الأساسي
+               ========================================================= */
+
+            #header {
+                height: var(--header-height);
+            }
+
+            #header .header-inner {
+                width: min(1240px, 92%);
+                min-height: var(--header-height);
+                margin-inline: auto;
+                padding: 0;
+                display: grid;
+                grid-template-columns: 170px minmax(0, 1fr) 110px;
+                align-items: center;
+                column-gap: 22px;
+            }
+
+            /* Logo */
+            #header .logo {
+                width: 145px;
+                height: 58px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                flex: 0 0 auto;
+                text-decoration: none;
+            }
+
+            #header .logo-svg {
+                width: 145px;
+                height: 58px;
+                display: block;
+                overflow: visible;
+            }
+
+            /* Navigation */
+            #header nav {
+                min-width: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            #header .navlist {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 3px;
+                margin: 0;
+                padding: 5px;
+                border: 1px solid var(--border);
+                border-radius: 16px;
+                background: rgba(255, 255, 255, .025);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+            }
+
+            #header .navlist > li {
+                display: flex;
+                align-items: center;
+            }
+
+            #header .navlist a {
+                min-height: 40px;
+                padding: 8px 11px;
+                border-radius: 11px;
+                gap: 6px;
+                white-space: nowrap;
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: .05px;
+            }
+
+            #header .navlist a i {
+                font-size: 16px;
+                line-height: 1;
+            }
+
+            #header .navlist a:hover,
+            #header .navlist a.active {
+                background: rgba(22, 224, 255, .08);
+            }
+
+            #header .navlist a.active::after {
+                bottom: 4px;
+                width: 5px;
+                height: 5px;
+            }
+
+            /* Login item */
+            #header .nav-auth {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            #header .nav-auth .auth-user {
+                max-width: 85px;
+            }
+
+            /* Right-side actions */
+            #header .header-actions {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 8px;
+            }
+
+            #header .icon-btn {
+                width: 40px;
+                height: 40px;
+                flex: 0 0 40px;
+                border-radius: 11px;
+            }
+
+            /* Mobile */
+            @media (max-width: 1100px) {
+                #header .header-inner {
+                    grid-template-columns: 150px minmax(0, 1fr) 96px;
+                    column-gap: 12px;
+                }
+
+                #header .logo,
+                #header .logo-svg {
+                    width: 130px;
+                }
+
+                #header .navlist {
+                    gap: 1px;
+                    padding: 4px;
+                }
+
+                #header .navlist a {
+                    padding-inline: 8px;
+                    font-size: 11px;
+                }
+
+                #header .navlist a i {
+                    font-size: 15px;
+                }
+            }
+
+            @media (max-width: 900px) {
+                #header .header-inner {
+                    width: min(94%, 1240px);
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 12px;
+                }
+
+                #header .logo,
+                #header .logo-svg {
+                    width: 132px;
+                    height: 54px;
+                }
+
+                #header nav {
+                    display: block;
+                    min-width: 0;
+                }
+
+                #header .navlist {
+                    position: fixed;
+                    top: var(--header-height);
+                    right: -100%;
+                    width: min(320px, 85%);
+                    height: calc(100vh - var(--header-height));
+                    margin: 0;
+                    padding: 25px;
+                    flex-direction: column;
+                    align-items: stretch;
+                    justify-content: flex-start;
+                    gap: 6px;
+                    border: 0;
+                    border-left: 1px solid var(--border);
+                    border-radius: 0;
+                    background: rgba(5, 15, 27, .97);
+                    backdrop-filter: blur(25px);
+                    -webkit-backdrop-filter: blur(25px);
+                    transition: .4s ease;
+                    overflow-y: auto;
+                }
+
+                body.light-theme #header .navlist {
+                    background: rgba(255, 255, 255, .97);
+                }
+
+                #header .navlist.open {
+                    right: 0;
+                }
+
+                #header .navlist > li {
+                    width: 100%;
+                }
+
+                #header .navlist a {
+                    width: 100%;
+                    min-height: 48px;
+                    padding: 13px 14px;
+                    justify-content: flex-start;
+                    font-size: 14px;
+                    border-radius: 12px;
+                }
+
+                #header .nav-auth {
+                    width: 100%;
+                }
+
+                #header .nav-auth .auth-user {
+                    max-width: 120px;
+                }
+
+                #header .header-actions {
+                    gap: 7px;
+                }
+
+                #header .icon-btn {
+                    width: 40px;
+                    height: 40px;
+                    flex-basis: 40px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                #header .header-inner {
+                    width: calc(100% - 28px);
+                }
+
+                #header .logo,
+                #header .logo-svg {
+                    width: 118px;
+                    height: 50px;
+                }
+
+                #header .header-actions {
+                    gap: 5px;
+                }
+
+                #header .icon-btn {
+                    width: 38px;
+                    height: 38px;
+                    flex-basis: 38px;
+                }
+            }
+   
 
         .navlist a:hover,
         .navlist a.active {
@@ -1715,39 +1964,141 @@
            LOADER
            ========================================================= */
 
+        /* =========================================================
+           LOADER — REFINED & PROPORTIONAL
+           ========================================================= */
+
         .page-loader {
             position: fixed;
             inset: 0;
             z-index: 9999;
-            display: grid;
-            place-items: center;
-            background: var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background:
+                radial-gradient(circle at center,
+                    rgba(22, 224, 255, .055) 0%,
+                    transparent 38%),
+                var(--bg);
+            overflow: hidden;
             transition:
                 opacity .5s ease,
                 visibility .5s ease;
         }
 
+        .page-loader::before {
+            content: "";
+            position: absolute;
+            width: min(520px, 85vw);
+            aspect-ratio: 1;
+            border: 1px solid rgba(22, 224, 255, .10);
+            border-radius: 50%;
+            box-shadow:
+                0 0 80px rgba(22, 224, 255, .06),
+                inset 0 0 60px rgba(217, 119, 6, .025);
+            pointer-events: none;
+        }
+
+        .page-loader::after {
+            content: "";
+            position: absolute;
+            width: min(360px, 65vw);
+            aspect-ratio: 1;
+            border: 1px dashed rgba(255, 255, 255, .08);
+            border-radius: 50%;
+            animation: loaderOrbit 8s linear infinite;
+            pointer-events: none;
+        }
+
         .page-loader.hide {
             opacity: 0;
             visibility: hidden;
+            pointer-events: none;
         }
 
-        .loader-logo {
-            width: 130px;
-            animation: loaderPulse 1.5s infinite;
+        /* مهم: الـ SVG في الـ loader يستخدم logo-svg */
+        .page-loader .logo-svg {
+            position: relative;
+            z-index: 2;
+            display: block;
+            width: min(330px, 72vw);
+            height: auto;
+            aspect-ratio: 450 / 200;
+            overflow: visible;
+            filter:
+                drop-shadow(0 0 16px rgba(22, 224, 255, .10))
+                drop-shadow(0 10px 35px rgba(0, 0, 0, .25));
+            transform-origin: center;
+            animation: loaderPulse 1.8s ease-in-out infinite;
+        }
+
+        /* نقطة ضوء تمر أسفل الشعار لإعطاء إحساس احترافي */
+        .page-loader .logo-svg::after {
+            content: "";
         }
 
         @keyframes loaderPulse {
-
             0%,
             100% {
-                opacity: .5;
-                transform: scale(.95);
+                opacity: .72;
+                transform: scale(.96);
             }
 
             50% {
                 opacity: 1;
                 transform: scale(1);
+            }
+        }
+
+        @keyframes loaderOrbit {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        body.light-theme .page-loader {
+            background:
+                radial-gradient(circle at center,
+                    rgba(22, 224, 255, .07) 0%,
+                    transparent 40%),
+                var(--bg);
+        }
+
+        body.light-theme .page-loader::before {
+            border-color: rgba(15, 23, 42, .08);
+        }
+
+        body.light-theme .page-loader::after {
+            border-color: rgba(15, 23, 42, .08);
+        }
+
+        @media (max-width: 620px) {
+            .page-loader {
+                padding: 18px;
+            }
+
+            .page-loader .logo-svg {
+                width: min(290px, 82vw);
+            }
+
+            .page-loader::before {
+                width: 105vw;
+            }
+
+            .page-loader::after {
+                width: 72vw;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .page-loader .logo-svg,
+            .page-loader::after {
+                animation: none;
             }
         }
 
@@ -2114,7 +2465,90 @@
                 transition-duration: .01ms !important;
             }
         }
-    </style>
+  
+              .branches-container {
+                position: relative;
+                background: #0f172a;
+                border-radius: 20px;
+                padding: 30px 20px;
+                overflow: hidden;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            /* حاوية الخريطة الحقيقية */
+            #realMap {
+                width: 100%;
+                height: 450px;
+                border-radius: 14px;
+                box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+                z-index: 1;
+            }
+
+            /* تخصيص مظهر النوافذ المنبثقة على الخريطة */
+            .leaflet-popup-content-wrapper {
+                background: #1e293b;
+                color: #fff;
+                border: 1px solid #d97706;
+                border-radius: 10px;
+            }
+
+            .leaflet-popup-tip {
+                background: #1e293b;
+            }
+
+            .branches-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            .branch-card {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 14px;
+                padding: 20px;
+                color: #fff;
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                cursor: pointer;
+            }
+
+            .branch-card:hover {
+                background: rgba(217, 119, 6, 0.15);
+                border-color: #d97706;
+                transform: translateY(-5px);
+            }
+
+            .branch-icon {
+                width: 48px;
+                height: 48px;
+                background: linear-gradient(135deg, #d97706, #b45309);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                color: #fff;
+                flex-shrink: 0;
+            }
+
+            .branch-info h4 {
+                margin: 0 0 4px 0;
+                font-size: 1.1rem;
+                color: #f8fafc;
+            }
+
+            .branch-info p {
+                margin: 0;
+                font-size: 0.85rem;
+                color: #94a3b8;
+            }
+            </style>
 </head>
 
 <body>
@@ -2124,7 +2558,99 @@
      ========================================================= -->
 
     <div class="page-loader" id="pageLoader">
-            <svg class="logo-svg" viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
+        <svg class="logo-svg loader-logo" viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- Silver Gradient for Towers & Borders -->
+                <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="35%" stop-color="#e2e8f0" />
+                    <stop offset="70%" stop-color="#94a3b8" />
+                    <stop offset="100%" stop-color="#cbd5e1" />
+                </linearGradient>
+
+                <!-- Metallic Gold Gradient for Airplane & Accents -->
+                <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#fef08a" />
+                    <stop offset="50%" stop-color="#d97706" />
+                    <stop offset="100%" stop-color="#b45309" />
+                </linearGradient>
+
+                <!-- Subtle Glow Effect -->
+                <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+            </defs>
+
+            <!-- TOP ARCHITECTURAL TOWERS -->
+            <g fill="url(#silverGrad)">
+                <polygon points="160,50 178,42 178,92 160,92" />
+                <polygon points="186,35 204,27 204,92 186,92" />
+                <polygon points="212,20 230,12 230,92 212,92" />
+            </g>
+
+            <!-- FLYING AIRPLANE ICON -->
+            <g transform="translate(290, 36) rotate(-10)" fill="url(#goldGrad)" filter="url(#glowEffect)">
+                <path
+                    d="M 0,0 L 18,-6 L 24,-18 L 29,-18 L 26,-4 L 38,-2 L 43,-8 L 47,-8 L 44,2 L 47,12 L 43,12 L 38,6 L 26,6 L 29,20 L 24,20 L 18,8 L 0,2 Z" />
+            </g>
+
+            <!-- FRAMING BOX -->
+            <path d="M 120,68 L 120,45 L 260,45 M 310,45 L 370,45 L 370,118 L 120,118 L 120,95" fill="none"
+                stroke="url(#silverGrad)" stroke-width="5" stroke-linecap="square" />
+
+            <!-- ARABIC TYPOGRAPHY (فيزتاك) -->
+            <g fill="url(#silverGrad)">
+                <!-- ف -->
+                <path d="M 335,92 L 350,92 L 350,75 L 335,75 Z M 335,108 L 360,108 L 360,68 L 325,68 L 325,108 Z" />
+                <rect x="338" y="58" width="8" height="8" fill="url(#goldGrad)" />
+
+                <!-- ي -->
+                <path d="M 300,108 L 320,108 L 320,82 L 308,82 L 308,98 L 300,98 Z" />
+                <rect x="302" y="112" width="6" height="6" fill="url(#goldGrad)" />
+                <rect x="312" y="112" width="6" height="6" fill="url(#goldGrad)" />
+
+                <!-- ز -->
+                <path d="M 280,108 L 295,108 L 295,78 L 280,78 Z" />
+                <rect x="284" y="66" width="7" height="7" fill="url(#goldGrad)" />
+
+                <!-- ت -->
+                <path d="M 242,108 L 275,108 L 275,82 L 263,82 L 263,98 L 242,98 Z" />
+                <rect x="247" y="70" width="6" height="6" fill="url(#goldGrad)" />
+                <rect x="257" y="70" width="6" height="6" fill="url(#goldGrad)" />
+
+                <!-- ا -->
+                <rect x="228" y="60" width="10" height="48" />
+
+                <!-- ك -->
+                <path d="M 140,108 L 220,108 L 220,98 L 152,98 L 152,82 L 210,82 L 210,72 L 140,72 Z" />
+                <!-- Hamza ء -->
+                <path d="M 148,68 Q 154,62 160,68 T 154,76 L 162,76" fill="none" stroke="url(#silverGrad)"
+                    stroke-width="3" />
+            </g>
+
+            <!-- LATIN BRAND TEXT "VISTAK" -->
+            <text x="225" y="162" font-family="'Cinzel', 'Times New Roman', serif" font-size="46" font-weight="800"
+                letter-spacing="12" fill="url(#silverGrad)" text-anchor="middle">VISTAK</text>
+
+            <!-- SUB-TEXT "AGENCY" & UNDERLINE -->
+            <line x1="110" y1="182" x2="210" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
+            <text x="225" y="187" font-family="'Inter', sans-serif" font-size="14" font-weight="700" letter-spacing="8"
+                fill="url(#silverGrad)" text-anchor="middle">AGENCY</text>
+            <line x1="240" y1="182" x2="340" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
+        </svg>
+
+    </div>
+
+    <!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+    <header id="header">
+        <div class="header-inner">
+
+            <a href="#home" class="logo" aria-label="Vistak Home">
+                <svg class="logo-svg" viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <!-- Silver Gradient for Towers & Borders -->
                         <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -2157,17 +2683,19 @@
 
                     <!-- FLYING AIRPLANE ICON -->
                     <g transform="translate(290, 36) rotate(-10)" fill="url(#goldGrad)" filter="url(#glowEffect)">
-                        <path d="M 0,0 L 18,-6 L 24,-18 L 29,-18 L 26,-4 L 38,-2 L 43,-8 L 47,-8 L 44,2 L 47,12 L 43,12 L 38,6 L 26,6 L 29,20 L 24,20 L 18,8 L 0,2 Z" />
+                        <path
+                            d="M 0,0 L 18,-6 L 24,-18 L 29,-18 L 26,-4 L 38,-2 L 43,-8 L 47,-8 L 44,2 L 47,12 L 43,12 L 38,6 L 26,6 L 29,20 L 24,20 L 18,8 L 0,2 Z" />
                     </g>
 
                     <!-- FRAMING BOX -->
-                    <path d="M 120,68 L 120,45 L 260,45 M 310,45 L 370,45 L 370,118 L 120,118 L 120,95" 
-                          fill="none" stroke="url(#silverGrad)" stroke-width="5" stroke-linecap="square" />
+                    <path d="M 120,68 L 120,45 L 260,45 M 310,45 L 370,45 L 370,118 L 120,118 L 120,95" fill="none"
+                        stroke="url(#silverGrad)" stroke-width="5" stroke-linecap="square" />
 
                     <!-- ARABIC TYPOGRAPHY (فيزتاك) -->
                     <g fill="url(#silverGrad)">
                         <!-- ف -->
-                        <path d="M 335,92 L 350,92 L 350,75 L 335,75 Z M 335,108 L 360,108 L 360,68 L 325,68 L 325,108 Z" />
+                        <path
+                            d="M 335,92 L 350,92 L 350,75 L 335,75 Z M 335,108 L 360,108 L 360,68 L 325,68 L 325,108 Z" />
                         <rect x="338" y="58" width="8" height="8" fill="url(#goldGrad)" />
 
                         <!-- ي -->
@@ -2190,236 +2718,101 @@
                         <!-- ك -->
                         <path d="M 140,108 L 220,108 L 220,98 L 152,98 L 152,82 L 210,82 L 210,72 L 140,72 Z" />
                         <!-- Hamza ء -->
-                        <path d="M 148,68 Q 154,62 160,68 T 154,76 L 162,76" fill="none" stroke="url(#silverGrad)" stroke-width="3" />
+                        <path d="M 148,68 Q 154,62 160,68 T 154,76 L 162,76" fill="none" stroke="url(#silverGrad)"
+                            stroke-width="3" />
                     </g>
 
                     <!-- LATIN BRAND TEXT "VISTAK" -->
-                    <text x="225" y="162" 
-                          font-family="'Cinzel', 'Times New Roman', serif" 
-                          font-size="46" 
-                          font-weight="800" 
-                          letter-spacing="12" 
-                          fill="url(#silverGrad)" 
-                          text-anchor="middle">VISTAK</text>
+                    <text x="225" y="162" font-family="'Cinzel', 'Times New Roman', serif" font-size="46"
+                        font-weight="800" letter-spacing="12" fill="url(#silverGrad)" text-anchor="middle">VISTAK</text>
 
                     <!-- SUB-TEXT "AGENCY" & UNDERLINE -->
                     <line x1="110" y1="182" x2="210" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
-                    <text x="225" y="187" 
-                          font-family="'Inter', sans-serif" 
-                          font-size="14" 
-                          font-weight="700" 
-                          letter-spacing="8" 
-                          fill="url(#silverGrad)" 
-                          text-anchor="middle">AGENCY</text>
+                    <text x="225" y="187" font-family="'Inter', sans-serif" font-size="14" font-weight="700"
+                        letter-spacing="8" fill="url(#silverGrad)" text-anchor="middle">AGENCY</text>
                     <line x1="240" y1="182" x2="340" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
                 </svg>
-  
-    </div>
+            </a>
 
-    <!-- =========================================================
-     HEADER
-     ========================================================= -->
+            <nav>
+                <ul class="navlist" id="navList">
 
-<header id="header">
+                    <li>
+                        <a href="#home" class="nav-link active">
+                            <i class="bx bx-home-alt"></i>
+                            Home
+                        </a>
+                    </li>
 
-    <style>
-        /* تحسينات لضمان إظهار الـ SVG واستجابته */
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background-color: #0f172a; /* خلفية داكنة لإبراز التدرج الفضي والذهبي */
-        }
+                    <li>
+                        <a href="#about" class="nav-link">
+                            <i class="bx bx-buildings"></i>
+                            About
+                        </a>
+                    </li>
 
-        .logo {
-            display: inline-block;
-            width: 180px; /* تحديد عرض مناسب للوجو */
-            height: auto;
-            text-decoration: none;
-        }
+                    <li>
+                        <a href="#services" class="nav-link">
+                            <i class="bx bx-grid-alt"></i>
+                            Services
+                        </a>
+                    </li>
 
-        .logo-svg {
-            width: 100%;
-            height: auto;
-            display: block;
-            overflow: visible;
-        }
-    </style>
+                    <li>
+                        <a href="#book" class="nav-link">
+                            <i class="bx bx-calendar-check"></i>
+                            Book
+                        </a>
+                    </li>
 
-    <div class="header-inner">
+                    <li>
+                        <a href="#contact" class="nav-link">
+                            <i class="bx bx-message-rounded-dots"></i>
+                            Contact
+                        </a>
+                    </li>
 
-        <a href="#home" class="logo" aria-label="Vistak Home">
-            <svg class="logo-svg" viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <!-- Silver Gradient for Towers & Borders -->
-                    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#ffffff" />
-                        <stop offset="35%" stop-color="#e2e8f0" />
-                        <stop offset="70%" stop-color="#94a3b8" />
-                        <stop offset="100%" stop-color="#cbd5e1" />
-                    </linearGradient>
+                    <li id="filesNavItem" style="display:none;">
+                        <a href="#files" class="nav-link" id="filesNavLink">
+                            <i class="bx bx-folder-open"></i>
+                            Files
+                        </a>
+                    </li>
 
-                    <!-- Metallic Gold Gradient for Airplane & Accents -->
-                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#fef08a" />
-                        <stop offset="50%" stop-color="#d97706" />
-                        <stop offset="100%" stop-color="#b45309" />
-                    </linearGradient>
+                    <!-- رابط الانتقال إلى الصفحة الخارجية vistak2.html -->
+                    <li id="vistak2NavItem">
+                        <a href="vistak2.html" class="nav-link">
+                            <i class="bx bx-right-arrow-alt"></i>
+                            Vistak Portal
+                        </a>
+                    </li>
 
-                    <!-- Subtle Glow Effect -->
-                    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
-                        <feGaussianBlur stdDeviation="3" result="blur" />
-                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                    </filter>
-                </defs>
+                    <li class="nav-auth">
+                        <a href="#" class="nav-link" id="authNavLink">
+                            <i class="bx bx-log-in-circle"></i>
+                            <span id="authNavText">Login</span>
+                        </a>
+                        <span class="auth-user" id="authUserLabel" hidden></span>
+                    </li>
 
-                <!-- TOP ARCHITECTURAL TOWERS -->
-                <g fill="url(#silverGrad)">
-                    <polygon points="160,50 178,42 178,92 160,92" />
-                    <polygon points="186,35 204,27 204,92 186,92" />
-                    <polygon points="212,20 230,12 230,92 212,92" />
-                </g>
+                </ul>
+            </nav>
 
-                <!-- FLYING AIRPLANE ICON -->
-                <g transform="translate(290, 36) rotate(-10)" fill="url(#goldGrad)" filter="url(#glowEffect)">
-                    <path d="M 0,0 L 18,-6 L 24,-18 L 29,-18 L 26,-4 L 38,-2 L 43,-8 L 47,-8 L 44,2 L 47,12 L 43,12 L 38,6 L 26,6 L 29,20 L 24,20 L 18,8 L 0,2 Z" />
-                </g>
+            <div class="header-actions">
 
-                <!-- FRAMING BOX -->
-                <path d="M 120,68 L 120,45 L 260,45 M 310,45 L 370,45 L 370,118 L 120,118 L 120,95" 
-                      fill="none" stroke="url(#silverGrad)" stroke-width="5" stroke-linecap="square" />
+                <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <i class="bx bx-moon"></i>
+                </button>
 
-                <!-- ARABIC TYPOGRAPHY (فيزتاك) -->
-                <g fill="url(#silverGrad)">
-                    <!-- ف -->
-                    <path d="M 335,92 L 350,92 L 350,75 L 335,75 Z M 335,108 L 360,108 L 360,68 L 325,68 L 325,108 Z" />
-                    <rect x="338" y="58" width="8" height="8" fill="url(#goldGrad)" />
+                <button class="icon-btn" id="menu-icon" aria-label="Open menu" title="Menu">
+                    <i class="bx bx-menu"></i>
+                </button>
 
-                    <!-- ي -->
-                    <path d="M 300,108 L 320,108 L 320,82 L 308,82 L 308,98 L 300,98 Z" />
-                    <rect x="302" y="112" width="6" height="6" fill="url(#goldGrad)" />
-                    <rect x="312" y="112" width="6" height="6" fill="url(#goldGrad)" />
-
-                    <!-- ز -->
-                    <path d="M 280,108 L 295,108 L 295,78 L 280,78 Z" />
-                    <rect x="284" y="66" width="7" height="7" fill="url(#goldGrad)" />
-
-                    <!-- ت -->
-                    <path d="M 242,108 L 275,108 L 275,82 L 263,82 L 263,98 L 242,98 Z" />
-                    <rect x="247" y="70" width="6" height="6" fill="url(#goldGrad)" />
-                    <rect x="257" y="70" width="6" height="6" fill="url(#goldGrad)" />
-
-                    <!-- ا -->
-                    <rect x="228" y="60" width="10" height="48" />
-
-                    <!-- ك -->
-                    <path d="M 140,108 L 220,108 L 220,98 L 152,98 L 152,82 L 210,82 L 210,72 L 140,72 Z" />
-                    <!-- Hamza ء -->
-                    <path d="M 148,68 Q 154,62 160,68 T 154,76 L 162,76" fill="none" stroke="url(#silverGrad)" stroke-width="3" />
-                </g>
-
-                <!-- LATIN BRAND TEXT "VISTAK" -->
-                <text x="225" y="162" 
-                      font-family="'Cinzel', 'Times New Roman', serif" 
-                      font-size="46" 
-                      font-weight="800" 
-                      letter-spacing="12" 
-                      fill="url(#silverGrad)" 
-                      text-anchor="middle">VISTAK</text>
-
-                <!-- SUB-TEXT "AGENCY" & UNDERLINE -->
-                <line x1="110" y1="182" x2="210" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
-                <text x="225" y="187" 
-                      font-family="'Inter', sans-serif" 
-                      font-size="14" 
-                      font-weight="700" 
-                      letter-spacing="8" 
-                      fill="url(#silverGrad)" 
-                      text-anchor="middle">AGENCY</text>
-                <line x1="240" y1="182" x2="340" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
-            </svg>
-        </a>
-
-        <nav>
-            <ul class="navlist" id="navList">
-
-                <li>
-                    <a href="#home" class="nav-link active">
-                        <i class="bx bx-home-alt"></i>
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#about" class="nav-link">
-                        <i class="bx bx-buildings"></i>
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#services" class="nav-link">
-                        <i class="bx bx-grid-alt"></i>
-                        Services
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#book" class="nav-link">
-                        <i class="bx bx-calendar-check"></i>
-                        Book
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contact" class="nav-link">
-                        <i class="bx bx-message-rounded-dots"></i>
-                        Contact
-                    </a>
-                </li>
-
-                <li id="filesNavItem" style="display:none;">
-                    <a href="#files" class="nav-link" id="filesNavLink">
-                        <i class="bx bx-folder-open"></i>
-                        Files
-                    </a>
-                </li>
-
-                <!-- رابط الانتقال إلى الصفحة الخارجية vistak2.html -->
-                <li id="vistak2NavItem">
-                    <a href="vistak2.html" class="nav-link">
-                        <i class="bx bx-right-arrow-alt"></i>
-                        Vistak Portal
-                    </a>
-                </li>
-
-                <li class="nav-auth">
-                    <a href="#" class="nav-link" id="authNavLink">
-                        <i class="bx bx-log-in-circle"></i>
-                        <span id="authNavText">Login</span>
-                    </a>
-                    <span class="auth-user" id="authUserLabel" hidden></span>
-                </li>
-
-            </ul>
-        </nav>
-
-        <div class="header-actions">
-
-            <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
-                <i class="bx bx-moon"></i>
-            </button>
-
-            <button class="icon-btn" id="menu-icon" aria-label="Open menu" title="Menu">
-                <i class="bx bx-menu"></i>
-            </button>
+            </div>
 
         </div>
 
-    </div>
-
-</header>
+    </header>
 
 
 
@@ -2499,95 +2892,90 @@
                 <div class="visual-orbit"></div>
 
                 <div class="hero-card">
-      <svg class="logo-svg" viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <!-- Silver Gradient for Towers & Borders -->
-                        <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#ffffff" />
-                            <stop offset="35%" stop-color="#e2e8f0" />
-                            <stop offset="70%" stop-color="#94a3b8" />
-                            <stop offset="100%" stop-color="#cbd5e1" />
-                        </linearGradient>
+                    <svg class="logo-svg" viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <!-- Silver Gradient for Towers & Borders -->
+                            <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ffffff" />
+                                <stop offset="35%" stop-color="#e2e8f0" />
+                                <stop offset="70%" stop-color="#94a3b8" />
+                                <stop offset="100%" stop-color="#cbd5e1" />
+                            </linearGradient>
 
-                        <!-- Metallic Gold Gradient for Airplane & Accents -->
-                        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#fef08a" />
-                            <stop offset="50%" stop-color="#d97706" />
-                            <stop offset="100%" stop-color="#b45309" />
-                        </linearGradient>
+                            <!-- Metallic Gold Gradient for Airplane & Accents -->
+                            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#fef08a" />
+                                <stop offset="50%" stop-color="#d97706" />
+                                <stop offset="100%" stop-color="#b45309" />
+                            </linearGradient>
 
-                        <!-- Subtle Glow Effect -->
-                        <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
-                            <feGaussianBlur stdDeviation="3" result="blur" />
-                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                        </filter>
-                    </defs>
+                            <!-- Subtle Glow Effect -->
+                            <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
 
-                    <!-- TOP ARCHITECTURAL TOWERS -->
-                    <g fill="url(#silverGrad)">
-                        <polygon points="160,50 178,42 178,92 160,92" />
-                        <polygon points="186,35 204,27 204,92 186,92" />
-                        <polygon points="212,20 230,12 230,92 212,92" />
-                    </g>
+                        <!-- TOP ARCHITECTURAL TOWERS -->
+                        <g fill="url(#silverGrad)">
+                            <polygon points="160,50 178,42 178,92 160,92" />
+                            <polygon points="186,35 204,27 204,92 186,92" />
+                            <polygon points="212,20 230,12 230,92 212,92" />
+                        </g>
 
-                    <!-- FLYING AIRPLANE ICON -->
-                    <g transform="translate(290, 36) rotate(-10)" fill="url(#goldGrad)" filter="url(#glowEffect)">
-                        <path d="M 0,0 L 18,-6 L 24,-18 L 29,-18 L 26,-4 L 38,-2 L 43,-8 L 47,-8 L 44,2 L 47,12 L 43,12 L 38,6 L 26,6 L 29,20 L 24,20 L 18,8 L 0,2 Z" />
-                    </g>
+                        <!-- FLYING AIRPLANE ICON -->
+                        <g transform="translate(290, 36) rotate(-10)" fill="url(#goldGrad)" filter="url(#glowEffect)">
+                            <path
+                                d="M 0,0 L 18,-6 L 24,-18 L 29,-18 L 26,-4 L 38,-2 L 43,-8 L 47,-8 L 44,2 L 47,12 L 43,12 L 38,6 L 26,6 L 29,20 L 24,20 L 18,8 L 0,2 Z" />
+                        </g>
 
-                    <!-- FRAMING BOX -->
-                    <path d="M 120,68 L 120,45 L 260,45 M 310,45 L 370,45 L 370,118 L 120,118 L 120,95" 
-                          fill="none" stroke="url(#silverGrad)" stroke-width="5" stroke-linecap="square" />
+                        <!-- FRAMING BOX -->
+                        <path d="M 120,68 L 120,45 L 260,45 M 310,45 L 370,45 L 370,118 L 120,118 L 120,95" fill="none"
+                            stroke="url(#silverGrad)" stroke-width="5" stroke-linecap="square" />
 
-                    <!-- ARABIC TYPOGRAPHY (فيزتاك) -->
-                    <g fill="url(#silverGrad)">
-                        <!-- ف -->
-                        <path d="M 335,92 L 350,92 L 350,75 L 335,75 Z M 335,108 L 360,108 L 360,68 L 325,68 L 325,108 Z" />
-                        <rect x="338" y="58" width="8" height="8" fill="url(#goldGrad)" />
+                        <!-- ARABIC TYPOGRAPHY (فيزتاك) -->
+                        <g fill="url(#silverGrad)">
+                            <!-- ف -->
+                            <path
+                                d="M 335,92 L 350,92 L 350,75 L 335,75 Z M 335,108 L 360,108 L 360,68 L 325,68 L 325,108 Z" />
+                            <rect x="338" y="58" width="8" height="8" fill="url(#goldGrad)" />
 
-                        <!-- ي -->
-                        <path d="M 300,108 L 320,108 L 320,82 L 308,82 L 308,98 L 300,98 Z" />
-                        <rect x="302" y="112" width="6" height="6" fill="url(#goldGrad)" />
-                        <rect x="312" y="112" width="6" height="6" fill="url(#goldGrad)" />
+                            <!-- ي -->
+                            <path d="M 300,108 L 320,108 L 320,82 L 308,82 L 308,98 L 300,98 Z" />
+                            <rect x="302" y="112" width="6" height="6" fill="url(#goldGrad)" />
+                            <rect x="312" y="112" width="6" height="6" fill="url(#goldGrad)" />
 
-                        <!-- ز -->
-                        <path d="M 280,108 L 295,108 L 295,78 L 280,78 Z" />
-                        <rect x="284" y="66" width="7" height="7" fill="url(#goldGrad)" />
+                            <!-- ز -->
+                            <path d="M 280,108 L 295,108 L 295,78 L 280,78 Z" />
+                            <rect x="284" y="66" width="7" height="7" fill="url(#goldGrad)" />
 
-                        <!-- ت -->
-                        <path d="M 242,108 L 275,108 L 275,82 L 263,82 L 263,98 L 242,98 Z" />
-                        <rect x="247" y="70" width="6" height="6" fill="url(#goldGrad)" />
-                        <rect x="257" y="70" width="6" height="6" fill="url(#goldGrad)" />
+                            <!-- ت -->
+                            <path d="M 242,108 L 275,108 L 275,82 L 263,82 L 263,98 L 242,98 Z" />
+                            <rect x="247" y="70" width="6" height="6" fill="url(#goldGrad)" />
+                            <rect x="257" y="70" width="6" height="6" fill="url(#goldGrad)" />
 
-                        <!-- ا -->
-                        <rect x="228" y="60" width="10" height="48" />
+                            <!-- ا -->
+                            <rect x="228" y="60" width="10" height="48" />
 
-                        <!-- ك -->
-                        <path d="M 140,108 L 220,108 L 220,98 L 152,98 L 152,82 L 210,82 L 210,72 L 140,72 Z" />
-                        <!-- Hamza ء -->
-                        <path d="M 148,68 Q 154,62 160,68 T 154,76 L 162,76" fill="none" stroke="url(#silverGrad)" stroke-width="3" />
-                    </g>
+                            <!-- ك -->
+                            <path d="M 140,108 L 220,108 L 220,98 L 152,98 L 152,82 L 210,82 L 210,72 L 140,72 Z" />
+                            <!-- Hamza ء -->
+                            <path d="M 148,68 Q 154,62 160,68 T 154,76 L 162,76" fill="none" stroke="url(#silverGrad)"
+                                stroke-width="3" />
+                        </g>
 
-                    <!-- LATIN BRAND TEXT "VISTAK" -->
-                    <text x="225" y="162" 
-                          font-family="'Cinzel', 'Times New Roman', serif" 
-                          font-size="46" 
-                          font-weight="800" 
-                          letter-spacing="12" 
-                          fill="url(#silverGrad)" 
-                          text-anchor="middle">VISTAK</text>
+                        <!-- LATIN BRAND TEXT "VISTAK" -->
+                        <text x="225" y="162" font-family="'Cinzel', 'Times New Roman', serif" font-size="46"
+                            font-weight="800" letter-spacing="12" fill="url(#silverGrad)"
+                            text-anchor="middle">VISTAK</text>
 
-                    <!-- SUB-TEXT "AGENCY" & UNDERLINE -->
-                    <line x1="110" y1="182" x2="210" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
-                    <text x="225" y="187" 
-                          font-family="'Inter', sans-serif" 
-                          font-size="14" 
-                          font-weight="700" 
-                          letter-spacing="8" 
-                          fill="url(#silverGrad)" 
-                          text-anchor="middle">AGENCY</text>
-                    <line x1="240" y1="182" x2="340" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
-                </svg>                </div>
+                        <!-- SUB-TEXT "AGENCY" & UNDERLINE -->
+                        <line x1="110" y1="182" x2="210" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
+                        <text x="225" y="187" font-family="'Inter', sans-serif" font-size="14" font-weight="700"
+                            letter-spacing="8" fill="url(#silverGrad)" text-anchor="middle">AGENCY</text>
+                        <line x1="240" y1="182" x2="340" y2="182" stroke="url(#silverGrad)" stroke-width="2" />
+                    </svg>
+                </div>
 
                 <div class="floating-card floating-one">
 
@@ -2649,102 +3037,102 @@
      ABOUT
      ========================================================= -->
 
-  <section class="section" id="about">
+    <section class="section" id="about">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="about-grid">
+            <div class="about-grid">
 
-            <div class="about-visual reveal">
+                <div class="about-visual reveal">
 
-                <div class="about-image">
+                    <div class="about-image">
 
-                    <!-- صورة احترافية عالية الدقة تعبر عن السفر والتوسع العالمي والأعمال -->
-                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
-                        alt="About Vistak Global Travel and Services" 
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                        <!-- صورة احترافية عالية الدقة تعبر عن السفر والتوسع العالمي والأعمال -->
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop"
+                            alt="About Vistak Global Travel and Services"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
 
-                    <div class="about-badge">
-                        <strong>2017</strong>
-                        <span>Founded in Lebanon</span>
+                        <div class="about-badge">
+                            <strong>2017</strong>
+                            <span>Founded in Lebanon</span>
+                        </div>
+
                     </div>
 
                 </div>
 
-            </div>
+                <div class="about-content reveal">
 
-            <div class="about-content reveal">
-
-                <div class="eyebrow">
-                    <i class="bx bx-sparkles"></i>
-                    About Vistak
-                </div>
-
-                <h2>
-                    A smarter way to
-                    <span>go global.</span>
-                </h2>
-
-                <p>
-                    Vistak was originated back in 2017 as a travel
-                    agency in Lebanon specializing in outbound tourism.
-                    Today, we provide a wider range of professional
-                    solutions covering tourism, investment, study abroad
-                    and immigration consultancy.
-                </p>
-
-                <p>
-                    Our philosophy is simple:
-                    <strong>Think globally, act locally.</strong>
-                    We focus on exceeding expectations, building
-                    long-term relationships and operating with integrity.
-                </p>
-
-                <div class="feature-list">
-
-                    <div class="feature">
-                        <i class="bx bx-check"></i>
-
-                        <div>
-                            <strong>Personalized Guidance</strong>
-                            <p>Solutions designed around your individual goals.</p>
-                        </div>
+                    <div class="eyebrow">
+                        <i class="bx bx-sparkles"></i>
+                        About Vistak
                     </div>
 
-                    <div class="feature">
-                        <i class="bx bx-check"></i>
+                    <h2>
+                        A smarter way to
+                        <span>go global.</span>
+                    </h2>
 
-                        <div>
-                            <strong>Professional Expertise</strong>
-                            <p>Experience across travel and international services.</p>
+                    <p>
+                        Vistak was originated back in 2017 as a travel
+                        agency in Lebanon specializing in outbound tourism.
+                        Today, we provide a wider range of professional
+                        solutions covering tourism, investment, study abroad
+                        and immigration consultancy.
+                    </p>
+
+                    <p>
+                        Our philosophy is simple:
+                        <strong>Think globally, act locally.</strong>
+                        We focus on exceeding expectations, building
+                        long-term relationships and operating with integrity.
+                    </p>
+
+                    <div class="feature-list">
+
+                        <div class="feature">
+                            <i class="bx bx-check"></i>
+
+                            <div>
+                                <strong>Personalized Guidance</strong>
+                                <p>Solutions designed around your individual goals.</p>
+                            </div>
                         </div>
+
+                        <div class="feature">
+                            <i class="bx bx-check"></i>
+
+                            <div>
+                                <strong>Professional Expertise</strong>
+                                <p>Experience across travel and international services.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <i class="bx bx-check"></i>
+
+                            <div>
+                                <strong>Long-Term Partnership</strong>
+                                <p>We build relationships beyond a single transaction.</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="feature">
-                        <i class="bx bx-check"></i>
-
-                        <div>
-                            <strong>Long-Term Partnership</strong>
-                            <p>We build relationships beyond a single transaction.</p>
-                        </div>
+                    <div style="margin-top:28px;">
+                        <a href="#contact" class="btn">
+                            Talk To Our Team
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
                     </div>
 
-                </div>
-
-                <div style="margin-top:28px;">
-                    <a href="#contact" class="btn">
-                        Talk To Our Team
-                        <i class="bx bx-right-arrow-alt"></i>
-                    </a>
                 </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
     <!-- =========================================================
      SERVICES
@@ -2894,210 +3282,79 @@
      BRANCHES
      ========================================================= -->
 
-   <section class="section" id="branches">
+    <section class="section" id="branches">
 
-    <!-- استدعاء ملفات Leaflet CSS & JS للخرائط الحقيقية -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <!-- استدعاء ملفات Leaflet CSS & JS للخرائط الحقيقية -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-    <style>
-        .branches-container {
-            position: relative;
-            background: #0f172a;
-            border-radius: 20px;
-            padding: 30px 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+        <div class="container">
 
-        /* حاوية الخريطة الحقيقية */
-        #realMap {
-            width: 100%;
-            height: 450px;
-            border-radius: 14px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
-            z-index: 1;
-        }
+            <div class="section-header reveal">
 
-        /* تخصيص مظهر النوافذ المنبثقة على الخريطة */
-        .leaflet-popup-content-wrapper {
-            background: #1e293b;
-            color: #fff;
-            border: 1px solid #d97706;
-            border-radius: 10px;
-        }
-        .leaflet-popup-tip {
-            background: #1e293b;
-        }
+                <div class="eyebrow">
+                    <i class="bx bx-map"></i>
+                    Our Presence
+                </div>
 
-        .branches-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
+                <h2 class="section-title">
+                    Meet us
+                    <span>wherever you are.</span>
+                </h2>
 
-        .branch-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 14px;
-            padding: 20px;
-            color: #fff;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            cursor: pointer;
-        }
+                <p class="section-description">
+                    Our network is designed to bring professional
+                    international services closer to you.
+                </p>
 
-        .branch-card:hover {
-            background: rgba(217, 119, 6, 0.15);
-            border-color: #d97706;
-            transform: translateY(-5px);
-        }
-
-        .branch-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #d97706, #b45309);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: #fff;
-            flex-shrink: 0;
-        }
-
-        .branch-info h4 {
-            margin: 0 0 4px 0;
-            font-size: 1.1rem;
-            color: #f8fafc;
-        }
-
-        .branch-info p {
-            margin: 0;
-            font-size: 0.85rem;
-            color: #94a3b8;
-        }
-    </style>
-
-    <div class="container">
-
-        <div class="section-header reveal">
-
-            <div class="eyebrow">
-                <i class="bx bx-map"></i>
-                Our Presence
             </div>
 
-            <h2 class="section-title">
-                Meet us
-                <span>wherever you are.</span>
-            </h2>
+            <div class="branches-container reveal">
 
-            <p class="section-description">
-                Our network is designed to bring professional
-                international services closer to you.
-            </p>
+                <!-- عنصر الخريطة الحقيقية -->
+                <div id="realMap"></div>
 
-        </div>
+                <!-- بطاقات الفروع للتفاعل مع الخريطة -->
+                <div class="branches-grid">
 
-        <div class="branches-container reveal">
-
-            <!-- عنصر الخريطة الحقيقية -->
-            <div id="realMap"></div>
-
-            <!-- بطاقات الفروع للتفاعل مع الخريطة -->
-            <div class="branches-grid">
-
-                <div class="branch-card" onclick="focusBranch(34.4367, 35.8497, 12, 'lebanon')">
-                    <div class="branch-icon">
-                        <i class="bx bx-building-house"></i>
+                    <div class="branch-card" onclick="focusBranch(34.4367, 35.8497, 12, 'lebanon')">
+                        <div class="branch-icon">
+                            <i class="bx bx-building-house"></i>
+                        </div>
+                        <div class="branch-info">
+                            <h4>Lebanon (HQ)</h4>
+                            <p>Tripoli Branch</p>
+                        </div>
                     </div>
-                    <div class="branch-info">
-                        <h4>Lebanon (HQ)</h4>
-                        <p>Tripoli Branch</p>
-                    </div>
-                </div>
 
-                <div class="branch-card" onclick="focusBranch(29.3759, 47.9774, 12, 'kuwait')">
-                    <div class="branch-icon">
-                        <i class="bx bx-globe"></i>
+                    <div class="branch-card" onclick="focusBranch(29.3759, 47.9774, 12, 'kuwait')">
+                        <div class="branch-icon">
+                            <i class="bx bx-globe"></i>
+                        </div>
+                        <div class="branch-info">
+                            <h4>Kuwait</h4>
+                            <p>Kuwait City</p>
+                        </div>
                     </div>
-                    <div class="branch-info">
-                        <h4>Kuwait</h4>
-                        <p>Kuwait City</p>
-                    </div>
-                </div>
 
-                <div class="branch-card" onclick="focusBranch(-37.8136, 144.9631, 12, 'australia')">
-                    <div class="branch-icon">
-                        <i class="bx bx-compass"></i>
+                    <div class="branch-card" onclick="focusBranch(-37.8136, 144.9631, 12, 'australia')">
+                        <div class="branch-icon">
+                            <i class="bx bx-compass"></i>
+                        </div>
+                        <div class="branch-info">
+                            <h4>Australia</h4>
+                            <p>Melbourne Branch</p>
+                        </div>
                     </div>
-                    <div class="branch-info">
-                        <h4>Australia</h4>
-                        <p>Melbourne Branch</p>
-                    </div>
+
                 </div>
 
             </div>
 
         </div>
 
-    </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // 1. إنشاء الخريطة الحقيقية وتحديد المركز الأولي (المتوسط العالمي)
-            const map = L.map('realMap').setView([20.0, 45.0], 2);
-
-            // 2. تحميل طبقة الخريطة الحقيقية العصرية الداكنة (CartoDB Dark Matter)
-            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-                attribution: '&copy; OpenStreetMap &copy; CARTO',
-                maxZoom: 19
-            }).addTo(map);
-
-            // 3. إحداثيات الفروع
-            const branches = {
-                lebanon: {
-                    coords: [34.4367, 35.8497],
-                    title: "<b>Vistak Lebanon (HQ)</b><br>Tripoli"
-                },
-                kuwait: {
-                    coords: [29.3759, 47.9774],
-                    title: "<b>Vistak Kuwait</b><br>Kuwait City"
-                },
-                australia: {
-                    coords: [-37.8136, 144.9631],
-                    title: "<b>Vistak Australia</b><br>Melbourne"
-                }
-            };
-
-            const markers = {};
-
-            // 4. إضافة دبابيس الفروع على الخريطة
-            for (let key in branches) {
-                const b = branches[key];
-                markers[key] = L.marker(b.coords).addTo(map)
-                    .bindPopup(b.title);
-            }
-
-            // 5. دالة للتركيز والتكبير على الفرع عند الضغط عليه
-            window.focusBranch = function (lat, lng, zoom, key) {
-                map.flyTo([lat, lng], zoom, {
-                    duration: 1.5
-                });
-                if (markers[key]) {
-                    markers[key].openPopup();
-                }
-            };
-        });
-    </script>
-
-</section>
+    </section>
 
     <!-- =========================================================
      BOOKING
@@ -5441,7 +5698,52 @@
                 }
 
             }
-        );
+        );  
+            document.addEventListener("DOMContentLoaded", function () {
+                // 1. إنشاء الخريطة الحقيقية وتحديد المركز الأولي (المتوسط العالمي)
+                const map = L.map('realMap').setView([20.0, 45.0], 2);
+
+                // 2. تحميل طبقة الخريطة الحقيقية العصرية الداكنة (CartoDB Dark Matter)
+                L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                    attribution: '&copy; OpenStreetMap &copy; CARTO',
+                    maxZoom: 19
+                }).addTo(map);
+
+                // 3. إحداثيات الفروع
+                const branches = {
+                    lebanon: {
+                        coords: [34.4367, 35.8497],
+                        title: "<b>Vistak Lebanon (HQ)</b><br>Tripoli"
+                    },
+                    kuwait: {
+                        coords: [29.3759, 47.9774],
+                        title: "<b>Vistak Kuwait</b><br>Kuwait City"
+                    },
+                    australia: {
+                        coords: [-37.8136, 144.9631],
+                        title: "<b>Vistak Australia</b><br>Melbourne"
+                    }
+                };
+
+                const markers = {};
+
+                // 4. إضافة دبابيس الفروع على الخريطة
+                for (let key in branches) {
+                    const b = branches[key];
+                    markers[key] = L.marker(b.coords).addTo(map)
+                        .bindPopup(b.title);
+                }
+
+                // 5. دالة للتركيز والتكبير على الفرع عند الضغط عليه
+                window.focusBranch = function (lat, lng, zoom, key) {
+                    map.flyTo([lat, lng], zoom, {
+                        duration: 1.5
+                    });
+                    if (markers[key]) {
+                        markers[key].openPopup();
+                    }
+                };
+            });
 
     </script>
 </body>
